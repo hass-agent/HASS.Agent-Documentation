@@ -3,19 +3,24 @@
 
 <!-- Announcement bar -->
 {% block announce %}
+
 <style>
-  .md-announce a,
-  .md-announce a:focus,
   .md-announce a:hover {
     color: currentColor;
   }
   .md-announce strong {
     white-space: nowrap;
   }
-  .md-announce .twitter {
-    margin-left: 0.2em;
-    color: #00acee;
+  .announcement {
+    color: white;
+  }
+  .announcement:hover {
+    color: #41bdf5;
   }
 </style>
-<strong><a href="https://lab02-research.org/2023-04-01-help-wanted/">Have experience in C# and windows apps? Or python and homeassistant integrations? We need help! Click to find out more.</a></strong>
+
+<a href="help">
+  <p class="announcement">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</p>
+</a>
+
 {% endblock %}
