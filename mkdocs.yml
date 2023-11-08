@@ -1,5 +1,6 @@
 site_name: Hass Agent Documentation
 theme:
+  custom_dir: theme_override_home
   name: material
   features:
     - navigation.tabs
@@ -48,7 +49,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
   &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a>

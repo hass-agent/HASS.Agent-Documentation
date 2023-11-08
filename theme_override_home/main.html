@@ -1,0 +1,21 @@
+<!-- Elements added to main will be displayed on all pages -->
+{% extends "base.html" %}
+
+<!-- Announcement bar -->
+{% block announce %}
+<style>
+  .md-announce a,
+  .md-announce a:focus,
+  .md-announce a:hover {
+    color: currentColor;
+  }
+  .md-announce strong {
+    white-space: nowrap;
+  }
+  .md-announce .twitter {
+    margin-left: 0.2em;
+    color: #00acee;
+  }
+</style>
+<strong><a href="https://lab02-research.org/2023-04-01-help-wanted/">Have experience in C# and windows apps? Or python and homeassistant integrations? We need help! Click to find out more.</a></strong>
+{% endblock %}

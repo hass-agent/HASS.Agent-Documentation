@@ -1,0 +1,144 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+
+{% extends "main.html" %} {% block tabs %} {{ super() }}
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+  }
+
+  .markdown-body {
+    background-color: #f7f7f7;
+    color: white;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    background-color: #41bdf5;
+    color: white;
+    padding: 100px 0;
+  }
+
+  .hero-section .content {
+    display: flex;
+    align-items: center;
+  }
+
+  .text-content {
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .logo {
+    width: 40%;
+    float: right;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  /* Additional styles for responsiveness */
+  @media screen and (max-width: 768px) {
+    .text-content,
+    .logo {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 30px;
+    }
+
+    .hero-section p {
+      font-size: 16px;
+    }
+  }
+
+  /* Feature Description Section */
+  .feature-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+  }
+
+  .feature-section .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    flex: 0 0 calc(33.3333% - 40px);
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #41bdf5;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .feature:hover {
+    background-color: #41bdf5;
+    color: white;
+  }
+
+  .feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .feature p {
+    font-size: 18px;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="content">
+      <div class="text-content">
+        <h1>Welcome to HASS.Agent</h1>
+        <p>A windows Home Assistant client(Companion App) that provides powerful features for automating your windows system.</p>
+      </div>
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png" alt="Hass.agent Logo" width="256" height="256" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Description Section -->
+<section class="feature-section">
+  <div class="container">
+    <div class="feature">
+      <h2>Sensors</h2>
+      <p>Collect data from Windows and send it to Home Assistant.</p>
+    </div>
+    <div class="feature">
+      <h2>Commands</h2>
+      <p>Button entities added into Home Assistant for actions on the Windows machine.</p>
+    </div>
+    <div class="feature">
+      <h2>Notifications</h2>
+      <p>Windows notifications with actions and images.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block content %}{% endblock %} {% block footer %}{% endblock %}
