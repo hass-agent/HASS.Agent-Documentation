@@ -6,24 +6,27 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
+    background-color: #2d2d30;
+  }
+
+  .accent-color {
+    background-color: #3f3f46;
   }
 
   .markdown-body {
-    background-color: #f7f7f7;
-    color: white;
+    color: black; /* Adjust the text color for the light mode */
   }
 
   .container {
-    max-width: 960px;
+    max-width: 65%;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   .hero-section {
     background-color: #41bdf5;
-    color: white;
-    padding: 100px 0;
+    padding: 100px 100px;
   }
 
   .hero-section .content {
@@ -38,7 +41,6 @@
 
   .logo {
     width: 40%;
-    float: right;
     text-align: center;
     padding-top: 20px;
   }
@@ -73,7 +75,7 @@
 
   /* Feature Description Section */
   .feature-section {
-    background-color: #ffffff;
+    background-color: #2d2d30;
     padding: 80px 0;
   }
 
@@ -84,18 +86,15 @@
   }
 
   .feature {
-    flex: 0 0 calc(33.3333% - 40px);
+    flex: 0 0 calc(25% - 40px);
     text-align: center;
     margin: 20px;
     padding: 20px;
-    border: 1px solid #41bdf5;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    background-color: #3f3f46;
   }
 
   .feature:hover {
-    background-color: #41bdf5;
-    color: white;
+    border: 1px solid white; /* Add border on hover */
   }
 
   .feature h2 {
@@ -106,10 +105,16 @@
   .feature p {
     font-size: 18px;
   }
+
+  .feature img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
 </style>
 
-<!-- Hero Section -->
-<section class="hero-section">
+<!-- Your HTML content goes here -->
+<section class="hero-section accent-color">
   <div class="container">
     <div class="content">
       <div class="text-content">
@@ -123,20 +128,27 @@
   </div>
 </section>
 
-<!-- Feature Description Section -->
 <section class="feature-section">
   <div class="container">
     <div class="feature">
+      <img src="assets/images/icons/sensors.png" alt="Sensors Icon" />
       <h2>Sensors</h2>
       <p>Collect data from Windows and send it to Home Assistant.</p>
     </div>
     <div class="feature">
+      <img src="assets/images/icons/commands.png" alt="Commands Icon" />
       <h2>Commands</h2>
       <p>Button entities added into Home Assistant for actions on the Windows machine.</p>
     </div>
     <div class="feature">
+      <img src="assets/images/icons/bell-regular.svg" alt="Notifications Icon" />
       <h2>Notifications</h2>
       <p>Windows notifications with actions and images.</p>
+    </div>
+    <div class="feature">
+      <img src="assets/images/icons/quick-actions.png" alt="Quick Actions Icon" />
+      <h2>Quick Actions</h2>
+      <p>Quick access to HomeAssistant entities from the Windows taskbar.</p>
     </div>
   </div>
 </section>
