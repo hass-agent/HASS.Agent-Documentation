@@ -1,4 +1,6 @@
 site_name: Hass Agent Documentation
+extra_css:
+  - stylesheets/extra.css
 theme:
   custom_dir: theme_override_home
   name: material
@@ -18,13 +20,13 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: blue
+      primary: custom
       accent: purple
     - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: blue
+      primary: custom
       accent: lime
 
 extra:
