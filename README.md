@@ -34,7 +34,7 @@ If you would like to help out with development or translating of the HASS.Agent 
 
 You can either submit github tickets with the info you want added to the documentation or make the changes yourself. You can submit a ticket for any issues, edits or info you want added to the docs. If you want to make the changes yourself continue reading.
 
-**Editing the docs yourself**
+**Editing the docs yourself**  
 HASS.Agent's documentation is built with MKDocs which runs on python. You need to install the latest python(and pip) version, and ensure venv works.
 
 #### Setup a local environment
