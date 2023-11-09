@@ -1,14 +1,25 @@
 site_name: Hass Agent Documentation
+repo_url: https://github.com/LAB02-Research/HASS.Agent/
+repo_name: LAB02Research/HASS.Agent
 extra_css:
   - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
 theme:
   custom_dir: theme_override_home
   name: material
+  logo: assets/images/logo/logo-128.png
+  favicon: assets/images/logo/logo-128-round.png
   features:
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.path
+    - navigation.indexes
     - navigation.top
+    - navigation.footer
+    - toc.integrate # TOC is table of contents
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -27,7 +38,7 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
       primary: custom
-      accent: lime
+      accent: purple
 
 extra:
   social:

@@ -1,3 +1,8 @@
+---
+search:
+  boost: 0.5
+---
+
 # Old Home
 
 <a href="https://github.com/LAB02-Research/HASS.Agent/">
