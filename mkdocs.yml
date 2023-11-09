@@ -1,23 +1,24 @@
 site_name: Hass Agent Documentation
+site_url: https://drr0x-glitch.github.io/hass.agent-docs/
+site_author: DrR0X-glitch
+site_description: >-
+  Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
+
 repo_url: https://github.com/LAB02-Research/HASS.Agent/
 repo_name: LAB02Research/HASS.Agent
-extra_css:
-  - stylesheets/extra.css
-nav:
-  - Home: index.md
-  - Introduction: introduction.md
+
+copyright: Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a>
+
 theme:
-  custom_dir: theme_override_home
   name: material
-  logo: assets/images/logo/logo-128.png
-  favicon: assets/images/logo/logo-128-round.png
+  custom_dir: theme_override_home
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.path
-    - navigation.indexes
     - navigation.top
     - navigation.footer
+    - navigation.tracking
     - toc.integrate # TOC is table of contents
     - toc.follow
     - search.suggest
@@ -39,7 +40,14 @@ theme:
         name: Switch to light mode
       primary: custom
       accent: purple
+  favicon: assets/images/logo/logo-128-round.png
+  logo: assets/images/logo/logo-128.png
 
+# Add stylesheet for custom color scheme
+extra_css:
+  - stylesheets/extra.css
+
+# Add social icons to footer
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -48,6 +56,8 @@ extra:
       link: https://ko-fi.com/lab02research
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -62,7 +72,11 @@ markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg # Page Tree
 
-copyright: |
-  &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a>
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Installation: getting-started/installation.md

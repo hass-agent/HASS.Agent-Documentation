@@ -53,6 +53,20 @@
     margin-bottom: 40px;
   }
 
+  .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4e4e57; /* CTA button background color */
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .cta-button:hover {
+    outline: 2px solid white; /* CTA button outline on hover */
+  }
+
   /* Additional styles for responsiveness */
   @media screen and (max-width: 768px) {
     .text-content,
@@ -133,6 +147,7 @@
       <div class="text-content">
         <h1>Welcome to HASS.Agent</h1>
         <p>A windows Home Assistant client(Companion App) that provides powerful features for automating your windows system.</p>
+        <a href="/getting-started" class="cta-button">Get Started</a>
       </div>
       <div class="logo">
         <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png" alt="Hass.agent Logo" width="256" height="256" />
