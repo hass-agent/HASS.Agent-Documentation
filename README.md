@@ -1,30 +1,14 @@
-<style>
-  .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .title {
-    padding-top: 10px;
-    font-size: 36px;
-    color: #41BDF5;
-    text-align: center;
-  }
-  .subtitle {
-    font-size: 20px;
-    text-align: center;
-  }
-</style>
-
-<a href="https://github.com/LAB02-Research/HASS.Agent">
-  <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png"  alt="HASS.Agent" align="center" class="logo" />
-</a>
-<p class="title">
+<p align="center">
+  <a href="https://github.com/LAB02-Research/HASS.Agent">
+    <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png"  alt="HASS.Agent" class="logo" />
+  </a>
+</p>
+<p align="center" font-size="36px" color="#41BDF5">
   <strong>
     HASS.Agent Documentation
   </strong>
 </p>
-<p class="subtitle">
+<p align="center" font-size="20px">
   <strong>
     View the documentation 
     <a href="https://drr0x-glitch.github.io/hass.agent-docs/">here</a>
