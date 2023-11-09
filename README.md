@@ -3,18 +3,15 @@
     <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png"  alt="HASS.Agent" class="logo" />
   </a>
 </p>
-<p align="center" font-size="36px" color="#41BDF5">
-  <strong>
-    HASS.Agent Documentation
-  </strong>
-</p>
-<p align="center" font-size="20px">
+<p align="center">
   <strong>
     View the documentation 
     <a href="https://drr0x-glitch.github.io/hass.agent-docs/">here</a>
   </strong>
 </p>
 <br clear="left" />
+
+# HASS.Agent Documentation
 
 ## Overview
 
@@ -24,6 +21,10 @@ This repository contains all the files used to create [HASS.Agent's documentatio
 
 - `main` --> contains the source code
 - `gh-pages` --> deployable (builded) version
+
+## Deployed Documentation
+
+The documentation is deployed here on github pages, you can view it [here](https://drr0x-glitch.github.io/hass.agent-docs/)
 
 ## Development / Contributing
 
