@@ -24,22 +24,22 @@ This repository contains all the files used to create [HASS.Agent's documentatio
 
 ## Deployed Documentation
 
-The documentation is deployed here on github pages, you can view it [here](https://drr0x-glitch.github.io/hass.agent-docs/)
+The documentation is deployed here on github pages, you can view it [here](https://drr0x-glitch.github.io/hass.agent-docs/).
 
 ## Development / Contributing
 
-If you would like to help out with development or translating of the HASS.Agent application check out our guide [here]().
+If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://drr0x-glitch.github.io/hass.agent-docs/help/).
 
 ### Contributing to the documentation
 
-HASS.Agent's documentation is built with MKDocs which runs on python. You need to install the latest python(and pip) version and ensure venv works.
+HASS.Agent's documentation is built with MKDocs which runs on python. You need to install the latest python(and pip) version, and ensure venv works.
 
 #### Setup a local environment
 
-1. Clone the repo to a local folder
-2. Open a command prompt in the folder and run `python -m venv venv` to create a new venv environment
-3. Run `venv\scripts\activate` to activate this new environment
-4. Run `python -m pip install mkdocs-material`
+1. Clone the repo to a local folder.
+2. Open a command prompt in the folder and run `python -m venv venv` to create a new venv environment.
+3. Run `venv\scripts\activate` to activate this new environment.
+4. Run `python -m pip install mkdocs-material` to setup mkdocs.
 5. Open the project in your editor, for vs code run `code .` and then close the command prompt.
 
 #### Editing the documentation
@@ -50,17 +50,26 @@ The project is build with a nav tree which consists of a folder for each section
 1. Run `mkdocs serve` to host the page at `http://localhost:8000/` Real-time updates will be shown as long as the terminal is active.
 2. Make changes to any `*.md` files and check how they look in your browser.
 3. Create a Pull Request to the `main` branch when done editing. No building or anything is required.
-4. After a Pull Request is accepted it will be added to the `main` branch, built and then deployed at [https://drr0x-glitch.github.io/hass.agent-docs/](https://drr0x-glitch.github.io/hass.agent-docs/)
+4. After a Pull Request is accepted it will be added to the `main` branch, built and then deployed at [https://drr0x-glitch.github.io/hass.agent-docs/](https://drr0x-glitch.github.io/hass.agent-docs/).
 
 #### Adding local files(images)
 
 You may notice that sometimes when you add local images into the docs folder and reference them in a markdown file they don't show in your browser. If this happens you can try the following steps:
 
-1. Stop `mkdocs serve` (use `ctrl+c`)
-2. Run `mkdocs build` to rebuild the project including the images
-3. Run `mkdocs serve`
+1. Stop `mkdocs serve` (use `ctrl+c`).
+2. Run `mkdocs build` to rebuild the project including the images.
+3. Run `mkdocs serve` to restart the daemon.
 
-If this doesn't work check the directories and filenames are correct and you can look for help in our [discord server](https://discord.gg/nMvqzwrVBU) or DM [drr0x](https://discord.com/users/638245963240046592)
+If this doesn't work check the directories and filenames are correct and you can look for help in our [discord server](https://discord.gg/nMvqzwrVBU) or DM [drr0x](https://discord.com/users/638245963240046592).
+
+#### Homepage and other special pages
+
+You may notice that there is no homepage `.md` file, instead it is a html document. It has to be written in raw html and css, this is most likely too difficult for a lot of people so just reach out to [drr0x](https://discord.com/users/638245963240046592) on discord if anything needs to be changed.
+
+##### List of special pages/elements without markdown
+
+- Homepage
+- Announcement bar
 
 ## TODO
 
