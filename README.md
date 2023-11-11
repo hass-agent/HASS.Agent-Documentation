@@ -28,6 +28,8 @@ The documentation is deployed here on github pages, you can view it [here](https
 
 ## Development / Contributing
 
+> Pleas do **not** submit pull requests on this branch.
+
 If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://drr0x-glitch.github.io/hass.agent-docs/help/).
 
 ### Contributing to the documentation
