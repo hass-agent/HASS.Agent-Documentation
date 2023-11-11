@@ -28,13 +28,14 @@ The documentation is deployed here on github pages, you can view it [here](https
 
 ## Development / Contributing
 
-> Pleas do **not** submit pull requests on this branch.
+> Pleas do **not** submit pull requests to this repo.
 
-If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://hass-agent-beta.github.io//help/).
+If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://hass-agent-beta.github.io/help/).
 
 ### Contributing to the documentation
 
 You can either submit github tickets with the info you want added to the documentation or make the changes yourself. You can submit a ticket for any issues, edits or info you want added to the docs. If you want to make the changes yourself continue reading.
 
 ### Editing the docs yourself
-DM [drr0x](https://discord.com/users/638245963240046592) on discord for access to the dev documentation repository. 
+
+Checkout [this](https://hass-agent-beta.github.io/help/documentation) page for information on contributing to the documentation.
