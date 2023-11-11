@@ -1,5 +1,5 @@
 site_name: Hass Agent Documentation
-site_url: https://drr0x-glitch.github.io/hass.agent-docs/
+site_url: https://hass-agent-beta.github.io/
 site_author: DrR0X-glitch
 site_description: >-
   Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
@@ -7,7 +7,9 @@ site_description: >-
 repo_url: https://github.com/LAB02-Research/HASS.Agent/
 repo_name: LAB02Research/HASS.Agent
 
-copyright: Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a>
+copyright: >
+  Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a> -
+  <a href="#__consent">Change cookie settings</a>
 
 theme:
   name: material
@@ -43,12 +45,36 @@ theme:
   favicon: assets/images/logo/logo-128-round.png
   logo: assets/images/logo/logo-128.png
 
+plugins:
+  # - social:
+  #     enabled: !ENV [CI, false]
+  #     cards_layout: default/variant
+  #     cards_layout_options:
+  #       background_image: layouts/HASS.Agent-Social-Card.png
+  #       background_color: transparent
+  #       color: #ffffff
+  - search
+
 # Add stylesheet for custom color scheme
 extra_css:
   - stylesheets/extra.css
 
 # Add social icons to footer
 extra:
+  analytics:
+    provider: google
+    property: G-415530619
+  consent:
+    actions:
+      - accept
+      - reject
+      - manage
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/LAB02-Research/HASS.Agent
@@ -78,5 +104,14 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-      - getting-started/index.md
+      - Start Here: getting-started/index.md
       - Installation: getting-started/installation.md
+  - Helping Out:
+      - Start Here: contributing/index.md
+      - Reporting Issues: contributing/reporting-issues.md
+      - Developing the App:
+          - Start Here: contributing/hass-agent-app/index.md
+      - Developing the Integration:
+          - Start Here: contributing/hass-agent-integration/index.md
+      - Developing the Documentation:
+          - Start Here: contributing/hass-agent-documentation/index.md
