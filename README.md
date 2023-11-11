@@ -6,7 +6,7 @@
 <p align="center">
   <strong>
     View the documentation 
-    <a href="https://drr0x-glitch.github.io/hass.agent-docs/">here</a>
+    <a href="https://hass-agent-beta.github.io/">here</a>
   </strong>
 </p>
 <br clear="left" />
@@ -15,7 +15,7 @@
 
 ## Overview
 
-This repository contains all the files used to create [HASS.Agent's documentation](https://drr0x-glitch.github.io/hass.agent-docs/).
+This repository contains all the files used to create [HASS.Agent's documentation](https://hass-agent-beta.github.io/).
 
 ### Branches
 
@@ -24,13 +24,13 @@ This repository contains all the files used to create [HASS.Agent's documentatio
 
 ## Deployed Documentation
 
-The documentation is deployed here on github pages, you can view it [here](https://drr0x-glitch.github.io/hass.agent-docs/).
+The documentation is deployed here on github pages, you can view it [here](https://hass-agent-beta.github.io/).
 
 ## Development / Contributing
 
 > Pleas do **not** submit pull requests on this branch.
 
-If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://drr0x-glitch.github.io/hass.agent-docs/help/).
+If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://hass-agent-beta.github.io//help/).
 
 ### Contributing to the documentation
 
