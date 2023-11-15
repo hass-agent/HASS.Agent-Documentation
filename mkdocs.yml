@@ -88,6 +88,7 @@ extra:
 markdown_extensions:
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
