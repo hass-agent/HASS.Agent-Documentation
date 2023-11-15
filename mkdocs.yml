@@ -1,11 +1,11 @@
 site_name: Hass Agent Documentation
-site_url: https://hass-agent-beta.github.io/
-site_author: DrR0X-glitch
+site_url: https://hass-agent.github.io/
+site_author: DrR0X
 site_description: >-
   Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
 
-repo_url: https://github.com/LAB02-Research/HASS.Agent/
-repo_name: LAB02Research/HASS.Agent
+repo_url: https://github.com/hass-agent/hass-agent.github.io
+repo_name: HASS.Agent Docs Repo
 
 copyright: >
   Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a> -
