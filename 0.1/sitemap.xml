@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/introduction/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/introduction/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/contributing/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/contributing/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/contributing/reporting-issues/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/contributing/reporting-issues/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/contributing/hass-agent-app/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/contributing/hass-agent-app/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/contributing/hass-agent-documentation/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/contributing/hass-agent-documentation/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/contributing/hass-agent-integration/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/contributing/hass-agent-integration/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/contributing/translating/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/contributing/translating/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/getting-started/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/getting-started/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hass-agent-beta.github.io/0.1/getting-started/installation/</loc>
+         <loc>https://hass-agent-beta.github.io/latest/getting-started/installation/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
