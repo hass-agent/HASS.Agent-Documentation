@@ -46,6 +46,8 @@ theme:
   logo: assets/images/logo/logo-128.png
 
 plugins:
+  - mike:
+    canonical_version: latest
   # - social:
   #     enabled: !ENV [CI, false]
   #     cards_layout: default/variant
@@ -61,6 +63,8 @@ extra_css:
 
 # Add social icons to footer
 extra:
+  version:
+    provider: mike
   analytics:
     provider: google
     property: G-415530619
