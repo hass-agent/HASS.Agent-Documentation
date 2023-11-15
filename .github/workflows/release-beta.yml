@@ -1,0 +1,54 @@
+name: Release Beta Version
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_prs_resolved:
+        description: "I have made sure all PRs are resolved"
+        required: true
+        type: boolean
+      confirm_branch:
+        description: "I have set this workflow to run from the beta branch"
+        required: true
+        type: boolean
+      new_version:
+        description: "The new beta version number"
+        required: true
+        type: number
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Fetch full gh-pages and main branches and create user
+        run: |
+          git fetch origin gh-pages --depth=1
+          git fetch origin main --depth=1
+          git config user.name ci-bot
+          git config user.email ci-bot@example.com
+      - name: Get version numbers
+        run: |
+          echo "beta_version=$(mike list beta | awk -F'[()]' '{print $2}')" >> $GITHUB_ENV
+          echo "latest_version=$(mike list latest | awk -F'[()]' '{print $2}')" >> $GITHUB_ENV
+      - name: Rename the current latest version to its version number
+        run: |
+          mike retitle -p ${{ env.latest_version }} ${{ env.latest_version }}
+      - name: Deploy current beta version as latest
+        run: |
+          mike deploy -p -u ${{ env.beta_version }} latest -t latest
+      - name: Deploy copy of beta with incremented version number for development
+        run: |
+          mike deploy -p -u ${{ inputs.new_version }} beta -t beta
+      - name: Merge beta branch with main
+        run: |
+          git fetch --unshallow
+          git checkout main
+          git pull
+          git merge --no-ff beta -m "Auto-Merge beta into main"
+          git push
