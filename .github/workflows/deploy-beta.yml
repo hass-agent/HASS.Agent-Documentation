@@ -1,0 +1,27 @@
+name: Overwrite Beta Version
+on:
+  push:
+    branches:
+      - beta
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Fetch full gh-pages branch and create user
+        run: |
+          git fetch origin gh-pages --depth=1
+          git config user.name ci-bot
+          git config user.email ci-bot@example.com
+      - name: Get current beta version number
+        run: |
+          echo "version=$(mike list beta | awk -F'[()]' '{print $2}')" >> $GITHUB_ENV
+      - run: |
+          mike deploy -u -p ${{ env.version }} beta -t beta
