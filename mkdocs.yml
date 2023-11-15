@@ -47,7 +47,7 @@ theme:
 
 plugins:
   - mike:
-    canonical_version: latest
+      canonical_version: latest
   # - social:
   #     enabled: !ENV [CI, false]
   #     cards_layout: default/variant
