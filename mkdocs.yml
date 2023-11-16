@@ -67,7 +67,20 @@ extra:
     provider: mike
   analytics:
     provider: google
-    property: G-415530619
+    property: G-TBLK7V0HW7
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
   consent:
     actions:
       - accept
@@ -86,6 +99,7 @@ extra:
       link: https://ko-fi.com/lab02research
 
 markdown_extensions:
+  - tables
   - toc:
       permalink: true
       toc_depth: 3
@@ -98,7 +112,11 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.mark
@@ -123,6 +141,8 @@ nav:
           - Start Here: contributing/hass-agent-integration/index.md
       - Developing the Documentation:
           - Start Here: contributing/hass-agent-documentation/index.md
+          - Setup: contributing/hass-agent-documentation/setup.md
+          - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
       - Extra Resources:
           - Info: contributing/developer-resources/index.md
           - Version System: contributing/developer-resources/version-system.md
