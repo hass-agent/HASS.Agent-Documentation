@@ -10,14 +10,16 @@
         <meta name="description" content="Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks">
       
       
-        <meta name="author" content="DrR0X-glitch">
+        <meta name="author" content="DrR0X">
       
       
-        <link rel="canonical" href="https://hass-agent-beta.github.io/latest/contributing/hass-agent-documentation/">
+        <link rel="canonical" href="https://hass-agent.github.io/latest/contributing/hass-agent-documentation/">
       
       
         <link rel="prev" href="../hass-agent-integration/">
       
+      
+        <link rel="next" href="setup/">
       
       
       <link rel="icon" href="../../assets/images/logo/logo-128-round.png">
@@ -62,7 +64,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-415530619"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-415530619",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-415530619",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-TBLK7V0HW7"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-TBLK7V0HW7",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-TBLK7V0HW7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
@@ -245,13 +247,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/LAB02-Research/HASS.Agent/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/hass-agent/hass-agent.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    LAB02Research/HASS.Agent
+    HASS.Agent Docs Repo
   </div>
 </a>
       </div>
@@ -358,13 +360,13 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/LAB02-Research/HASS.Agent/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/hass-agent/hass-agent.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    LAB02Research/HASS.Agent
+    HASS.Agent Docs Repo
   </div>
 </a>
     </div>
@@ -747,6 +749,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Start Here
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -757,6 +770,206 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-documentation-versions" class="md-nav__link">
+    The documentation versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-structure" class="md-nav__link">
+    Github Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Github Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#branches-overview" class="md-nav__link">
+    Branches Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-the-documentation" class="md-nav__link">
+    Deploying the documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-there-restrictions" class="md-nav__link">
+    Why are there restrictions?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="development-lifecycle.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Lifecycle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Extra Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Extra Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-resources/version-system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version System
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -796,11 +1009,168 @@
 
 
 <h1 id="contributing-to-the-hassagent-documentation">Contributing to the HASS.Agent Documentation<a class="headerlink" href="#contributing-to-the-hassagent-documentation" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Make sure you understand the HASS.Agent client version system before continuing. You can find info on it <a href="../developer-resources/version-system/#clientdocumentation-versioning">here</a>.</strong></p>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The HASS.Agent docs are built on MKDocs, which is a python based tool that allows you to write documentation in simple markdown. Most of the docs is written in markdown and is therefore easily editable. However submitting these edits and testing them requires a basic understanding of git and github version control.</p>
+<h3 id="the-documentation-versions">The documentation versions<a class="headerlink" href="#the-documentation-versions" title="Permanent link">&para;</a></h3>
+<p>At the top of the documentation you will find a selector to the write of the title. This is a version selector that allows you to view different versions of the documentation. You will notice there are two special versions and the rest follow the format of <code>*.*</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beta</code></td>
+<td>The current beta build of the documentation, used for trying new features and writing docs for upcoming features of HASS.Agent.</td>
+</tr>
+<tr>
+<td><code>latest</code></td>
+<td>The current latest release of HASS.Agent, this is also the default version.</td>
+</tr>
+<tr>
+<td><code>*.*</code></td>
+<td>Older versions of the docs, these are not editable. These are known as <code>old-versions</code> Example: <code>1.5</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="github-structure">Github Structure<a class="headerlink" href="#github-structure" title="Permanent link">&para;</a></h2>
+<p>The repo for the documentation is linked at the top right of the documentation at all times and is also available <a href="https://github.com/hass-agent/hass-agent.github.io">here</a>. Go ahead and open it in another tab to reference as you go through this section.</p>
+<h3 id="branches-overview">Branches Overview<a class="headerlink" href="#branches-overview" title="Permanent link">&para;</a></h3>
+<p>The repo contains three branches:</p>
+<table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main</code></td>
+<td>Contains the files used to maintain the <code>latest</code><sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version of the documentation.</td>
+</tr>
+<tr>
+<td><code>beta</code></td>
+<td>Contains the files developing the next release of the documentation, this is also the <code>beta</code><sup id="fnref11:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version of the documentation.</td>
+</tr>
+<tr>
+<td><code>gh-pages</code></td>
+<td>Contains the built files of the documentation, this repo is not to be touched, everything is written in HTML, CSS and JS. All the files are auto-generated during builds of the documentation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="why-two-separate-branches">Why two separate branches?<a class="headerlink" href="#why-two-separate-branches" title="Permanent link">&para;</a></h4>
+<p>We use two separate branches in the github as it allows us to work on new versions of the documentation while fixing issues with the current documentation. This is great for us as we can test new features online and send them to people without accidently destroying the <code>latest</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> documentation. However this does create a few guidelines that need to be followed:</p>
+<ul>
+<li>If you want your changes to be applied in all future versions of the documentation you <strong>MUST</strong> make these changes in the <code>beta</code> branch.</li>
+<li>Any changes made to the <code>main</code> branch will be immediately applied to the <code>latest</code><sup id="fnref10:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version however they will <strong>not</strong> be included in future versions of the documentation.</li>
+</ul>
+<p>If you would like to know why these restrictions exist checkout <a href="#why-are-there-restrictions">this</a> section.</p>
+<h3 id="deploying-the-documentation">Deploying the documentation<a class="headerlink" href="#deploying-the-documentation" title="Permanent link">&para;</a></h3>
+<p>After merges occur to either the <code>beta</code> or <code>main</code> branch specific github workflows will run that wil automatically build and deploy the correct version of the documentation. Therefore you <strong>do not</strong> need to ever do any sort of building or deploying.</p>
+<h4 id="releasing-the-beta-version">Releasing the <code>beta</code> version<a class="headerlink" href="#releasing-the-beta-version" title="Permanent link">&para;</a></h4>
+<p>When it comes time to release the <code>beta</code><sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version of the documentation as the <code>latest</code><sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version, one of the admins of the github will manually trigger a workflow that will deploy and build the <code>beta</code> branch as the <code>latest</code><sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version and also deploy a copy for the <code>beta</code><sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version. After the deployment a merge will be triggered to merge the <code>beta</code> branch with the <code>main</code> branch. We will do our best to bring over changes from the <code>main</code> branch to the <code>beta</code> but we cannot guarantee, this is the reason for <a href="#why-are-there-restrictions">this</a> section.</p>
+<h3 id="why-are-there-restrictions">Why are there restrictions?<a class="headerlink" href="#why-are-there-restrictions" title="Permanent link">&para;</a></h3>
+<p>These restrictions exist because of the way the system is built. Here is a diagram showing an example of changes made to the homepage:</p>
+<pre class="mermaid"><code>flowchart LR
+  beta&gt;Beta Branch]
+  main&gt;Main Branch]
+
+  beta-changes(Example change to homepage)
+  latest-changes(Different change to homepage)
+
+  beta-pr([Beta PR merged])
+  latest-pr([Main PR merged])
+
+
+  beta--&gt;beta-pr
+  beta-changes--&gt;|Commit changes to beta|beta-pr
+  main--&gt;latest-pr
+  latest-changes--&gt;|Commit changes to main|latest-pr
+
+  beta-pr --&gt; |Deploy beta version| beta-deployment
+  latest-pr --&gt; |Deploy latest version| latest-deployment
+
+  beta-deployment{{Beta Deployment}}
+  latest-deployment{{Latest Deployment}}</code></pre>
+<p>You will notice that now the homepage is different on each of these versions, specifically the homepage on the <code>main</code> branch has been added changes that are not included in the <code>beta</code> branch version. Now if we have a look at what happens when the beta version is released as latest:</p>
+<pre class="mermaid"><code>flowchart LR
+  beta&gt;Beta Branch]
+  main&gt;Main Branch]
+
+  beta-deployment{{Beta Deployment}}
+  latest-deployment{{Latest Deployment}}
+
+  beta --&gt; |Deploy to latest| latest-deployment
+  beta --&gt; |Deploy copy for next beta version| beta-deployment
+
+  merge([Merge beta into main])
+
+  beta --&gt; |Overwrite main with beta| merge
+  main --&gt; |Changes overwritten by beta| merge
+
+  main --&gt; |Deploy main as it's version number| gh-pages[(Old Versions)]</code></pre>
+<p>When we release the <code>beta</code><sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version, we copy the <code>latest</code><sup id="fnref7:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version into the <code>old-versions</code> by changing it's name to it's version number. Then the <code>beta</code><sup id="fnref8:1"><a class="footnote-ref" href="#fn:1">1</a></sup> version is deployed to <code>latest</code><sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and a copy is created for developing the next version. Finally the <code>beta</code> branch is merged with the <code>main</code> branch. This means that any changes added into the <code>main</code> branch will be overwritten by the <code>beta</code> branch.</p>
+<p>Now that you understand how the system works you can see why changes added to the <code>main</code> branch are not included in future versions of the documentation.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>This corresponds to the label in the documentation version selector.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
   
 
 
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
                 
@@ -842,6 +1212,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Setup
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
