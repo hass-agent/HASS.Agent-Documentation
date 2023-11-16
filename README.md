@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://github.com/LAB02-Research/HASS.Agent">
-    <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png"  alt="HASS.Agent" class="logo" />
+    <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png"  alt="HASS.Agent" />
   </a>
 </p>
 <p align="center">
   <strong>
     View the documentation 
-    <a href="https://hass-agent-beta.github.io/">here</a>
+    <a href="https://hass-agent.github.io/">here</a>
   </strong>
 </p>
 <br clear="left" />
@@ -15,7 +15,7 @@
 
 ## Overview
 
-This repository contains all the files used to create [HASS.Agent's documentation](https://hass-agent-beta.github.io/).
+This repository contains all the files used to create [HASS.Agent's documentation](https://hass-agent.github.io/).
 
 ### Branches
 
@@ -24,13 +24,13 @@ This repository contains all the files used to create [HASS.Agent's documentatio
 
 ## Deployed Documentation
 
-The documentation is deployed here on github pages, you can view it [here](https://hass-agent-beta.github.io/).
+The documentation is deployed here on github pages, you can view it [here](https://hass-agent.github.io/).
 
 ## Development / Contributing
 
 > Pleas do **not** submit pull requests to this repo.
 
-If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://hass-agent-beta.github.io/contributing/).
+If you would like to help out with development or translating of the HASS.Agent application check out our guide [here](https://hass-agent.github.io/latest/contributing/).
 
 ### Contributing to the documentation
 
@@ -38,4 +38,4 @@ You can either submit github tickets with the info you want added to the documen
 
 ### Editing the docs yourself
 
-Checkout [this](https://hass-agent-beta.github.io/contributing/#helping-out-with-the-documentation) page for information on contributing to the documentation.
+Checkout [this](https://hass-agent.github.io/latest/contributing/#helping-out-with-the-documentation) page for information on contributing to the documentation.

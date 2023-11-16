@@ -1,11 +1,11 @@
 site_name: Hass Agent Documentation
-site_url: https://hass-agent-beta.github.io/
-site_author: DrR0X-glitch
+site_url: https://hass-agent.github.io/
+site_author: DrR0X
 site_description: >-
   Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
 
-repo_url: https://github.com/LAB02-Research/HASS.Agent/
-repo_name: LAB02Research/HASS.Agent
+repo_url: https://github.com/hass-agent/hass-agent.github.io
+repo_name: HASS.Agent Docs Repo
 
 copyright: >
   Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a> -
@@ -67,7 +67,20 @@ extra:
     provider: mike
   analytics:
     provider: google
-    property: G-415530619
+    property: G-TBLK7V0HW7
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
   consent:
     actions:
       - accept
@@ -86,8 +99,10 @@ extra:
       link: https://ko-fi.com/lab02research
 
 markdown_extensions:
+  - tables
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -97,9 +112,16 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.mark
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg # Page Tree
@@ -119,3 +141,8 @@ nav:
           - Start Here: contributing/hass-agent-integration/index.md
       - Developing the Documentation:
           - Start Here: contributing/hass-agent-documentation/index.md
+          - Setup: contributing/hass-agent-documentation/setup.md
+          - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
+      - Extra Resources:
+          - Info: contributing/developer-resources/index.md
+          - Version System: contributing/developer-resources/version-system.md
