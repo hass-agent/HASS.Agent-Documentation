@@ -13,11 +13,13 @@
         <meta name="author" content="DrR0X">
       
       
-        <link rel="canonical" href="https://hass-agent.github.io/latest/contributing/developer-resources/version-system/">
+        <link rel="canonical" href="https://hass-agent.github.io/latest/contributing/hass-agent-documentation/editing-files/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../development-lifecycle/">
       
+      
+        <link rel="next" href="../adding-pages/">
       
       
       <link rel="icon" href="../../../assets/images/logo/logo-128-round.png">
@@ -25,7 +27,7 @@
     
     
       
-        <title>Version System - Hass Agent Documentation</title>
+        <title>Editing Files - Hass Agent Documentation</title>
       
     
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hassagents-version-system" class="md-skip">
+        <a href="#editing-the-documentation-files" class="md-skip">
           Skip to content
         </a>
       
@@ -169,7 +171,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Version System
+              Editing Files
             
           </span>
         </div>
@@ -683,6 +685,8 @@
                 
   
   
+    
+  
   
     
     
@@ -708,17 +712,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../hass-agent-documentation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -735,7 +739,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Developing the Documentation
@@ -750,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hass-agent-documentation/setup/" class="md-nav__link">
+      <a href="../setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hass-agent-documentation/development-lifecycle/" class="md-nav__link">
+      <a href="../development-lifecycle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,9 +792,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../hass-agent-documentation/editing-files/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Editing Files
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -799,6 +823,296 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-directory" class="md-nav__link">
+    Root directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Root directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-files" class="md-nav__link">
+    Important files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-directories" class="md-nav__link">
+    Important directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-directories" class="md-nav__link">
+    Other directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docs-directory-structure" class="md-nav__link">
+    docs/ Directory Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="docs/ Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-directories" class="md-nav__link">
+    Special Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-directories_1" class="md-nav__link">
+    Other Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexmd-special-file" class="md-nav__link">
+    index.md - special file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-markdown" class="md-nav__link">
+    Intro to Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro to Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-formatting-options" class="md-nav__link">
+    Simple Formatting Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newlines-and-document-structure" class="md-nav__link">
+    Newlines and document structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separating-paragraphs" class="md-nav__link">
+    Separating paragraphs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeblocks" class="md-nav__link">
+    Codeblocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Codeblocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline-codeblocks" class="md-nav__link">
+    Inline Codeblocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiline-codeblocks" class="md-nav__link">
+    Multiline Codeblocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiline Codeblocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-codeblock" class="md-nav__link">
+    Basic codeblock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax-highlighting" class="md-nav__link">
+    Syntax Highlighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-numbers-titles-and-highlighting-lines" class="md-nav__link">
+    Line numbers, titles and highlighting lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations-footnotes-and-admonitions" class="md-nav__link">
+    Annotations, Footnotes and Admonitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations, Footnotes and Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotations-overview" class="md-nav__link">
+    Annotations Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+    <nav class="md-nav" aria-label="Footnotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax_1" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    Admonitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Admonitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax_2" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collapsible-admonitions" class="md-nav__link">
+    Collapsible admonitions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrams" class="md-nav__link">
+    Diagrams
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -810,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hass-agent-documentation/adding-pages/" class="md-nav__link">
+      <a href="../adding-pages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hass-agent-documentation/special-files/" class="md-nav__link">
+      <a href="../special-files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,8 +1170,6 @@
                 
   
   
-    
-  
   
     
     
@@ -875,17 +1187,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../developer-resources/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -902,7 +1214,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Extra Resources
@@ -915,29 +1227,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Version System
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../developer-resources/version-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,160 +1238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#warning" class="md-nav__link">
-    WARNING!
-  </a>
-  
-    <nav class="md-nav" aria-label="WARNING!">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#you-must-read-and-understand-this-entire-page-if-you-want-to-be-able-to-develop-any-part-of-hassagent" class="md-nav__link">
-    You must read and understand this entire page if you want to be able to develop any part of HASS.Agent
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hassagent-uses-two-main-version-systems" class="md-nav__link">
-    HASS.Agent uses TWO main version systems
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clientdocumentation-versioning" class="md-nav__link">
-    Client/Documentation Versioning
-  </a>
-  
-    <nav class="md-nav" aria-label="Client/Documentation Versioning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stable-release-versions" class="md-nav__link">
-    Stable release versions
-  </a>
-  
-    <nav class="md-nav" aria-label="Stable release versions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#major" class="md-nav__link">
-    Major
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minor" class="md-nav__link">
-    Minor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#patch" class="md-nav__link">
-    Patch
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beta-developmental-versions" class="md-nav__link">
-    Beta developmental versions
-  </a>
-  
-    <nav class="md-nav" aria-label="Beta developmental versions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#beta-version" class="md-nav__link">
-    Beta version
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-info" class="md-nav__link">
-    Other info
-  </a>
-  
-    <nav class="md-nav" aria-label="Other info">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#resetting-numbers" class="md-nav__link">
-    Resetting numbers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1147,16 +1285,118 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#warning" class="md-nav__link">
-    WARNING!
+  <a href="#directory-structure" class="md-nav__link">
+    Directory Structure
   </a>
   
-    <nav class="md-nav" aria-label="WARNING!">
+    <nav class="md-nav" aria-label="Directory Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#you-must-read-and-understand-this-entire-page-if-you-want-to-be-able-to-develop-any-part-of-hassagent" class="md-nav__link">
-    You must read and understand this entire page if you want to be able to develop any part of HASS.Agent
+  <a href="#root-directory" class="md-nav__link">
+    Root directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Root directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-files" class="md-nav__link">
+    Important files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-directories" class="md-nav__link">
+    Important directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-directories" class="md-nav__link">
+    Other directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docs-directory-structure" class="md-nav__link">
+    docs/ Directory Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="docs/ Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-directories" class="md-nav__link">
+    Special Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-directories_1" class="md-nav__link">
+    Other Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexmd-special-file" class="md-nav__link">
+    index.md - special file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-markdown" class="md-nav__link">
+    Intro to Markdown
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro to Markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-formatting-options" class="md-nav__link">
+    Simple Formatting Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newlines-and-document-structure" class="md-nav__link">
+    Newlines and document structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separating-paragraphs" class="md-nav__link">
+    Separating paragraphs
   </a>
   
 </li>
@@ -1167,17 +1407,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#codeblocks" class="md-nav__link">
+    Codeblocks
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
+    <nav class="md-nav" aria-label="Codeblocks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hassagent-uses-two-main-version-systems" class="md-nav__link">
-    HASS.Agent uses TWO main version systems
+  <a href="#inline-codeblocks" class="md-nav__link">
+    Inline Codeblocks
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiline-codeblocks" class="md-nav__link">
+    Multiline Codeblocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiline Codeblocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-codeblock" class="md-nav__link">
+    Basic codeblock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax-highlighting" class="md-nav__link">
+    Syntax Highlighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-numbers-titles-and-highlighting-lines" class="md-nav__link">
+    Line numbers, titles and highlighting lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1187,38 +1461,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clientdocumentation-versioning" class="md-nav__link">
-    Client/Documentation Versioning
+  <a href="#annotations-footnotes-and-admonitions" class="md-nav__link">
+    Annotations, Footnotes and Admonitions
   </a>
   
-    <nav class="md-nav" aria-label="Client/Documentation Versioning">
+    <nav class="md-nav" aria-label="Annotations, Footnotes and Admonitions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stable-release-versions" class="md-nav__link">
-    Stable release versions
+  <a href="#annotations" class="md-nav__link">
+    Annotations
   </a>
   
-    <nav class="md-nav" aria-label="Stable release versions">
+    <nav class="md-nav" aria-label="Annotations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#major" class="md-nav__link">
-    Major
+  <a href="#annotations-overview" class="md-nav__link">
+    Annotations Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#minor" class="md-nav__link">
-    Minor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#patch" class="md-nav__link">
-    Patch
+  <a href="#syntax" class="md-nav__link">
+    Syntax
   </a>
   
 </li>
@@ -1229,16 +1496,16 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#beta-developmental-versions" class="md-nav__link">
-    Beta developmental versions
+  <a href="#footnotes" class="md-nav__link">
+    Footnotes
   </a>
   
-    <nav class="md-nav" aria-label="Beta developmental versions">
+    <nav class="md-nav" aria-label="Footnotes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#beta-version" class="md-nav__link">
-    Beta version
+  <a href="#syntax_1" class="md-nav__link">
+    Syntax
   </a>
   
 </li>
@@ -1249,23 +1516,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#other-info" class="md-nav__link">
-    Other info
+  <a href="#admonitions" class="md-nav__link">
+    Admonitions
   </a>
   
-    <nav class="md-nav" aria-label="Other info">
+    <nav class="md-nav" aria-label="Admonitions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#resetting-numbers" class="md-nav__link">
-    Resetting numbers
+  <a href="#syntax_2" class="md-nav__link">
+    Syntax
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#collapsible-admonitions" class="md-nav__link">
+    Collapsible admonitions
   </a>
   
 </li>
@@ -1277,6 +1544,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrams" class="md-nav__link">
+    Diagrams
+  </a>
   
 </li>
       
@@ -1298,94 +1572,222 @@
   
 
 
-<h1 id="hassagents-version-system">HASS.Agent's version system<a class="headerlink" href="#hassagents-version-system" title="Permanent link">&para;</a></h1>
-<h2 id="warning">WARNING!<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h2>
-<h4 id="you-must-read-and-understand-this-entire-page-if-you-want-to-be-able-to-develop-any-part-of-hassagent">You must read and understand this entire page if you want to be able to develop any part of HASS.Agent<a class="headerlink" href="#you-must-read-and-understand-this-entire-page-if-you-want-to-be-able-to-develop-any-part-of-hassagent" title="Permanent link">&para;</a></h4>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<h4 id="hassagent-uses-two-main-version-systems">HASS.Agent uses TWO main version systems<a class="headerlink" href="#hassagent-uses-two-main-version-systems" title="Permanent link">&para;</a></h4>
-<h5 id="client">Client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h5>
+<h1 id="editing-the-documentation-files">Editing the documentation files<a class="headerlink" href="#editing-the-documentation-files" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before you read through here make sure you understand the <a href="../development-lifecycle/">Development Lifecycle</a> and have finished the <a href="../setup/">Setup Guide</a>.</p>
+</div>
+<h2 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h2>
+<p>To start off with you will want to understand the directory structure of the documentation.</p>
+<h3 id="root-directory">Root directory<a class="headerlink" href="#root-directory" title="Permanent link">&para;</a></h3>
+<p>At the root of the project you will see a directory structure similar to this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├───.github
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│<span class="w">   </span>├───ISSUE_TEMPLATE
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│<span class="w">   </span>└───workflows
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├───docs
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├───theme_override_home
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│<span class="w">   </span>├───home.html
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│<span class="w">   </span>└───main.html
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├───mkdocs.yaml
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>└───requirements.txt
+</code></pre></div>
+<h4 id="important-files">Important files<a class="headerlink" href="#important-files" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Client</li>
-<li>Documentation</li>
+<li><code>mkdocs.yaml</code>: The top-level configuration of the documentation. Holds information such as the navtree and plugins used.</li>
+<li><code>requirements.txt</code>: Used to hold all versions of dependencies required for the documentation. You will not need to edit this.</li>
 </ul>
-<p>The client and documentation share a version system to make it easy for users to find documentation for any version.</p>
-<h5 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">&para;</a></h5>
-<p>The integration has its own version system similar to HASS's own system.</p>
-<h2 id="clientdocumentation-versioning">Client/Documentation Versioning<a class="headerlink" href="#clientdocumentation-versioning" title="Permanent link">&para;</a></h2>
-<p>HASS.Agent's client and documentation use a semantic-style version system, however some parts are specific to HASS.Agent, so read on.</p>
-<h3 id="stable-release-versions">Stable release versions<a class="headerlink" href="#stable-release-versions" title="Permanent link">&para;</a></h3>
-<p>All release version numbers of HASS.Agent look like this: <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code><br />
-An example of a released version number: <code>1.5.4</code></p>
-<h4 id="major">Major<a class="headerlink" href="#major" title="Permanent link">&para;</a></h4>
-<p>The major version number is rarely changed, if you are reading this documentation you will most likely never have to change this. But for your information it is only changed when breaking API updates are added. So version <code>2.*.*</code> client, is <strong>not</strong> backwards compatible with version <code>2.*.*</code>. This also means that all versions of <code>1.*.*</code> will be backwards compatible, there may be small warnings or missing features but all previous API calls and features work as intended. Basically this version number only needs to be incremented when no backwards compatability is added. This also forces the dev team to not release backwards compatible updates very often.</p>
-<details class="example" open="open">
-<summary>Example</summary>
+<h4 id="important-directories">Important directories<a class="headerlink" href="#important-directories" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Version <code>1.4.2</code> of the client <strong>does</strong> have backwards compatibility with version <code>1.8.3</code></li>
-<li>Version <code>2.3.2</code> of the lient <strong>does not</strong> have backwards compatibility with version <code>1.8.3</code></li>
+<li>
+<p><code>.github</code>: This folder contains information for github such as the issue templates and the workflows.</p>
+</li>
+<li>
+<p><code>docs</code>: This folder contains all of the files used to make the pages of the documentation. This is where you will find the markdown files.</p>
+</li>
+<li>
+<p><code>theme_override_home/</code>: This folder contains "Theme Overrides", which allow us to have very fine control over the documentation.</p>
+</li>
 </ul>
-</details>
-<h4 id="minor">Minor<a class="headerlink" href="#minor" title="Permanent link">&para;</a></h4>
-<p>The minor version number is to be incremented whenever new features are added in a backwards compatible way. More than one feature <strong>can</strong> be added per version number, however they all have to have backwards compatibility.</p>
-<details class="example" open="open">
-<summary>Example</summary>
+<h4 id="other-directories">Other directories<a class="headerlink" href="#other-directories" title="Permanent link">&para;</a></h4>
+<p>There are some other files/folders you will find in your project directory such as <code>venv/</code>, <code>.gitignore</code> and <code>README.md</code>. These are all files that will not need to be edited so I don't explain them here.</p>
+<div class="admonition note">
+<p class="admonition-title">Special Files</p>
+<p>Most of these files/folders are talked about in more detail on the <a href="../special-files/">Special Files</a> page.</p>
+</div>
+<h3 id="docs-directory-structure"><code>docs/</code> Directory Structure<a class="headerlink" href="#docs-directory-structure" title="Permanent link">&para;</a></h3>
+<p>The <code>docs/</code> folder is where you will be spending the majority of the time. It contains all of the <code>*.md</code> files as well as the assets used in the documentation. The basic directory structure looks like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>├───assets
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>│<span class="w">   </span>└───images
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│<span class="w">       </span>├───icons
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│<span class="w">       </span>├───logo
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│<span class="w">       </span>└───screenshots
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├───contributing
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>├───getting-started
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>├───layouts
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>├───stylesheets
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>└───index.md
+</code></pre></div>
+<h4 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h4>
+<p>This folder contains the assets used in the documentation. This folder mainly contains images at the moment. You will find it is organised into subfolders, in this case just <code>images/</code>. When you need to reference any image you will be navigating here.</p>
+<h4 id="special-directories">Special Directories<a class="headerlink" href="#special-directories" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Version <code>1.4.1</code> of the client will have <strong>less</strong> features than <code>1.5.0</code></li>
-<li>Version <code>1.6.0</code> of the client will have <strong>more</strong> features than <code>1.5.0</code></li>
+<li>
+<p><code>layouts/</code>: Contains the images and layouts used across the documentation for specific usecases. Currently it just hold data for Jinja templates that make up the social cards.</p>
+</li>
+<li>
+<p><code>stylesheets/</code>: Contains the extra <code>*.css</code> files used to overwrite documentation styling. Things such as the color scheme is found here.</p>
+</li>
 </ul>
-<p><strong>Note that in both of these examples the versions are backwards compatible.</strong></p>
-</details>
-<h4 id="patch">Patch<a class="headerlink" href="#patch" title="Permanent link">&para;</a></h4>
-<p>The patch version number is to be incremented whenever bug fixes(patches) are released in a backwards compatible way. All bug fixes are to be released in a backwards compatible way anyway, so basically everytime a patch is released, this number will be incremented. The important thing to note about the patch version number is that <strong>no new features</strong> can be added.</p>
-<details class="example" open="open">
-<summary>Example</summary>
+<h4 id="other-directories_1">Other Directories<a class="headerlink" href="#other-directories_1" title="Permanent link">&para;</a></h4>
+<p>The rest of the directories found here are sections of the documentation. Each one of these directories corresponds to a section. For example the <code>contributing/</code> directory corresponds to the "Helping Out" section you are in right now.</p>
+<h4 id="indexmd-special-file"><code>index.md</code> - special file<a class="headerlink" href="#indexmd-special-file" title="Permanent link">&para;</a></h4>
+<p><code>index.md</code> is a special file that you will find in every folder that holds <code>*.md</code> files. This file is the "Home" of every folder. So when it is in the root <code>docs/</code> folder it is the homepage for the entire site. Another example is the one in the <code>contributing/</code> folder that is the home of the "Helping Out" section, and so on and so forth.</p>
+<div class="admonition note">
+<p class="admonition-title">Special Case: Homepage</p>
+<p>The <code>index.md</code> file in the root <code>docs/</code> directory doesn't contain any actual markdown. This is because it is a fully custom page that is written in html and css as a theme override, there is more information about it <a href="../special-files/#homepage">here</a>.</p>
+</div>
+<h2 id="intro-to-markdown">Intro to Markdown<a class="headerlink" href="#intro-to-markdown" title="Permanent link">&para;</a></h2>
+<p>This section will serve as a very basic intro to markdown. As well as describe the extra features included with the documentation that are not in normal markdown.</p>
+<p>To start off with, most of the stuff written will just be plain text, for example this section you are reading right now is just plain text.</p>
+<h3 id="simple-formatting-options">Simple Formatting Options<a class="headerlink" href="#simple-formatting-options" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Version <code>1.3.0</code> of the client will have more bugs than <code>1.3.1</code> of the client</li>
-<li>Version <code>1.5.6</code> of the client will have more patches and therefore less bugs, than <code>1.5.2</code> of the client</li>
+<li>Titles: <code># Title</code> We use hashtags to indicate titles, you can go from heading 1 to 6, 1 being the largest heading and 6 being the smallest. This number corresponds to the number of hashtags. A heading 3 would look like this: <code>### Title</code>.</li>
+<li>Bold: <code>**Bold text**</code> We use Double Asterisks to indicate bold text.</li>
+<li>Code blocks: <code>This is a `Code block`, specifically an inline one</code> Multiline ones are also available, checkout <a href="#codeblocks">this</a> section for more</li>
+<li>Lists: <code>- List item</code> A dash indicates a bulleted list, like this one. And for numbered you just write <code>1. Numbered list item</code></li>
 </ul>
-<p><strong>No new features are added between the versions in these examples. Only bug fixes and patches are added.</strong></p>
-</details>
-<h3 id="beta-developmental-versions">Beta developmental versions<a class="headerlink" href="#beta-developmental-versions" title="Permanent link">&para;</a></h3>
-<p>During the development of a new version of the HASS.Agent client beta versions of the code will exist. These versions will be denoted like this: <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-beta.&lt;beta-version&gt;</code> You will notice the only difference is the addition of the <code>-beta</code> flag and the fourth version number <code>&lt;beta-version&gt;</code>
-The first beta version of the example upcoming <code>1.5.3</code> release would look like this: <code>1.5.3-beta.0</code></p>
-<h4 id="beta-version">Beta version<a class="headerlink" href="#beta-version" title="Permanent link">&para;</a></h4>
-<p>The beta version number is to be incremented whenever a new beta version of the code is built or released for testing.</p>
-<details class="example annotate" open="open">
-<summary>Example</summary>
 <blockquote>
-<p>The current stable version is <code>2.5.4</code> and the dev team is working on a new feature</p>
+<p>Callouts like this one can be written using a <code>&gt;</code> at the start: <code>&gt; Example callout</code></p>
 </blockquote>
-<p>The beta version during the first development update should be <code>2.6.0-beta.0</code></p>
-<p>Everytime a new development update is added to this feature the last number should be incremented.</p>
+<p>You will notice all of these require a certain character followed by a space. If you do not include a space between the special character and the text it will not showup correctly.</p>
+<h3 id="newlines-and-document-structure">Newlines and document structure<a class="headerlink" href="#newlines-and-document-structure" title="Permanent link">&para;</a></h3>
+<p>Every different "text-type" should have a newline separating it from the previous one. So there should be a new line between titles and paragraphs and also a new line between a title and a group of list items, etc.</p>
+<h3 id="separating-paragraphs">Separating paragraphs<a class="headerlink" href="#separating-paragraphs" title="Permanent link">&para;</a></h3>
+<p>You can separate paragraphs in two ways, here are the 2 options:<br />
+Text starting on next line.</p>
+<p>Gap before next text block.</p>
 <blockquote>
-<p>The dev team has now finished working on this feature</p>
+<p>You can create a gap between each paragraph by just creating a newline in the file. To continue the text without a gap but on the next line you add 2 spaces to the end of the previous line.</p>
 </blockquote>
-<p>The stable version for release should be <code>2.6.0</code></p>
+<h2 id="codeblocks">Codeblocks<a class="headerlink" href="#codeblocks" title="Permanent link">&para;</a></h2>
+<p>Codeblocks are unsurprisingly used to indicate code, they have different styling and can be copied as well as highlighted depending on the syntax.</p>
+<h3 id="inline-codeblocks">Inline Codeblocks<a class="headerlink" href="#inline-codeblocks" title="Permanent link">&para;</a></h3>
+<p>These are the most simple. They are just a small section of a paragraph or line. These do not have options such as a copy button or annotations.</p>
 <blockquote>
-<p>The dev team has found bugs and is working on a hotfix. They have completed 2 updates to work on this hotfix</p>
+<p>Example: <code>Inline codeblock here</code> Normal text here</p>
 </blockquote>
-<p>The current beta version should be <code>2.6.1-beta.1</code> (1)</p>
-<blockquote>
-<p>They have now completed this hotfix</p>
-</blockquote>
-<p>The stable release version should be <code>2.6.1</code></p>
-</details>
+<p>You can write these inline codeblocks by adding a backtick: <code>`</code>, at the start and end of the codeblock.</p>
+<h3 id="multiline-codeblocks">Multiline Codeblocks<a class="headerlink" href="#multiline-codeblocks" title="Permanent link">&para;</a></h3>
+<p>These codeblocks are slightly more complex but include features such as a copy button and line highlighting.</p>
+<h4 id="basic-codeblock">Basic codeblock<a class="headerlink" href="#basic-codeblock" title="Permanent link">&para;</a></h4>
+<p>A basic codeblock can be written using 3 backticks: <code>```</code> at the start and end.</p>
+<div class="highlight"><span class="filename">Example basic codeblock syntax</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>```
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>def add1(num):
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  return num += 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>```
+</code></pre></div>
+<p><strong>Looks like this:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>def add1(num):
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  return num += 1
+</code></pre></div>
+<p>You will notice a copy button at the top right of each codeblock.</p>
+<h4 id="syntax-highlighting">Syntax Highlighting<a class="headerlink" href="#syntax-highlighting" title="Permanent link">&para;</a></h4>
+<p>You can add syntax highlighting for almost every language. Here is the same python function with some highlighting:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">add1</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="k">return</span> <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+<p>To do this you add a language shortcode right after the backtick(s). Like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>```py
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Highlighted as python
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>```
+</code></pre></div>
+<h4 id="line-numbers-titles-and-highlighting-lines">Line numbers, titles and highlighting lines<a class="headerlink" href="#line-numbers-titles-and-highlighting-lines" title="Permanent link">&para;</a></h4>
+<h5 id="line-numbers">Line Numbers<a class="headerlink" href="#line-numbers" title="Permanent link">&para;</a></h5>
+<p class="annotate">You can add line numbers with <code>linenums="1"</code> this will make the first line 1. You can set the first line to any number;<br />
+For example, to start at 54(1): use <code>linenums="54"</code>.</p>
 <ol>
-<li>We use 1 for the <code>&lt;beta-version&gt;</code> here, because development update 1 was .0 and development update 2 was .1</li>
+<li>This is just an example number, any number can be used.</li>
 </ol>
-<h3 id="other-info">Other info<a class="headerlink" href="#other-info" title="Permanent link">&para;</a></h3>
-<h4 id="resetting-numbers">Resetting numbers<a class="headerlink" href="#resetting-numbers" title="Permanent link">&para;</a></h4>
-<p>Whenever a "parent" version number is incremented the "children" numbers must be rest to zero.</p>
-<details class="example" open="open">
-<summary>Example</summary>
-<ul>
-<li>If the current version is <code>1.5.6</code> and a new backwards <strong>compatible</strong> feature is being added the new version will be <code>1.6.0</code></li>
-<li>If the current version is <code>1.5.6</code> and a new backwards <strong>incompatible</strong> feature is being added the new version will be <code>2.0.0</code></li>
-</ul>
+<h5 id="highlighting-lines">Highlighting Lines<a class="headerlink" href="#highlighting-lines" title="Permanent link">&para;</a></h5>
+<p>You can also highlight any of the lines using <code>hl_lines="2 3"</code>; this will highlight lines 2 and 3, if you want to use a range just add a dash: <code>hl_lines="3-5"</code></p>
+<h5 id="adding-titles">Adding Titles<a class="headerlink" href="#adding-titles" title="Permanent link">&para;</a></h5>
+<p>Titles can be added with <code>title="This is a title"</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">With line numbers, a title and line 2 highlighted</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span> <span class="nf">add1</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="hll">  <span class="k">return</span> <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="annotations-footnotes-and-admonitions">Annotations, Footnotes and Admonitions<a class="headerlink" href="#annotations-footnotes-and-admonitions" title="Permanent link">&para;</a></h2>
+<p>The documentation also has annotations and admonitions which are not a normal markdown feature.</p>
+<h3 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h3>
+<h4 id="annotations-overview">Annotations Overview<a class="headerlink" href="#annotations-overview" title="Permanent link">&para;</a></h4>
+<p class="annotate">Annotations are small plus buttons that can be placed almost anywhere in the documentation that when clicked show more information.(1)</p>
+<ol>
+<li>This is an example annotation</li>
+</ol>
+<h4 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h4>
+<p>You can add these anywhere with a number inside of 2 parentheses, example: <code>(1)</code>. And then at the end of that block you add <code>{.annotate}</code> followed by a numbered list corresponding to the annotation number. Here is an example with comments to help you understand:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Example bit of text with annotation here: (1)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Another annotation here: (2)
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="hll">{.annotate}
+</span><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">1.</span> This is the first annotation - corresponds to <span class="sb">`(1)`</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">2.</span> Another annotation - corresponds to <span class="sb">`(2)`</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the <code>{.annotate} after the codeblock, it is required for the list item to not be rendered and instead link to the</code>(1)`.
+Also note the numbers used, they must matchup for the annotations to work correctly.</p>
+</div>
+<blockquote>
+<p>More information can be found <a href="https://squidfunk.github.io/mkdocs-material/reference/annotations/">here</a></p>
+</blockquote>
+<h3 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h3>
+<p>Footnotes can be added anywhere in a page. They work similarly to the annotations and look like this:</p>
+<blockquote>
+<p>There is a footnote at the end of this sentence.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+</blockquote>
+<h4 id="syntax_1">Syntax<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h4>
+<p>You indicate footnotes anywhere in a page with <code>[^1]</code> with the number working the same as the annotations. Just make sure the number corresponds between the location in the page and at the bottom.</p>
+<p>At the very bottom of the page you write the same identifier, so in this case <code>[^1]</code> followed by a <code>:</code> like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Text with footnote here: [^1]
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="hll">[<span class="nl">^1</span>]: <span class="na">This is an example footnote text</span>
+</span></code></pre></div>
+<blockquote>
+<p>More information can be found <a href="https://squidfunk.github.io/mkdocs-material/reference/footnotes/?h=footnote">here</a></p>
+</blockquote>
+<h3 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h3>
+<p>Admonitions are the "notes" or "warnings" you will have seen, they are in a colored box and stand out. Here is an example:</p>
+<details class="example">
+<summary>Example admonition</summary>
+<p>Admonition text</p>
 </details>
-<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
-<p>The documentation operates on version of just <code>&lt;major&gt;.&lt;minor&gt;</code> This will still match the client because no major documentation change will happen during a patch of the HASS.Agent client.</p>
-<p>The other difference between this version system and the client's version system is that beta version attributes will not exist. In the documentation if the upcoming release is going to be <code>1.5.0</code> and the current beta version is <code>1.5.0-beta.3</code> then the docs will have <code>1.5</code> with the label/attribute <code>beta</code>.</p>
+<h4 id="syntax_2">Syntax<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h4>
+<p>They can be written like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>!!! note
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    This is a note admonition
+</code></pre></div>
+<p>Titles can be included by adding text in <code>""</code> after the admonition type:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>!!! note &quot;Note admonition example title&quot;
+</code></pre></div>
+<h4 id="collapsible-admonitions">Collapsible admonitions<a class="headerlink" href="#collapsible-admonitions" title="Permanent link">&para;</a></h4>
+<p>You can create either static admonitions or collapsible ones. Collapsible ones are indicated with a <code>???</code> instead of <code>!!!</code>, if you would like the collapsible one to be open by default then use <code>???+</code>.</p>
+<blockquote>
+<p>More informaition including the list of admonition types can be found <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/">here</a></p>
+</blockquote>
+<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">&para;</a></h2>
+<p>The documentation has multiple diagrams spread across the pages that can be edited from the markdown files. All of these are based on <a href="http://mermaid.js.org/syntax/flowchart.html">mermaidjs</a>.</p>
+<p>The documentation basically exlusively uses flowcharts for better styling but all mermaid types are technically supported. You can find docs on the flowcharts <a href="http://mermaid.js.org/syntax/flowchart.html">here</a>, and more information about our implementation of mermaidjs <a href="https://squidfunk.github.io/mkdocs-material/reference/diagrams/">here</a>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The example footnote, you can use the enter button here to return to where you were:&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
   
@@ -1457,7 +1859,7 @@ The first beta version of the example upcoming <code>1.5.3</code> release would 
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Info">
+          <a href="../development-lifecycle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Development Lifecycle">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1467,11 +1869,27 @@ The first beta version of the example upcoming <code>1.5.3</code> release would 
                 Previous
               </span>
               <div class="md-ellipsis">
-                Info
+                Development Lifecycle
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../adding-pages/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding Pages">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Adding Pages
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
