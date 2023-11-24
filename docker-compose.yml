@@ -1,0 +1,9 @@
+version: "3"
+services:
+  docs:
+    build: .
+    container_name: hass-agent-docs
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
