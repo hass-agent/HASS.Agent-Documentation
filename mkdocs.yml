@@ -21,12 +21,12 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.tracking
-    - toc.integrate # TOC is table of contents
+    - navigation.indexes
     - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
   language: en
   palette:
@@ -102,7 +102,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
-      toc_depth: 3
+      toc_depth: 4
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -136,13 +136,16 @@ nav:
       - Start Here: contributing/index.md
       - Reporting Issues: contributing/reporting-issues.md
       - Developing the App:
-          - Start Here: contributing/hass-agent-app/index.md
+          - contributing/hass-agent-app/index.md
       - Developing the Integration:
-          - Start Here: contributing/hass-agent-integration/index.md
+          - contributing/hass-agent-integration/index.md
       - Developing the Documentation:
-          - Start Here: contributing/hass-agent-documentation/index.md
+          - contributing/hass-agent-documentation/index.md
           - Setup: contributing/hass-agent-documentation/setup.md
           - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
+          - Editing Files: contributing/hass-agent-documentation/editing-files.md
+          - Adding Pages: contributing/hass-agent-documentation/adding-pages.md
+          - Special Pages / Other Files: contributing/hass-agent-documentation/special-files.md
       - Extra Resources:
           - Info: contributing/developer-resources/index.md
           - Version System: contributing/developer-resources/version-system.md
