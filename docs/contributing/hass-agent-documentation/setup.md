@@ -34,52 +34,30 @@ Select the current branch --> View all branches --> Select the delete icon next 
 
 Now you will want to navigate to a directory on your pc for HASS.Agent, I will be using `HASS.Agent`
 
-Now go ahead and create two new folders named `hass-agent-docs-beta` and `hass-agent-docs-main`.
+Now go ahead and create at least one new folder named `hass-agent-docs-beta`.
 
 ### Clone the branches to each folder
 
-Open a command prompt in the `HASS.Agent` folder and clone your forked repo into the `hass-agent-docs-main` folder. After that clone the `beta` branch of your forked repo into the `hass-agent-docs-beta` folder. You can use the `-b beta` flag for this.
+Open a command prompt in the `HASS.agent` directory and clone the `beta` branch of your forked repo into the `hass-agent-docs-beta` folder. You can use the `-b beta` flag for this.
 
-## Setting up virtual environments
+## Setting up local environment
 
-Now you will need to repeat the following steps in each of the folders:
+???+ warning "Docker Required"
 
-???+ warning
+    Docker is required to contribute to the documentation, you can get it [here](https://hub.docker.com). You will also need the docker engine to be running whenever you want to edit the documentation.
 
-    Steps 2 onwards require vscode and the python extension for vscode to be installed.
+### Setup Docker
 
-### Setup venv and vscode
+To setup the local docker environment all you need to do is run the following command:
 
-1. run `python -m venv venv` to create a venv environment named venv
-2. run `code .` to open the folder in vscode
-3. Use ctrl + shift + p to open the command pallette and type in `select interpreter` and press enter. Now select the python located in `.\venv\scripts\python.exe`
-4. Use ctrl + , to open the user settings page. Now search for `activate environment` and make sure Python > Terminal: Activate Environment is turned on
-5. Open a new terminal in vscode using ctrl + `
-6. Verify this terminal contains `(venv)` at the start
-
-???+ note
-
-    After this setup whenever you open vscode to either of these projectsm new terminals will have the venv activated by default. However when re-opening a project vscode's terminal history **does not** activate the venv. So make sure to create a new terminal each time to ensure it's activated. As always you will know it's active when you see `(venv)` at the start.
-
-### Install all requirements
-
-In both of these directories you will need to run:
-
-- `pip install -r requirements.txt`
-
-To install all the dependencies for the documentation.
-
-!!! warning
-
-    Make sure the venv is active before running `pip install` or you will get errors.
-
-## Finishing up
-
-You will now have two separate directories setup on your machine that reflect a fork of the hass.agent docs repo. This will allow you to modify the documentation and test your edits. As well as upload these edits to github and have them reviewed and implemented into the official documentation. The final directory structure will look something like this:
-
-```{.sh .no-copy}
-.
-└─ HASS.Agent/
-   ├─hass-agent-docs-beta/
-   └─hass-agent-docs-main/
+```bash
+docker-compose up
 ```
+
+This will build and setup the local docker and activate the live reload editing page. You can view this page at [localhost:8000](http://localhost:8000).
+
+As long as this page successfully shows the documentation you can continue on to the development lifecycle and editing pages.
+
+???+ note "Hotfixes on the main branch"
+
+    If you want to put hotfixes onto the main branch you can repeat the steps from [here](#setting-up-the-local-branches).
