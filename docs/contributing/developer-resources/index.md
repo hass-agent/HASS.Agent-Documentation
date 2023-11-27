@@ -4,4 +4,4 @@ This section contains extra and shared resources for developers. You will find i
 
 ### Versioning
 
-The HASS.Agent client uses a version system that is shared with the documentation, you can read more on this [here](./version-system.md)
+The HASS.Agent client uses a version system that is shared with the documentation, you can read more on this [here](./version-system.md).
