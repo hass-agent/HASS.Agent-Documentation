@@ -35,3 +35,5 @@ However the project does require that you understand the basics of git version c
 ### Editing the documentation yourself
 
 If you understand the basics of git and can use an IDE(VSCode) then you can check out [this](hass-agent-documentation/index.md) section about contributing to the documentation.
+
+## Translating
