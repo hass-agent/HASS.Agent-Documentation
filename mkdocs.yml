@@ -7,13 +7,15 @@ site_description: >-
 repo_url: https://github.com/hass-agent/hass-agent.github.io
 repo_name: HASS.Agent Docs Repo
 
+edit_uri: edit/beta/docs/
+
 copyright: >
   Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a> -
   <a href="#__consent">Change cookie settings</a>
 
 theme:
   name: material
-  custom_dir: theme_override_home
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
@@ -28,6 +30,8 @@ theme:
     - content.tabs.link
     - content.code.annotate
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   language: en
   palette:
     - scheme: default
@@ -59,7 +63,7 @@ plugins:
 
 # Add stylesheet for custom color scheme
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 # Add social icons to footer
 extra:
@@ -119,6 +123,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.mark
   - attr_list
   - md_in_html
@@ -130,10 +137,11 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-      - Start Here: getting-started/index.md
+      - getting-started/index.md
       - Installation: getting-started/installation.md
   - Helping Out:
-      - Start Here: contributing/index.md
+      - contributing/index.md
+      - We Need Help: contributing/need-help.md
       - Reporting Issues: contributing/reporting-issues.md
       - Developing the App:
           - contributing/hass-agent-app/index.md
@@ -146,6 +154,9 @@ nav:
           - Editing Files: contributing/hass-agent-documentation/editing-files.md
           - Adding Pages: contributing/hass-agent-documentation/adding-pages.md
           - Special Pages / Other Files: contributing/hass-agent-documentation/special-files.md
+      - Translating:
+          - contributing/translating/index.md
       - Extra Resources:
-          - Info: contributing/developer-resources/index.md
+          - contributing/developer-resources/index.md
           - Version System: contributing/developer-resources/version-system.md
+          - Current Developers: contributing/developer-resources/current-devs.md
