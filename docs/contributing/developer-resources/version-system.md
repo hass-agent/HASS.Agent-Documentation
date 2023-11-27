@@ -1,8 +1,8 @@
 # HASS.Agent's version system
 
-## WARNING!
+!!! warning
 
-#### You must read and understand this entire page if you want to be able to develop any part of HASS.Agent
+    You must read and understand this entire page if you want to be able to develop any part of HASS.Agent. It helps you to understand the versioning and how to understand different versions of HASS.Agent
 
 ## Overview
 
