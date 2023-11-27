@@ -17,7 +17,7 @@ At the root of the project you will see a directory structure similar to this:
 │   ├───ISSUE_TEMPLATE
 │   └───workflows
 ├───docs
-├───theme_override_home
+├───overrides
 │   ├───home.html
 │   └───main.html
 ├───mkdocs.yaml
@@ -35,7 +35,7 @@ At the root of the project you will see a directory structure similar to this:
 
 - `docs`: This folder contains all of the files used to make the pages of the documentation. This is where you will find the markdown files.
 
-- `theme_override_home/`: This folder contains "Theme Overrides", which allow us to have very fine control over the documentation.
+- `overrides/`: This folder contains "Theme Overrides", which allow us to have very fine control over the documentation.
 
 #### Other directories
 
