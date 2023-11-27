@@ -43,7 +43,7 @@ flowchart TB
   main-branch>Main Branch]
 ```
 
-The highlighted blue node is where your changes will be entered into the process. You will creata Pull Request to have your code reviewed and then merged into the specified branch.
+The highlighted blue node is where your changes will be entered into the process. You will create a Pull Request to have your code reviewed and then merged into the specified branch.
 
 ## Picking a branch
 
@@ -65,8 +65,8 @@ After selecting a branch you will modify any markdown files you want and save th
 
 After all edits have been made you can commit the changes to your repo. You should follow these main guidelines:
 
-- There is such thing as too many commits. As much as we want you to separate each change into it's own commit try to not do 100 commits.
-- Also don't do just 1 commit, if you only fix 1 file than 1 commit is fine, but if you have edited multiple files than more than 1 commit is appreciated.
+- There **is** such thing as too many commits. As much as we want you to separate each change into it's own commit try to not do 100 commits.
+- Also don't do just 1 commit, if you only fix 1 file than 1 commit is fine, but if you have edited multiple files then more than 1 commit is appreciated.
 - Make proper commit messages; don't just say `fixed grammar`, specify the page and what section you have fixed.
 
 ### Creating a PR
