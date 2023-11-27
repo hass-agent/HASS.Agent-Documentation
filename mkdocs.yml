@@ -149,6 +149,7 @@ nav:
           - contributing/hass-agent-integration/index.md
       - Developing the Documentation:
           - contributing/hass-agent-documentation/index.md
+          - Easy Editing: contributing/hass-agent-documentation/easy-editing.md
           - Setup: contributing/hass-agent-documentation/setup.md
           - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
           - Editing Files: contributing/hass-agent-documentation/editing-files.md
