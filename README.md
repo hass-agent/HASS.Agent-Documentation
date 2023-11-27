@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/LAB02-Research/HASS.Agent">
-    <img src="https://raw.githubusercontent.com/LAB02-Research/HASS.Agent/08310c474780107f63053cf02ce52f80e49408cb/images/logo_256.png"  alt="HASS.Agent" />
+  <a href="https://github.com/hass-agent/HASS.Agent">
+    <img src="docs/assets/images/logo/logo-256.png"  alt="HASS.Agent" />
   </a>
 </p>
 <p align="center">
