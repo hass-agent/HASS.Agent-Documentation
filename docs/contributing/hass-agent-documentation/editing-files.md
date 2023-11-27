@@ -101,6 +101,42 @@ To start off with, most of the stuff written will just be plain text, for exampl
 
 You will notice all of these require a certain character followed by a space. If you do not include a space between the special character and the text it will not showup correctly.
 
+### Hyperlinks
+
+We use the standard markdown implementation for hyper links however some extra attributes can be added. Here is a standard link with the text home and the link to the homepage:
+
+```md
+[home](https://hass-agent.github.io/latest/)
+```
+
+#### Inside Links
+
+Inside links point to pages or sections inside of this documentation, for example I want to navigate a user to the forking section of the setup for editing the documentation:
+
+```md
+[More info on forking the repo](./setup.md/#forking-the-repo)
+```
+
+[More info on forking the repo](./setup.md/#forking-the-repo)
+
+This link points to a local file by using a `./` followed by the name of the file. If you want to go up a directory you use `../` These can be chained together to get anywhere in the documentation. E.g `../../getting-started/index.md`
+
+The hashtag specifies which section of the page you want to link to, vscode should autocomplete this for you but if not you can click the P icon to the right of any heading in the docs and the url at the top will end with the correct hashtag link to use.
+
+!!! example
+
+    This section we are in right now can be linked to with `#inside-links`
+
+#### External Links
+
+You can add links that point to any address however most of the time they should be opened in a new tab. Unless the link is a direct file download link you need to add this attribute to tell the browser to open the link in a new tab: `{: target="\_blank"}`
+
+```md title="Example link to open google in a new tab"
+[google](https://google.com){: target="\_blank"}
+```
+
+[google](https://google.com){: target="\_blank"}
+
 ### Newlines and document structure
 
 Every different "text-type" should have a newline separating it from the previous one. So there should be a new line between titles and paragraphs and also a new line between a title and a group of list items, etc.
@@ -222,7 +258,7 @@ Another annotation here: (2)
     Note the `{.annotate} after the codeblock, it is required for the list item to not be rendered and instead link to the `(1)`.
     Also note the numbers used, they must matchup for the annotations to work correctly.
 
-> More information can be found [here](https://squidfunk.github.io/mkdocs-material/reference/annotations/)
+> More information can be found [here](https://squidfunk.github.io/mkdocs-material/reference/annotations/){: target="\_blank"}
 
 ### Footnotes
 
@@ -242,7 +278,7 @@ Text with footnote here: [^1]
 [^1]: This is an example footnote text
 ```
 
-> More information can be found [here](https://squidfunk.github.io/mkdocs-material/reference/footnotes/?h=footnote)
+> More information can be found [here](https://squidfunk.github.io/mkdocs-material/reference/footnotes/?h=footnote){: target="\_blank"}
 
 ### Admonitions
 
@@ -272,12 +308,12 @@ Titles can be included by adding text in `""` after the admonition type:
 
 You can create either static admonitions or collapsible ones. Collapsible ones are indicated with a `???` instead of `!!!`, if you would like the collapsible one to be open by default then use `???+`.
 
-> More informaition including the list of admonition types can be found [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
+> More informaition including the list of admonition types can be found [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){: target="\_blank"}
 
 ## Diagrams
 
-The documentation has multiple diagrams spread across the pages that can be edited from the markdown files. All of these are based on [mermaidjs](http://mermaid.js.org/syntax/flowchart.html).
+The documentation has multiple diagrams spread across the pages that can be edited from the markdown files. All of these are based on [mermaidjs](http://mermaid.js.org/syntax/flowchart.html){: target="\_blank"}.
 
-The documentation basically exlusively uses flowcharts for better styling but all mermaid types are technically supported. You can find docs on the flowcharts [here](http://mermaid.js.org/syntax/flowchart.html), and more information about our implementation of mermaidjs [here](https://squidfunk.github.io/mkdocs-material/reference/diagrams/).
+The documentation basically exlusively uses flowcharts for better styling but all mermaid types are technically supported. You can find docs on the flowcharts [here](http://mermaid.js.org/syntax/flowchart.html){: target="\_blank"}, and more information about our implementation of mermaidjs [here](https://squidfunk.github.io/mkdocs-material/reference/diagrams/){: target="\_blank"}.
 
 [^1]: The example footnote, you can use the enter button here to return to where you were:

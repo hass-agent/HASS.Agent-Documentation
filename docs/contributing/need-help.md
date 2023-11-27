@@ -2,7 +2,7 @@
 
 ??? info "Link to original post"
 
-    This page is an updated repost of the original one by LAB02Research, you can find the original one [here](https://lab02-research.org/2023-04-01-help-wanted/).
+    This page is an updated repost of the original one by LAB02Research, you can find the original one [here](https://lab02-research.org/2023-04-01-help-wanted/){: target="\_blank"}.
 
 ## Welcome to the Evolving World of HASS.Agent!
 

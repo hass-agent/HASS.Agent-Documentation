@@ -4,9 +4,9 @@
 
 This page explains the basics behind HASS.Agent: What it is and what it can do. We'll be using the abbreviation **HA** for Home Assistant, so when HA is mentioned, it refers to your Home Assistant instance.
 
-> Tip: you can use Home Assistant's [glossary](https://www.home-assistant.io/docs/glossary/) to look up words you don't know yet.
+> Tip: you can use Home Assistant's [glossary](https://www.home-assistant.io/docs/glossary/){: target="\_blank"} to look up words you don't know yet.
 
-> Tip: EverythingSmartHome's youtube video is a great guide to get you started: [Control Your Windows PC With Home Assistant!](https://www.youtube.com/watch?v=B4SnJPVbSXc). Note that it is based on an older version, so for instance the mentioned missing 'actionable notifications' are already implemented.
+> Tip: EverythingSmartHome's youtube video is a great guide to get you started: [Control Your Windows PC With Home Assistant!](https://www.youtube.com/watch?v=B4SnJPVbSXc){: target="\_blank"}. Note that it is based on an older version, so for instance the mentioned missing 'actionable notifications' are already implemented.
 
 ## Overview
 
