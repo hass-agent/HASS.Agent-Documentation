@@ -4,7 +4,7 @@ We value your feedback! If you encounter issues or have suggestions for new feat
 
 ## Discord
 
-Join our Discord server to engage with the community, share your thoughts, and get help; [here](https://discord.com/invite/nMvqzwrVBU){: target="\_blank"}.
+Join our Discord server to engage with the community, share your thoughts, and get help; [here](https://discord.gg/JfZj98xqJr){: target="\_blank"}.
 
 ## GitHub Issues
 

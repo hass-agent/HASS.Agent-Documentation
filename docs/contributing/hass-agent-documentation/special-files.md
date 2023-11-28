@@ -31,7 +31,7 @@ Feel free to edit the html if you know what you are doing, but note that homepag
 
 **I don't know how to edit html/css but have found issues/modifications**
 
-You can either submit a github issue or use discord. For more info on creating a [github issue](../reporting-issues.md) checkout [Reporting Issues](../reporting-issues.md). If you want to use discord you can either dm [@drr0x](https://discord.com/users/638245963240046592){: target="\_blank"} the lead documentation dev or post a message in the dev channel on [this](https://discord.com/invite/nMvqzwrVBU){: target="\_blank"} discord server.
+You can either submit a github issue or use discord. For more info on creating a [github issue](../reporting-issues.md) checkout [Reporting Issues](../reporting-issues.md). If you want to use discord you can either dm [@drr0x](https://discord.com/users/638245963240046592){: target="\_blank"} the lead documentation dev or post a message in the dev channel on [this](https://discord.gg/JfZj98xqJr){: target="\_blank"} discord server.
 
 ## List of current overrides
 

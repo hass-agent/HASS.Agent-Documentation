@@ -7,7 +7,7 @@
 There are lots of ways to help out with HASS.Agent, even if you can't code. Here are some of the ways you can contribute:
 
 - Submitting Github issues whenever you find an error or problem with any aspect of HASS.Agent. Use [this](reporting-issues.md) guide for more info.
-- Helping other users of HASS.Agent with setup and usage. You can help other users in our discord server [here](https://discord.com/invite/nMvqzwrVBU){: target="\_blank"}.
+- Helping other users of HASS.Agent with setup and usage. You can help other users in our discord server [here](https://discord.gg/JfZj98xqJr){: target="\_blank"}.
 - Adding and updating everything found here in the HASS.Agent Documentation. More info can be found [below](#helping-out-with-the-documentation).
 - Translating HASS.Agent's app and documentation to reach more people. There is a specific guide for this, which you can find [here](translating/index.md).
 
