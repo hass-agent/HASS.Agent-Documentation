@@ -6,7 +6,7 @@
 
 ## Forking the repo
 
-To start off you will need to create your own fork of the documentation repo to track your changes. To do this go ahead and navigate to [this](https://github.com/hass-agent/hass-agent.github.io) repo. You will need to create a fork of this repo, a tutorial for this can be found [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+To start off you will need to create your own fork of the documentation repo to track your changes. To do this go ahead and navigate to [this](https://github.com/hass-agent/hass-agent.github.io){: target="\_blank"} repo. You will need to create a fork of this repo, a tutorial for this can be found [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo){: target="\_blank"}.
 
 ### Forking all branches
 
@@ -44,7 +44,7 @@ Open a command prompt in the `HASS.agent` directory and clone the `beta` branch 
 
 ???+ warning "Docker Required"
 
-    Docker is required to contribute to the documentation, you can get it [here](https://hub.docker.com). You will also need the docker engine to be running whenever you want to edit the documentation.
+    Docker is required to contribute to the documentation, you can get it [here](https://hub.docker.com){: target="\_blank"}. You will also need the docker engine to be running whenever you want to edit the documentation.
 
 ### Setup Docker
 
@@ -54,10 +54,10 @@ To setup the local docker environment all you need to do is run the following co
 docker-compose up
 ```
 
-This will build and setup the local docker and activate the live reload editing page. You can view this page at [localhost:8000](http://localhost:8000).
+This will build and setup the local docker and activate the live reload editing page. You can view this page at [localhost:8000](http://localhost:8000){: target="\_blank"}.
 
 As long as this page successfully shows the documentation you can continue on to the development lifecycle and editing pages.
 
-???+ note "Hotfixes on the main branch"
+???+ info "Hotfixes on the main branch"
 
     If you want to put hotfixes onto the main branch you can repeat the steps from [here](#setting-up-the-local-branches).

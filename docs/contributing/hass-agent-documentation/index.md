@@ -1,5 +1,9 @@
 # Contributing to the HASS.Agent Documentation
 
+!!! note "Easier Editor"
+
+    If you do not understand the basics of VSCode or git version control then take a look at [this](./easy-editing.md) page.
+
 !!! warning
 
     **Make sure you understand the HASS.Agent client version system before continuing. You can find info on it [here](../developer-resources/version-system.md/#clientdocumentation-versioning).**
@@ -20,7 +24,7 @@ At the top of the documentation you will find a selector to the write of the tit
 
 ## Github Structure
 
-The repo for the documentation is linked at the top right of the documentation at all times and is also available [here](https://github.com/hass-agent/hass-agent.github.io). Go ahead and open it in another tab to reference as you go through this section.
+The repo for the documentation is linked at the top right of the documentation at all times and is also available [here](https://github.com/hass-agent/hass-agent.github.io){: target="\_blank"}. Go ahead and open it in another tab to reference as you go through this section.
 
 ### Branches Overview
 
