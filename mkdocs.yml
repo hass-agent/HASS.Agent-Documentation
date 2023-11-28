@@ -142,7 +142,7 @@ nav:
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
-      - Reporting Issues: contributing/reporting-issues.md
+      - Reporting Issues / Features: contributing/reporting-issues.md
       - Developing the App:
           - contributing/hass-agent-app/index.md
       - Developing the Integration:
