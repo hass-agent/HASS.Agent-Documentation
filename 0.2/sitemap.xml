@@ -2,87 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hass-agent.github.io/latest/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/introduction/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hass-agent.github.io/latest/contributing/need-help/</loc>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/reporting-issues/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/developer-resources/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hass-agent.github.io/latest/contributing/developer-resources/current-devs/</loc>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/developer-resources/version-system/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-app/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/adding-pages/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/development-lifecycle/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/easy-editing/</loc>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/editing-files/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/setup/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-documentation/special-files/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/hass-agent-integration/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/contributing/translating/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/getting-started/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://hass-agent.github.io/latest/getting-started/installation/</loc>
-         <lastmod>2023-11-24</lastmod>
+         <lastmod>2023-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

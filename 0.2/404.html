@@ -47,7 +47,7 @@
       
     
     
-      <link rel="stylesheet" href="/latest/stylesheets/extra.css">
+      <link rel="stylesheet" href="/latest/assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL("/latest",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -111,7 +111,7 @@
 </style>
 
 <strong>
-  <a href="help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
+  <a href="/contributing/need-help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
 </strong>
 
 
@@ -253,7 +253,7 @@
     
     <div class="md-container" data-md-component="container">
       
-      
+       
         
           
             
@@ -324,6 +324,68 @@
           
         
       
+
+<style>
+  .error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; /* Added more padding on the sides */
+  }
+
+  .error-image {
+    max-width: 35%;
+    height: auto;
+    margin-right: 30px;
+  }
+
+  .error-message-container {
+    text-align: center;
+    margin-left: 30px;
+  }
+
+  .error-message {
+    font-size: 48px;
+    margin-top: 20px;
+  }
+
+  .error-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px; /* Added more gap between the blue buttons */
+    margin-top: 20px;
+  }
+
+  .error-button {
+    display: inline-block;
+    padding: 15px 20px; /* Slightly less padding */
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #41bdf5;
+    border-radius: 5px;
+    width: calc(100% - 10px); /* Adjusted width to account for padding */
+  }
+
+  .error-button:hover {
+    background-color: #3395c2;
+  }
+</style>
+
+<div class="error-container">
+  <img src="/assets/images/404.png" alt="404, page not found" class="error-image" />
+  <div class="error-message-container">
+    <h1 class="error-message">Let's get you back on track:</h1>
+    <div class="error-buttons-container">
+      <a href="/getting-started" class="error-button">Getting Started</a>
+      <a href="/" class="error-button">Homepage</a>
+      <a href="/setup" class="error-button">Setup</a>
+      <a href="/contributing" class="error-button">Contributing</a>
+    </div>
+  </div>
+</div>
+
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -487,6 +549,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -536,11 +602,31 @@
   
   
     <li class="md-nav__item">
+      <a href="/latest/contributing/need-help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    We Need Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="/latest/contributing/reporting-issues/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Reporting Issues
+    Reporting Issues / Features
   </span>
   
 
@@ -574,7 +660,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           
@@ -591,8 +677,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Developing the App
           </label>
@@ -632,7 +718,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
           
@@ -649,8 +735,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Developing the Integration
           </label>
@@ -688,6 +774,8 @@
       
         
       
+        
+      
     
     
     
@@ -700,7 +788,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
           
@@ -716,19 +804,39 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Developing the Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/contributing/hass-agent-documentation/easy-editing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Easy Editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -851,6 +959,66 @@
           
         
       
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="/latest/contributing/translating/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Translating
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Translating
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
         
       
     
@@ -865,7 +1033,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           
@@ -881,14 +1049,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Extra Resources
           </label>
@@ -907,6 +1075,26 @@
   
   <span class="md-ellipsis">
     Version System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/contributing/developer-resources/current-devs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Current Developers
   </span>
   
 
@@ -959,8 +1147,6 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
-
               </article>
             </div>
           
@@ -1112,7 +1298,7 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "/latest", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "/latest/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "/latest", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "/latest/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="/latest/assets/javascripts/bundle.81fa17fe.min.js"></script>
