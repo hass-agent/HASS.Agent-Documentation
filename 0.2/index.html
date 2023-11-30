@@ -333,9 +333,30 @@
         
       
 <style>
-  .md-main {
+  /* Remove spacing, as we cannot hide it completely */
+  .md-main__inner {
+    margin: 0;
+  }
+
+  /* Hide main content for now */
+  .md-content {
     display: none;
   }
+
+  /* Hide table of contents */
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
+  /* Hide navigation */
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -616,6 +637,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -670,6 +695,46 @@
   
   <span class="md-ellipsis">
     Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/initial-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initial Setup and First Run
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/other-installs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Install Methods
   </span>
   
 
