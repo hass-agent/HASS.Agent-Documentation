@@ -1,9 +1,5 @@
 # Other HASS.Agent Installation Methods
 
-## Manually installing HASS.Agent
-
-Installing
-
 ## Installing the integration without HACS
 
 If you don't want to use HACS for installation of the HASS.Agent integration you can do it manually.
