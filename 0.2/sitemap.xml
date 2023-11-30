@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://hass-agent.github.io/latest/changelog/</loc>
+         <lastmod>2023-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://hass-agent.github.io/latest/contributing/</loc>
          <lastmod>2023-11-30</lastmod>
          <changefreq>daily</changefreq>
