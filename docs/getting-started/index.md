@@ -14,16 +14,16 @@ In general, HASS.Agent is a client (_companion_) application for Home Assistant.
 
 The communication goes both ways: HASS.Agent can send data to HA, and HA can send data to HASS.Agent. In other words: you can use HASS.Agent to control and inform HA, and you can use HA to control HASS.Agent.
 
-Globally, these are the functionalities:
+## Main Functionalities
 
-| Function          | Description                                                                                                                          |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Commands          | Control your PC from HA.<br/>Example: lock your session, open notepad or emulate a keypress.                                         |
-| Sensors           | Send PC telemetry to HA.<br/>Example: cpu load, is your webcam active or is the current user active.                                 |
-| Quick Actions     | Trigger any HA entity.<br/>Example: turn on your lights or open the garage door.                                                     |
-| Notifications     | Receive a notification from HA, and show it as a Windows notification.<br/>Example: image of who's at the front door.                |
-| Media Player      | Control your PC from HA as if it were a mediaplayer.<br/>Example: see what Spotify song's playing, or send a text-to-speech message. |
-| WebView           | Show any webpage, without launching a browser.<br/>Example: show a HA dashboard when rightclicking HASS.Agent's tray icon.           |
-| Satellite Service | Process commands and sensors even when no user's logged in.<br/>Example: shutdown your PC at any time, locked or not.                |
+| Function          | Description                                                                    | Usage Examples                                                     |
+| ----------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Commands          | Control your PC from HA.                                                       | Lock your session, open notepad, or emulate a keypress.            |
+| Sensors           | Send PC telemetry data to HA.                                                  | CPU load, webcam status, or user activity.                         |
+| Quick Actions     | Control and view any HA entity from your taskbar or a hotkey.                  | Turn on lights or open the garage door.                            |
+| Notifications     | Send notifications from HA to Windows, includes actionable buttons and images. | Display an image of who's at the front door.                       |
+| Media Player      | Control your PC from HA as if it were a media player.                          | See what Spotify song's playing, or send a text-to-speech message. |
+| WebView           | Show any webpage or URL, without launching a browser.                          | Show a doorbell camera stream when the doorbell is pressed.        |
+| Satellite Service | Process commands and sensors even when no user is logged in.                   | Shutdown your PC at any time, locked or not.                       |
 
-We'll go into each function in depth a bit later on. For now lets get HASS.Agent installed and connected.
+We'll go into each function in depth a bit later on. For now lets get HASS.Agent [installed](./installation.md) and connected.
