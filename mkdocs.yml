@@ -166,3 +166,4 @@ nav:
           - contributing/developer-resources/index.md
           - Version System: contributing/developer-resources/version-system.md
           - Current Developers: contributing/developer-resources/current-devs.md
+  - Changelog: changelog.md
