@@ -114,6 +114,9 @@ markdown_extensions:
   - admonition
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
   - footnotes
   - pymdownx.details
   - pymdownx.superfences:
@@ -139,6 +142,8 @@ nav:
   - Getting Started:
       - getting-started/index.md
       - Installation: getting-started/installation.md
+      - Initial Setup and First Run: getting-started/initial-setup.md
+      - Other Install Methods: getting-started/other-installs.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
