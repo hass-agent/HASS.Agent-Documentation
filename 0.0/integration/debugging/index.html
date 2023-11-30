@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="LAB02-Research" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Debugging - NOTE Outdated docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Debugging";
+        var mkdocs_page_input_path = "integration\\debugging.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> NOTE Outdated docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../outdated/">OUTDATED DOCUMENTATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../configuration/">Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation-and-configuration-summary/">Installation and Configuration Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../updating/">Updating</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../screenshots/">Screenshots</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../clean-slate/">Clean Slate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../performance-counter-debugging/">Performance Counter Debugging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../translating/">Translating</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Misc Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../wmi-examples/">WMI Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/activewindowsensor-multiple-processes/">ActiveWindowSensor - Multiple Processes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/adjust-screen-brightness/">Adjust Screen Brightness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-card/">PC Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-state/">PC State Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Commands</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/command-basics/">Command Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/actions-usage-and-examples/">Actions Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/elevated-custom-command/">Elevated Custom Command</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Integration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Debugging</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#home-assistant">Home Assistant</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hassagent">HASS.Agent</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Media Player</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mediaplayer/mediaplayer-usage-and-examples/">MediaPlayer Usage and Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-usage-and-examples/">Notification Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-actionable/">Actionable Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-debugging/">Notification Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications Legacy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-client-side/">Notification Debugging - Client Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ha-side/">Notification Debugging - HA Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ssl/">Notification Debugging - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/sensors/">Sensors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">NOTE Outdated docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Integration</li>
+      <li class="breadcrumb-item active">Debugging</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="debugging">Debugging</h1>
+<h4 id="home-assistant">Home Assistant</h4>
+<p>If an integration isn't working as it should, you can opt to enable debug logging in Home Assistant. This will show you logs for every step the integration's taking, so you (or the dev) can better determine what's going wrong.</p>
+<p>Go to your file-editor-of-choice in HA, and open <code>configuration.yaml</code>. Add the following snippet:</p>
+<pre><code class="language-yaml">logger:
+  default: warning
+  logs:
+    custom_components.hass_agent: debug
+</code></pre>
+<p>This is for the new integration. If you use either of the old ones, you can add these rows:</p>
+<pre><code class="language-yaml">    custom_components.hass_agent_notifier: debug
+    custom_components.hass_agent_mediaplayer: debug
+</code></pre>
+<p>Reboot HA, and it'll be activated. </p>
+<blockquote>
+<p>Tip: install the <a href="https://github.com/hassio-addons/addon-log-viewer">Log Viewer</a> add-on for easy viewing.</p>
+</blockquote>
+<p>You should see rows like this coming in:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/202460423-721d495d-b160-49e6-a89c-7ab3b66f24ab.png" /></p>
+<hr />
+<h4 id="hassagent">HASS.Agent</h4>
+<p>If you're sure everything's working from HA's end, you can check HASS.Agent's logs. Open the <code>Configuration</code> window, navigate to the <code>Logging</code> page and click <code>Open Logs Folder</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/202460956-80757e7c-28b4-4fc0-b0e2-27ad99e49b75.png" /></p>
+<p>In there, sort by date, and open the latest log. You can ignore the files containing <code>restart</code> or <code>update</code> etc. in their name:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/202461663-8721786b-bdd6-4a32-a0be-62ba74c1e819.png" /></p>
+<p>Attach the content of the log to a <a href="https://github.com/LAB02-Research/HASS.Agent/issues">GitHub ticket</a>.</p>
+<p>If the log's not showing anything interesting, you can enable <code>Extended Logging</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/202461944-5fd37baf-998e-407b-836e-0e9ac140a7d0.png" /></p>
+<p>Restart HASS.Agent and try to reproduce your error.</p>
+<blockquote>
+<p>Note: disable this afterwards, as it can make the logfiles grow really large!</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../configuration/" class="btn btn-neutral float-left" title="Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../mediaplayer/mediaplayer-usage-and-examples/" class="btn btn-neutral float-right" title="MediaPlayer Usage and Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../mediaplayer/mediaplayer-usage-and-examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

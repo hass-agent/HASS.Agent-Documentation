@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="LAB02-Research" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Misc Examples - NOTE Outdated docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Misc Examples";
+        var mkdocs_page_input_path = "examples.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> NOTE Outdated docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../outdated/">OUTDATED DOCUMENTATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation-and-configuration-summary/">Installation and Configuration Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../updating/">Updating</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../screenshots/">Screenshots</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../clean-slate/">Clean Slate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../performance-counter-debugging/">Performance Counter Debugging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../translating/">Translating</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Misc Examples</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#template-sensor-storage-capacity">Template sensor: Storage Capacity</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#template-trigger-lastactive">Template trigger: LastActive</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#condition-tts-only-when-microphones-not-active">Condition: TTS only when microphone's not active</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#switch-wake-on-lan">Switch: Wake-On-LAN</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sensor-geolocation">Sensor: GeoLocation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sensor-ram-from-percent-to-usagetotal">Sensor: RAM from Percent to Usage/Total</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automation-change-lcd-brightness-based-on-lux-and-session-state">Automation: Change LCD brightness based on lux and session state</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#light-create-a-light-entity-for-your-monitors-powerstate">Light: Create a light entity for your monitor's powerstate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automation-toggle-light-based-on-motion-and-pc-activity">Automation: Toggle light based on motion and pc activity</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#command-grab-screenshot-using-powershell">Command: Grab screenshot using Powershell</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automation-send-a-notification-when-spotify-starts-playing">Automation: Send a notification when Spotify starts playing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sensor-battery-percentage-to-bluetooth-device">Sensor: Battery percentage to Bluetooth device</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#command-change-default-audio-playback-device">Command: Change default audio playback device</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wmi-examples/">WMI Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="activewindowsensor-multiple-processes/">ActiveWindowSensor - Multiple Processes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="adjust-screen-brightness/">Adjust Screen Brightness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pc-card/">PC Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="pc-state/">PC State Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Commands</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../commands/command-basics/">Command Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../commands/actions-usage-and-examples/">Actions Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../commands/elevated-custom-command/">Elevated Custom Command</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../integration/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../integration/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../integration/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../integration/debugging/">Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Media Player</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mediaplayer/mediaplayer-usage-and-examples/">MediaPlayer Usage and Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../notifications/notification-usage-and-examples/">Notification Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../notifications/new/notification-actionable/">Actionable Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../notifications/new/notification-debugging/">Notification Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications Legacy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../notifications/notification-debugging-client-side/">Notification Debugging - Client Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../notifications/notification-debugging-ha-side/">Notification Debugging - HA Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../notifications/notification-debugging-ssl/">Notification Debugging - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../development/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../development/commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../development/sensors/">Sensors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">NOTE Outdated docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Examples</li>
+      <li class="breadcrumb-item active">Misc Examples</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sensor-command-automation-and-script-examples">Sensor, Command, Automation and Script Examples</h1>
+<p>Below is a list of examples, provided by the community.</p>
+<hr />
+<h4 id="template-sensor-storage-capacity">Template sensor: Storage Capacity</h4>
+<p>Starting with 2022.13.0-beta2, multivalue sensors are using attributes. That means that a lot of values aren't reachable as regular sensors anymore. You can use <code>state_attr</code> to fetch the value, or even to create another sensor with just that specific value.</p>
+<p>Here's an example to get the AvailableSpaceMB attribute from a Storage multivalue sensor:</p>
+<pre><code class="language-yaml">template:
+  sensor:
+  - storage_capacity_c:
+      friendly_name: &quot;Storage Capacity Drive C&quot;
+      unit_of_measurement: &quot;MB&quot;
+      value_template: &quot;{{ state_attr('sensor.hass_agent_storage_c', 'AvailableSpaceMB') | float(0) }}&quot;
+</code></pre>
+<p>Make sure to change <code>sensor.hass_agent_storage_c</code> to the drive's sensor, and optionally <code>AvailableSpaceMB</code> to the attribute you want to use. The <code>| float(0)</code> part converts it to a number-based value, you can drop that if you want it as a text value.</p>
+<p>Reboot HA, and it'll show up as <code>sensor.storage_capacity_c</code>.</p>
+<h4 id="template-trigger-lastactive">Template trigger: LastActive</h4>
+<pre><code class="language-yaml">alias: example
+trigger:
+- platform: template
+  value_template: &quot;{{ (now() - states('sensor.testvm_lastactive')|as_datetime).total_seconds() &lt; 60 }}&quot;
+action:
+   ... etc ...
+</code></pre>
+<p>Alternative version:</p>
+<pre><code class="language-yaml">  value_template: &quot;{{ now() - states('sensor.testvm_lastactive')|as_datetime &lt; timedelta(minutes=1) }}&quot;
+</code></pre>
+<p>Alternative version (binary template sensor so you can use the true/false anywhere):</p>
+<pre><code class="language-yaml">template:
+  - binary_sensor:
+      - name: &quot;User Active&quot;
+        state: &quot;{{ as_timestamp(now(),0) - as_timestamp(states('sensor.staging_lastactive'),0) &lt; 60 }}&quot;
+</code></pre>
+<p>This will also not error when the sensor's unavailable (thanks <a href="https://community.home-assistant.io/t/how-to-handle-unknown-or-unavailable-states-in-template-entities-or-automations/411632/14">dbrunt</a>!).</p>
+<h4 id="condition-tts-only-when-microphones-not-active">Condition: TTS only when microphone's not active</h4>
+<pre><code class="language-yaml">tts_test:
+  alias: Test TTS
+  mode: single
+  sequence:
+    - condition: state
+      entity_id: binary_sensor.test_vm_mic_active
+      state: &quot;off&quot;
+    - service: notify.mycroft_tts
+      data_template:
+        message: &gt;-
+          {{ message }}
+</code></pre>
+<h4 id="switch-wake-on-lan">Switch: Wake-On-LAN</h4>
+<pre><code class="language-yaml">- platform: wake_on_lan
+  name: &quot;your_pc_name&quot;
+  mac: &quot;00-00-00-00-00-00&quot;
+  host: 10.0.0.5
+  broadcast_address: 10.0.0.255
+  turn_off:
+    service: switch.turn_on
+    data:
+      entity_id: switch.your_pc_hass_agent_shutdown_switch
+</code></pre>
+<p>Alternative version: use a <code>Hibernate Command</code> to put your PC in hibernation instead.</p>
+<p>You may need to enable a rule in Windows Firewall to allow ICMP (ping) packets. Open <strong>Windows Defender Firewall with Advanced Security</strong> by running <code>wf.msc</code> and go to <strong>Inbound Rules</strong>. Then look up the rules called <code>File and Printer Sharing (Echo Request - ICMPv*-In)</code>, and enable the ICMPv4 variants.</p>
+<p>To manually add a rule, consult these docs (thanks @ArekkusuDesu!):</p>
+<p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule">https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule</a></p>
+<h4 id="sensor-geolocation">Sensor: GeoLocation</h4>
+<pre><code class="language-yaml">alias: GPS voiture
+description: ''
+trigger:
+  - platform: state
+    entity_id: sensor.voiture_geolocation
+condition: []
+action:
+  - service: device_tracker.see
+    data:
+      dev_id: Voiture
+      gps:
+        - '{{ states(''sensor.voiture_geolocation'').split(&quot;,&quot;)[0] }}'
+        - '{{ states(''sensor.voiture_geolocation'').split(&quot;,&quot;)[1] }}'
+mode: single
+</code></pre>
+<p>This places the GeoLocation sensor as a <code>device_tracker</code> on the map (thanks <strong>Neilge</strong>!).</p>
+<h4 id="sensor-ram-from-percent-to-usagetotal">Sensor: RAM from Percent to Usage/Total</h4>
+<p>WMI Query Sensor:</p>
+<p>Query: <code>SELECT Capacity FROM Win32_PhysicalMemory</code></p>
+<p>Scope: <code>\\.\Root\CIMV2</code></p>
+<p>Home Assistant Template Sensor:</p>
+<pre><code class="language-yaml">- sensor:
+  - name: &quot;RAM Usage&quot;
+    state: &gt;
+      {% set ram = states('sensor.laptop_memoryusage') | float %}
+      {% set ramTotal = states('sensor.laptop_ramtotal') | int * 2 / 1024 / 1024 / 1024 %}
+      {% set usage = ramTotal | float / 100 * ram | round(0, default=0) %}
+      {% set state = usage | string + &quot;GB&quot; + &quot;/&quot; + ramTotal | string + &quot;GB&quot; %}
+
+      {{state}}
+</code></pre>
+<p>The sensor makes the assumption that you have 2 identical sticks of RAM installed, which you should have for performance, but if you only have 1 stick, simply remove the * 2. <code>sensor.laptop_memoryusage</code> is my percentage sensor reported by HASS Agent by default. I simply changed my entity in the card from the HASS.Agent entity to my own sensor.</p>
+<p>Thanks <strong>Celisuis</strong> (<a href="https://community.home-assistant.io/t/hass-agent-windows-client-to-receive-notifications-use-commands-sensors-quick-actions-and-more/369094/198?u=samkr">forum post</a>)!</p>
+<h4 id="automation-change-lcd-brightness-based-on-lux-and-session-state">Automation: Change LCD brightness based on lux and session state</h4>
+<p>Uses a CustomCommand with Actions to trigger Monitorian, and a LastSystemStateChangeSensor to check whether the user's active.</p>
+<pre><code class="language-yaml">alias: Change LCDs brightness based on lux
+mode: queued
+variables:
+  # 25 - min value to set on first LCD (my LCD is hard to view below this value)
+  # 30 - the difference between max value and min value that should be set, which gives us number of steps LCD can be set on (above 55 my LCD is already to bright for normal viewing)
+  # 220 - the max lux value I've observed where the LCDs are standing throughout normal day of work
+  # states(&quot;sensor.xiaomi_lumi_sen_ill_mgl01_illuminance&quot;) | int(0) - make sure to get int value, not text
+  lux_lcd01: '{{ 25 + (( (states(&quot;sensor.xiaomi_lumi_sen_ill_mgl01_illuminance&quot;) | int(0)) / 220) * 30) | int(0) }}'
+trigger:
+  - platform: state
+    entity_id: sensor.xiaomi_lumi_sen_ill_mgl01_illuminance
+    to: ~ 
+condition:
+  # set brightness only if the PC is up by looking for specific values from sensor set in HASS.Agent
+  - condition: template
+    value_template: &quot;{{ states('sensor.earth_lastsystemstatechange') in ['ApplicationStarted', 'Resume', 'SessionLogon', 'SessionUnlock'] }}&quot;
+  # don't update brightness if the last trigger was less the 10s ago but do if there was no trigger at all (like after restarting HA)
+  - condition: template
+    value_template: &quot;{{ state_attr('automation.lcd_change_brightness', 'last_triggered') != 'None' or ((as_timestamp(utcnow()) - as_timestamp(state_attr('automation.lcd_change_brightness', 'last_triggered')) |int(0) ) &gt; 10) }}&quot;
+  - condition: template
+    value_template: '{{ states(&quot;input_number.lux_value_for_automation&quot;) | int(0) != lux_lcd01 }}'
+action:
+  - service: mqtt.publish
+    data:
+      topic: &quot;homeassistant/light/EARTH/set_lcd01_brightness/action&quot;
+      payload_template: '%LOCALAPPDATA%\\Microsoft\\WindowsApps\\Monitorian.exe /set &quot;DISPLAY\AOC2713\5&amp;3f30a18&amp;0&amp;UID4357&quot; {{ lux_lcd01 }}'
+  - service: mqtt.publish
+    data:
+      topic: &quot;homeassistant/light/EARTH/set_lcd01_brightness/action&quot;
+      # this is the same as for lux_lcd01 but second LCD has different min and max (zero and 7 - yeah, that's how bright it is...)
+      payload_template: '%LOCALAPPDATA%\\Microsoft\\WindowsApps\\Monitorian.exe /set &quot;DISPLAY\PHL08E9\5&amp;3f30a18&amp;0&amp;UID4355&quot; {{ (( (states(&quot;sensor.xiaomi_lumi_sen_ill_mgl01_illuminance&quot;) | int(0)) / 220) * 7) | int(0) }}'
+  # I'm saving this to use later on when checking if the brightness changes even if the lux changed (automation was triggered)
+  - service: input_number.set_value
+    target:
+      entity_id: input_number.lux_value_for_automation
+    data:
+      value: '{{ lux_lcd01 }}'
+</code></pre>
+<p>Thanks @Draghmar! Awesome detailed writeup :)</p>
+<h4 id="light-create-a-light-entity-for-your-monitors-powerstate">Light: Create a light entity for your monitor's powerstate</h4>
+<pre><code class="language-yaml">- platform: template
+  lights:
+    pc_monitor:
+      friendly_name: &quot;PC Monitor&quot;
+      unique_id: pc_monitor
+      availability_template: '{{ not is_state(&quot;binary_sensor.my_pc_is_active&quot;, &quot;unknown&quot;) }}'
+      icon_template: &gt;-
+        hass: monitor
+      value_template: &gt;-
+        {{ is_state(&quot;sensor.windows_11_monitorpowerstate&quot;, &quot;PowerOn&quot;) }}
+      turn_on:
+        service: button.press
+        entity_id: button.windows_11_monitorwake
+      turn_off:
+        service: button.press
+        entity_id: button.windows_11_monitorsleep
+</code></pre>
+<p>Thanks @danielbrunt57!</p>
+<h4 id="automation-toggle-light-based-on-motion-and-pc-activity">Automation: Toggle light based on motion and pc activity</h4>
+<pre><code class="language-yaml">alias: Office Lights
+description: &quot;&quot;
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.my_pc_is_active
+    id: PC Active
+    to: &quot;on&quot;
+  - platform: state
+    entity_id:
+      - binary_sensor.office_motion
+    id: Motion on
+    to: &quot;on&quot;
+  - platform: state
+    entity_id:
+      - binary_sensor.my_pc_is_active
+    id: PC Idle
+    to: &quot;off&quot;
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - platform: state
+    entity_id:
+      - binary_sensor.office_motion
+    to: &quot;off&quot;
+    id: Motion off
+    for:
+      hours: 0
+      minutes: &quot;{{ states('input_number.office_lights_auto_off_time') }}&quot;
+      seconds: 0
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: or
+            conditions:
+              - condition: trigger
+                id: PC Active
+              - condition: trigger
+                id: Motion on
+        sequence:
+          - if:
+              - condition: state
+                entity_id: sensor.windows_11_monitorpowerstate
+                state: &quot;PowerOff&quot;
+            then:
+              - service: light.turn_on
+                data: {}
+                target:
+                  entity_id: light.pc_monitor
+          - if:
+              - condition: state
+                entity_id: light.office_lights
+                state: &quot;off&quot;
+            then:
+              - service: light.turn_on
+                data: {}
+                target:
+                  entity_id: light.office_lights
+      - conditions:
+          - condition: and
+            conditions:
+              - condition: state
+                entity_id: binary_sensor.my_pc_is_active
+                state: &quot;off&quot;
+              - condition: state
+                entity_id: binary_sensor.office_motion
+                state: &quot;off&quot;
+        sequence:
+          - service: light.turn_off
+            data: {}
+            target:
+              area_id: office
+    default: []
+mode: restart
+</code></pre>
+<p>Thanks @danielbrunt57!</p>
+<h4 id="command-grab-screenshot-using-powershell">Command: Grab screenshot using Powershell</h4>
+<p>A small Powershell script to save the screen and write it to the www folder on home assistant, then use the standard Generic Camera to use the image.
+This is the powershell to grab the shot. Then simply schedule a standard automation to update every two minutes.</p>
+<pre><code class="language-powershell">$Path = &quot;\\HOMEASSISTANT\config\www&quot;
+
+# Make sure that the directory to keep screenshots has been created, otherwise create it
+If (!(test-path $path)) {
+  New-Item -ItemType Directory -Force -Path $path
+}
+
+Add-Type -AssemblyName System.Windows.Forms
+
+$screen = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+
+# Get the current screen resolution
+$image = New-Object System.Drawing.Bitmap($screen.Width, $screen.Height)
+
+# Create a graphic object
+$graphic = [System.Drawing.Graphics]::FromImage($image)
+
+$point = New-Object System.Drawing.Point(0, 0)
+
+$graphic.CopyFromScreen($point, $point, $image.Size);
+
+$cursorBounds = New-Object System.Drawing.Rectangle([System.Windows.Forms.Cursor]::Position, [System.Windows.Forms.Cursor]::Current.Size)
+
+# Get a screenshot
+[System.Windows.Forms.Cursors]::Default.Draw($graphic, $cursorBounds)
+
+# $screen_file = &quot;$Path\&quot; + $env:computername + &quot;_&quot; + $env:username + &quot;_&quot; + &quot;$((get-date).tostring('yyyy.MM.dd-HH.mm.ss')).png&quot;
+$screen_file = &quot;$Path\&quot; + $env:computername + &quot;-screenshot.png&quot;
+
+# Save the screenshot as a PNG file
+$image.Save($screen_file, [System.Drawing.Imaging.ImageFormat]::Png)
+</code></pre>
+<p>Thanks kind <a href="https://lab02research.youtrack.cloud/issue/hassagent-85/Sensor-Screenshot#focus=Comments-4-19.0-0">stranger</a>!</p>
+<p>Note: make sure your PS execution policy <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.2">allows execution</a> (to allow remote unsigned, but require remote scripts to be signed, use <code>Set-ExecutionPolicy RemoteSigned</code>). Thanks <strong>drjjr</strong>!</p>
+<h4 id="automation-send-a-notification-when-spotify-starts-playing">Automation: Send a notification when Spotify starts playing</h4>
+<pre><code class="language-yaml">alias: HASS.Agent - Spotify is playing audio
+description: &quot;&quot;
+trigger:
+  - platform: template
+    value_template: &gt;-
+      {%- if state_attr('sensor.hass_desktop_audio_audio_sessions',
+      'AudioSessions') | selectattr('Application', 'match', 'Spotify') | list 
+      %}
+      true
+      {%- else %}
+      false
+      {%- endif %}
+condition: []
+action:
+  - service: notify.hass_agent_desktop
+    data:
+      message: Spotify is playing music
+      data:
+        image: none
+mode: single
+</code></pre>
+<p>Thanks <strong>Rokanishu</strong>!</p>
+<h4 id="sensor-battery-percentage-to-bluetooth-device">Sensor: Battery percentage to Bluetooth device</h4>
+<p>Based on: <a href="https://stackoverflow.com/questions/71736070/how-to-get-bluetooth-device-battery-percentage-using-powershell-on-windows">https://stackoverflow.com/questions/71736070/how-to-get-bluetooth-device-battery-percentage-using-powershell-on-windows</a></p>
+<p>Create a <code>PowershellSensor</code>:</p>
+<pre><code class="language-powershell">(Get-PnpDevice -Class 'Bluetooth' -FriendlyName ''Xbox Wireless Controller' | Get-PnpDeviceProperty -KeyName '{104EA319-6EE2-4701-BD47-8DDBF425BBE5} 2').Data
+</code></pre>
+<p><a href="https://www.home-assistant.io/docs/configuration/customizing-devices/#manual-customization">Customize</a> the sensor:</p>
+<pre><code class="language-yaml">sensor.desktop_windows_xboxbattery:
+  device_class: battery
+</code></pre>
+<p>Thanks @bkbilly!</p>
+<h4 id="command-change-default-audio-playback-device">Command: Change default audio playback device</h4>
+<p>Uses nircmd: <a href="https://www.nirsoft.net/utils/nircmd.html">https://www.nirsoft.net/utils/nircmd.html</a></p>
+<p>Create a <code>CustomCommand</code> (button type):</p>
+<p><code>nircmd setdefaultsounddevice &lt;your device&gt;</code></p>
+<p>Optionally use <code>input_select</code> in HA: <a href="https://github.com/LAB02-Research/HASS.Agent/issues/97#issuecomment-1288040508">https://github.com/LAB02-Research/HASS.Agent/issues/97#issuecomment-1288040508</a></p>
+<p>Thanks @tachibanayui!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../translating/" class="btn btn-neutral float-left" title="Translating"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../wmi-examples/" class="btn btn-neutral float-right" title="WMI Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../translating/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../wmi-examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

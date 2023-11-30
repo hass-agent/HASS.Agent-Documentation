@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="LAB02-Research" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Configuration - NOTE Outdated docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuration";
+        var mkdocs_page_input_path = "integration\\configuration.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> NOTE Outdated docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../outdated/">OUTDATED DOCUMENTATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../configuration/">Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation-and-configuration-summary/">Installation and Configuration Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../updating/">Updating</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../screenshots/">Screenshots</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../clean-slate/">Clean Slate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../performance-counter-debugging/">Performance Counter Debugging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../translating/">Translating</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Misc Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../wmi-examples/">WMI Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/activewindowsensor-multiple-processes/">ActiveWindowSensor - Multiple Processes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/adjust-screen-brightness/">Adjust Screen Brightness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-card/">PC Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-state/">PC State Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Commands</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/command-basics/">Command Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/actions-usage-and-examples/">Actions Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/elevated-custom-command/">Elevated Custom Command</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Integration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Configuration</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mqtt">MQTT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#legacy">Legacy</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debugging/">Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Media Player</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mediaplayer/mediaplayer-usage-and-examples/">MediaPlayer Usage and Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-usage-and-examples/">Notification Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-actionable/">Actionable Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-debugging/">Notification Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications Legacy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-client-side/">Notification Debugging - Client Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ha-side/">Notification Debugging - HA Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ssl/">Notification Debugging - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/sensors/">Sensors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">NOTE Outdated docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Integration</li>
+      <li class="breadcrumb-item active">Configuration</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configuration">Configuration</h1>
+<h4 id="mqtt">MQTT</h4>
+<p>By default, the integration uses MQTT to autodetect your devices. With MQTT setup, it'll show up in your <code>Integrations</code> page:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201068314-6f38ce3e-cc9d-46f5-9d45-f4fb2a99ae18.png" /></p>
+<p>Just hit <code>CONFIGURE</code>, click <code>SUBMIT</code>, pick an area (optionally) and you're done!</p>
+<p>You'll now have one (or a list of) HASS.Agent instance(s):</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201071780-b4f31075-71a9-4f93-b3d1-b0423514aeec.png" /></p>
+<p>Each instance will have a <code>media_player</code> entity and <code>notifiy</code> service, depending on what you've configured in HASS.Agent.</p>
+<blockquote>
+<p>Note: <code>notify</code> is a service, so it won't show up in the device's page like the <code>media_player</code> entity - you can test it through <code>Developer Tools</code> -&gt; <code>SERVICES</code>.</p>
+<p>Note: the integration's device is not the same as HASS.Agent's device, so it'll be empty except the <code>media_player</code> entity.</p>
+</blockquote>
+<h4 id="legacy">Legacy</h4>
+<p>If you don't use MQTT, you can still use HASS.Agent's local API to connect. Click <code>ADD INTEGRATION</code> in HA's <code>Integrations</code> page and search for <code>HASS.Agent</code>. Enter you device's IP and click <code>SUBMIT</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201068870-9e5c8b9b-4ce2-480f-b0f1-c7c51511ca40.png" /></p>
+<p>You'll also need to open the configured port in the firewall of the receiving PC (default <code>5115</code>). You can do that through the configuration window:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201073759-8afc6477-61e3-4d87-95d1-8288f8e658fd.png" /></p>
+<p>Use the legacy integration troubleshooting on the left if something's not working.</p>
+<blockquote>
+<p>Note: the local API doesn't support all functionality of the MQTT variant.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../debugging/" class="btn btn-neutral float-right" title="Debugging">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../debugging/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

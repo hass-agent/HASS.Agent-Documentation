@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="LAB02-Research" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Command Basics - NOTE Outdated docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Command Basics";
+        var mkdocs_page_input_path = "commands\\command-basics.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> NOTE Outdated docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../outdated/">OUTDATED DOCUMENTATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../configuration/">Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation-and-configuration-summary/">Installation and Configuration Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../updating/">Updating</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../screenshots/">Screenshots</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../clean-slate/">Clean Slate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../performance-counter-debugging/">Performance Counter Debugging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../translating/">Translating</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Misc Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../wmi-examples/">WMI Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/activewindowsensor-multiple-processes/">ActiveWindowSensor - Multiple Processes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/adjust-screen-brightness/">Adjust Screen Brightness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-card/">PC Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-state/">PC State Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Commands</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Command Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#intro">Intro</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creation">Creation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#yaml">YAML</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actions-usage-and-examples/">Actions Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../elevated-custom-command/">Elevated Custom Command</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/debugging/">Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Media Player</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mediaplayer/mediaplayer-usage-and-examples/">MediaPlayer Usage and Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-usage-and-examples/">Notification Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-actionable/">Actionable Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-debugging/">Notification Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications Legacy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-client-side/">Notification Debugging - Client Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ha-side/">Notification Debugging - HA Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ssl/">Notification Debugging - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/sensors/">Sensors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">NOTE Outdated docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Commands</li>
+      <li class="breadcrumb-item active">Command Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="command-basics">Command Basics</h1>
+<p>This page contains the basics behind HASS.Agent's commands: what they are, how they function and how you can use them. We'll be using the abbreviation <strong>HA</strong> for Home Assistant, so when HA is mentioned, it refers to your Home Assistant instance.</p>
+<p>You can use Home Assistant's <a href="https://www.home-assistant.io/docs/glossary/">glossary</a> to look up words you don't know yet.</p>
+<h3 id="intro">Intro</h3>
+<p>From within HASS.Agent you can create <code>commands</code>. These are <a href="https://www.home-assistant.io/docs/glossary/#entity">entities</a> that will be automatically added to HA. You can use these commands to control your PC from within HA.</p>
+<blockquote>
+<p>Tip: if you want to get data from your PC to HA, you can use HASS.Agent's sensors.</p>
+</blockquote>
+<p>Commands can be different entity types:</p>
+<ul>
+<li>Button</li>
+<li>Light</li>
+<li>Lock</li>
+<li>Siren</li>
+<li>Switch</li>
+</ul>
+<p>Your command is always handled the same way by HASS.Agent, regardless of the type your selection. The type is only relevant for HA: it determines as what type it'll show up. But they all have the same functionality.</p>
+<h3 id="creation">Creation</h3>
+<p>Throughout this page, we'll be working with an example command: the <code>Lock</code> command. This can be easily tested (your session will get locked, hard to miss!) without accidentally shutting down your pc or something like that.</p>
+<p>First, open HASS.Agent's main window, and click the <code>commands</code> button:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/203743900-15beae19-3ccd-45e4-a282-b3f5ee528198.png" /></p>
+<blockquote>
+<p>Note: Don't be alarmed if the <strong>system status</strong> for <code>commands</code> says <code>stopped</code>: that's just because you probably don't have any commands configured yet.</p>
+</blockquote>
+<p>You'll be shown a (possibly empty) command list:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167810115-b485f632-8327-4cf7-be2d-340581b741ed.png" /></p>
+<p>Click the <code>add new</code> button to begin creating a new command.</p>
+<blockquote>
+<p>Tip: want to modify an existing command? Just doubleclick it!</p>
+</blockquote>
+<p>You can see the different command types on the left. Select <code>Lock</code> to begin configuring your lock command:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167811252-2eacc702-763d-43a9-8dca-2fcd37cc30fd.png" /></p>
+<p>We'll pick <code>Button</code> as our entity type. HASS.Agent will try to generate a name for you, in this case <code>test-vm_lock</code>, but feel free to change that to anything you like. </p>
+<blockquote>
+<p>The names need to be unique! That's why it's a good idea to start with the name of your pc. That way, if you install HASS.Agent on multiple pcs, they won't clash.</p>
+</blockquote>
+<p>If you like, you can click through the command types on the left, and read their descriptions. This way you'll get a feeling for what's possible. </p>
+<blockquote>
+<p>Missing a command? Open a <a href="https://github.com/LAB02-Research/HASS.Agent/issues">ticket on GitHub</a> with your idea!</p>
+</blockquote>
+<p>When you're ready, click the <code>store command</code> button to continue. </p>
+<p>At this point, your command isn't yet sent to HA, and it isn't even stored locally on HASS.Agent. So if you made a naming or type mistake, just doubleclick your command to edit.</p>
+<p>Your commands config window will now have at least one command:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167812415-711a2ee2-65ed-4635-98f7-ecae1e19c621.png" /></p>
+<p>The columns on the right indicate <code>action</code> and <code>low integrity</code>, those are a bit more advanced and aren't relevant now.</p>
+<p>Satisfied with your new command? Go ahead and click <code>store and activate commands</code>. </p>
+<p>Your command is now sent to HA, and stored locally. Awesome!</p>
+<h3 id="usage">Usage</h3>
+<p>Let's look up our new command in HA. There are multiple ways to do this, but for now we'll look up our pc (an easy way to see all sensors/commands).</p>
+<p>Go to your HA instance, and press <code>c</code>. This will show the search bar. Now type <code>devices</code> and press <strong>enter</strong>. In the <code>Search devices</code> bar that's shown on top, type the name of your HASS.Agent instance:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167813646-22cd747f-9094-42d4-b48b-2b17766d582f.png" /></p>
+<blockquote>
+<p>Tip: you can always find (and change) the name of your HASS.Agent instance by clicking on the <code>configuration</code> button in the main window.</p>
+</blockquote>
+<p>If your HASS.Agent is properly configured, your pc will now show as a result. You can easily verify it's a HASS.Agent instance by confirming it says <code>LAB02 Research</code> under the <code>Manufacturer</code> column.</p>
+<p>Click on your pc to see what commands and sensors are configured. It should at least show our new command:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167814285-24eaf895-c182-4c85-99db-1baf07943efc.png" /></p>
+<p>If you can't find your device, or can't find your command, something's off in your HASS.Agent configuration. Feel free to post your problem on <a href="https://community.home-assistant.io/t/hass-agent-windows-client-to-receive-notifications-use-commands-sensors-quick-actions-and-more/369094">the HA forums</a>. The more info you can provide, the better, but if you don't know how don't worry - we'll help.</p>
+<p>Let's go nuts and just click it to see if it works. Did your pc get locked? Great success! If it didn't, please refer to the note above.</p>
+<h3 id="implementation">Implementation</h3>
+<p>Alright, so now you have a working button. There are roughly two ways you can use it: add it to your dashboard, so you can manually click it, or add it to an automation or script so HA will trigger it for you.</p>
+<p>Adding it to your dashboard is easy. Just click on the <code>ADD TO DASHBOARD</code> text:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167818902-c44b28f9-3cdb-4c8e-8cfe-a4fabe389249.png" /></p>
+<p>You can now choose which dashboard. When you click <code>NEXT</code>, HA will suggest a card for you. You can either pick a different one, or click <code>ADD TO DASHBOARD</code> to add it.</p>
+<p>When you go to your dashboard, it should now show your button:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167819093-7e2b6b50-f513-4417-a279-2235ea4709ef.png" /></p>
+<p>Go ahead and click it, to make sure it works :)</p>
+<p>Let's now add it to an automation. Go back to your device's page, and on the right, click on the <code>+</code> sign next to <code>Automations</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167819333-5949f043-511c-4911-a8e7-070989ed0704.png" /></p>
+<p>You can choose what type of automation you want. Let's pick <code>When something is triggered...</code>, click the button below it.</p>
+<p>When you scroll down, in the <code>Actions</code> section, you'll see your button added:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/167819977-08007f86-40b2-46e8-b909-cb804b04808c.png" /></p>
+<p>Configurating automations is beyond the scope of this manual, and there are lots of good tutorials online. Just remember that you can use this action to trigger your command!</p>
+<h3 id="yaml">YAML</h3>
+<p>If you're into yaml, you can also easily trigger your command from there. Here's an easy example automation:</p>
+<pre><code class="language-yaml">- alias: tests - trigger hassagent lock pc
+  initial_state: true
+  mode: single
+  trigger:
+    platform: state
+    entity_id: input_boolean.test_vm_lock_pc
+    to: &quot;on&quot;
+  action:
+    - service: button.press
+      target:
+        entity_id: button.test_vm_lock
+    - delay:
+        seconds: 2
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.test_vm_lock_pc
+</code></pre>
+<p>The trigger is when an input_boolean gets enabled. This is pretty useless, but it allows for easy testing. When the input_boolean triggers (its state changes to <code>on</code>), HA will trigger our button:</p>
+<pre><code class="language-yaml">    - service: button.press
+      target:
+        entity_id: button.test_vm_lock
+</code></pre>
+<p>The service is what you want HA to do: press our button. The entity specifies which button: our <code>test_vm_lock</code> one.</p>
+<p>If you configured your command to be something else than a button, you need to set the service accordingly. If for instance you made it a switch, you'd trigger it like this:</p>
+<pre><code class="language-yaml">    - service: switch.turn_on
+      target:
+        entity_id: switch.test_vm_lock
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../examples/pc-state/" class="btn btn-neutral float-left" title="PC State Cards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../actions-usage-and-examples/" class="btn btn-neutral float-right" title="Actions Usage and Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../examples/pc-state/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../actions-usage-and-examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="LAB02-Research" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>MediaPlayer Usage and Examples - NOTE Outdated docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "MediaPlayer Usage and Examples";
+        var mkdocs_page_input_path = "mediaplayer\\mediaplayer-usage-and-examples.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> NOTE Outdated docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../outdated/">OUTDATED DOCUMENTATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../configuration/">Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation-and-configuration-summary/">Installation and Configuration Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../updating/">Updating</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../screenshots/">Screenshots</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../clean-slate/">Clean Slate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../performance-counter-debugging/">Performance Counter Debugging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../translating/">Translating</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Misc Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../wmi-examples/">WMI Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/activewindowsensor-multiple-processes/">ActiveWindowSensor - Multiple Processes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/adjust-screen-brightness/">Adjust Screen Brightness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-card/">PC Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-state/">PC State Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Commands</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/command-basics/">Command Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/actions-usage-and-examples/">Actions Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../commands/elevated-custom-command/">Elevated Custom Command</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/debugging/">Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Media Player</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">MediaPlayer Usage and Examples</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#general">General</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#media-control">Media Control</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#text-to-speech">Text-to-Speech</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-usage-and-examples/">Notification Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-actionable/">Actionable Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-debugging/">Notification Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications Legacy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-client-side/">Notification Debugging - Client Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ha-side/">Notification Debugging - HA Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ssl/">Notification Debugging - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/sensors/">Sensors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">NOTE Outdated docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Media Player</li>
+      <li class="breadcrumb-item active">MediaPlayer Usage and Examples</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mediaplayer-usage-and-examples">MediaPlayer Usage and Examples</h1>
+<h3 id="installation">Installation</h3>
+<p>Refer to the integration's installation and configuration pages on the left.</p>
+<h3 id="general">General</h3>
+<p>You can add the mediaplayer to your dashboard by using a <code>Media Control Card</code>, and selecting your entity (for the above example, <code>media_player.hass_agent_test_mediaplayer</code>).</p>
+<p>It'll show up as follows:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/165727899-a6a5484b-fccc-4ad2-96a6-e38815b7c112.png" /></p>
+<h3 id="media-control">Media Control</h3>
+<p>The entity allows you to control your PC as if it were a regular media player, regardless of what application is actually playing. </p>
+<p>For the 'what's playing' functionality, the playing application needs to use Windows' media API. An example application that does this, is Spotify. An example application that doesn't do this, is VLC. </p>
+<p>If your application supports it, your current playing media will show up in Home Assistant:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/198244995-e962c2b4-b8a7-488e-b4a4-b7279600326e.png" /></p>
+<h3 id="text-to-speech">Text-to-Speech</h3>
+<p>By using this integration, you can use your PC as a text-to-speech target. You can easily test the functionality by using the developer tools in Home Assistant:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/165731015-140b67f5-cd52-4f45-a994-d4a81dd293f2.png" /></p>
+<p>Or through YAML:</p>
+<pre><code class="language-yaml">service: tts.google_translate_say
+data:
+  entity_id: media_player.hass_agent_test_mediaplayer
+  message: this is a test message
+</code></pre>
+<p>Replace <code>google_translate_say</code> if you're using any other TTS service.</p>
+<h3 id="notes">Notes</h3>
+<p>Some extra info:</p>
+<ul>
+<li>Besides TTS, you can play any .mp3 file on HASS.Agent directly</li>
+<li>This file can be online (<code>http(s)</code>) or local (<code>C:\path\to\file.mp3</code>)</li>
+<li>The <code>media_content_type</code> must be <code>music</code></li>
+<li>Currently running audio will be aborted when a new file is received</li>
+</ul>
+<p>YAML to play a .mp3 file on the agent:</p>
+<pre><code class="language-yaml">service: media_player.play_media
+data:
+  # Hosted on Home Assistant (/config/www folder)
+  media_content_id: media-source://media_source/local/Alarm1.mp3
+  # Or streamed from another server
+  # media_content_id: https://download.samplelib.com/mp3/sample-3s.mp3
+  media_content_type: music
+target:
+  entity_id: media_player.hass_agent_test_mediaplayer
+</code></pre>
+<p>If you're not getting your current-song information from Spotify, make sure this setting is enabled:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/171420676-111115c0-ff15-4dad-978d-b5f3e7b6397c.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../integration/debugging/" class="btn btn-neutral float-left" title="Debugging"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../notifications/notification-usage-and-examples/" class="btn btn-neutral float-right" title="Notification Usage and Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../integration/debugging/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../notifications/notification-usage-and-examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="LAB02-Research" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Elevated Custom Command - NOTE Outdated docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Elevated Custom Command";
+        var mkdocs_page_input_path = "commands\\elevated-custom-command.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> NOTE Outdated docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../outdated/">OUTDATED DOCUMENTATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../configuration/">Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation-and-configuration-summary/">Installation and Configuration Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../updating/">Updating</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../screenshots/">Screenshots</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../clean-slate/">Clean Slate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../performance-counter-debugging/">Performance Counter Debugging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../translating/">Translating</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Misc Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../wmi-examples/">WMI Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/activewindowsensor-multiple-processes/">ActiveWindowSensor - Multiple Processes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/adjust-screen-brightness/">Adjust Screen Brightness</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-card/">PC Card</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/pc-state/">PC State Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Commands</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../command-basics/">Command Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actions-usage-and-examples/">Actions Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Elevated Custom Command</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-the-scheduled-task">Creating the Scheduled Task</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-the-custom-command">Creating the Custom Command</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integration/debugging/">Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Media Player</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mediaplayer/mediaplayer-usage-and-examples/">MediaPlayer Usage and Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-usage-and-examples/">Notification Usage and Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-actionable/">Actionable Notifications</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/new/notification-debugging/">Notification Debugging</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Notifications Legacy</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-client-side/">Notification Debugging - Client Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ha-side/">Notification Debugging - HA Side</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../notifications/notification-debugging-ssl/">Notification Debugging - SSL</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/commands/">Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../development/sensors/">Sensors</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">NOTE Outdated docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Commands</li>
+      <li class="breadcrumb-item active">Elevated Custom Command</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="elevated-custom-command">Elevated Custom Command</h1>
+<h4 id="introduction">Introduction</h4>
+<p>There are situations where you'd want to launch a CustomCommand with elevated privileges, for instance if the application requires it. HASS.Agent can't natively do that (as a security measure), but you can use Windows' <a href="https://en.wikipedia.org/wiki/Windows_Task_Scheduler">Scheduled Tasks</a> instead.</p>
+<p>In short, scheduled tasks are a way to have Windows perform certain tasks on predetermined times or events. An example could be <em>open notepad when I log into Windows</em>  or <em>run this script at 5AM every first of the month</em>. </p>
+<h4 id="creating-the-scheduled-task">Creating the Scheduled Task</h4>
+<p>You can open the scheduler by searching for <code>Task Scheduler</code> from the task menu, or by executing <code>taskschd.msc</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201527584-b827f0b9-9ac4-410d-8c0a-ddf0ac4f7582.png" /></p>
+<p>Click on <code>Task Scheduler Library</code> on the left to view a list of your current tasks (there are also subfolders, but the root folder usually contains the interesting ones). To create a new task, click on <code>Create Task</code> on the right pane.</p>
+<p>Give it an appropriate name, describing what it does. Enable <code>Run with highest privileges</code> to make sure it can run elevated:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201527732-38ced999-39cd-446c-a47f-c54dbf83d77a.png" /></p>
+<blockquote>
+<p>Tip: if it's a script (something that closes itself when done), you can check <code>Hidden</code> to have it run in the background, no interface.</p>
+</blockquote>
+<p>The <code>Trigger</code> tab allows you to configure moments or events on when to run this task, but we'll do that through HASS.Agent, so you can skip that part. Click on the <code>Actions</code> tab -&gt; <code>New</code> and enter the application you want to run:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201527916-df1aa9ba-b2a4-429f-9937-472d74f53dab.png" /></p>
+<blockquote>
+<p>Tip: it's always best to provide the <code>Start in</code> path as well.</p>
+</blockquote>
+<p>When you enter it like this, your scheduled task will remaing in <code>Running</code> state until you close the application. You'll be able to start it once. If you just want to start your application, and then stop the scheduled task, you can use <code>cmd</code> as the program, and <code>/C "C:\Windows\notepad.exe"</code> as the arguments. Just replace <code>C:\Windows.notepad</code> with your app, leave the <code>/C</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201528036-55a8f7b2-1b9a-4f55-a6e6-39f56f32fb7c.png" /></p>
+<blockquote>
+<p>Note: if you're running a script, something without an interface, you don't need the <code>cmd /C</code> trick.</p>
+</blockquote>
+<p>Click <code>OK</code> to store your action.</p>
+<p>Go to the <code>Conditions</code> tab, and decide whether you want to be able to launch the task when on battery (only relevant for a laptop or if you use an UPS):</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201528087-3f16424a-91c9-46fe-b93d-e751e52b1b89.png" /></p>
+<p>Go to the <code>Settings</code> tab, and configure as follows (of course, feel free to change as you see fit):</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201528121-75ed6c6c-a2ed-49bf-b9c5-ac8f25a0d60b.png" /></p>
+<p>Click <code>OK</code> to store your scheduled task. You might be asked for your credentials, since we asked it to be elevated.</p>
+<h4 id="creating-the-custom-command">Creating the Custom Command</h4>
+<p>Close the Task Scheduler and open HASS.Agent. In the main window, click <code>Commands</code> -&gt; <code>Add New</code>. Select the <code>Custom</code> type in the list. </p>
+<p>In the command field, enter the following with your task's name, in my case: <code>schtasks /Run /TN "HASS.Agent Notepad Elevated"</code></p>
+<p>Replace <code>HASS.Agent Notepad Elevated</code> with the name you gave your task. Should look like this:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/81011038/201528548-80324d58-a7c2-4818-a605-c34abbe27a38.png" /></p>
+<p>Click <code>Store Command</code> -&gt; <code>Store and Activate Commands</code>. </p>
+<h4 id="testing">Testing</h4>
+<p>Go to your device's page in Home Assistant, and click on your new command. The application you chose should now launch, elevated!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../actions-usage-and-examples/" class="btn btn-neutral float-left" title="Actions Usage and Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../integration/introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../actions-usage-and-examples/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../integration/introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
