@@ -1,5 +1,10 @@
 {% extends "main.html" %} {% block tabs %} {{ super() }}
 <style>
+  /* Application header should be static for the landing page */
+  .md-header {
+    position: initial;
+  }
+
   /* Remove spacing, as we cannot hide it completely */
   .md-main__inner {
     margin: 0;
