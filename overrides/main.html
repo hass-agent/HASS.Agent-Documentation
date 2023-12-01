@@ -1,6 +1,13 @@
 <!-- Elements added to main will be displayed on all pages -->
 {% extends "base.html" %}
 
+<!-- Outdated bar -->
+{% block outdated %} You're not viewing the latest version.
+<a href="{{ '../' ~ base_url }}">
+  <strong>Click here to go to latest.</strong>
+</a>
+{% endblock %}
+
 <!-- Add released header tag -->
 {% block extrahead %} {{ super() }}
 <script src="https://embed.released.so/1/embed.js" defer></script>
@@ -9,13 +16,6 @@
 <!-- Add released widget -->
 {% block content %} {{ super() }}
 <released-widget channel-id="19883fcf-9c0f-45a3-8b50-f67ebca6fbbd"></released-widget>
-{% endblock %}
-
-<!-- Outdated bar -->
-{% block outdated %} You're not viewing the latest version.
-<a href="{{ '../' ~ base_url }}">
-  <strong>Click here to go to latest.</strong>
-</a>
 {% endblock %}
 
 <!-- Announcement bar -->
@@ -28,16 +28,10 @@
   .md-announce strong {
     white-space: nowrap;
   }
-  /* .announcement {
-    color: white;
-  }
-  .announcement:hover {
-    color: #41bdf5;
-  } */
 </style>
 
 <strong>
-  <a href="/contributing/need-help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
+  <a href="/latest/contributing/need-help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
 </strong>
 
 {% endblock %} {% block released_widget %}
