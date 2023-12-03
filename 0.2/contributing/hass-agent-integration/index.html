@@ -19,7 +19,7 @@
         <link rel="prev" href="../hass-agent-app/">
       
       
-        <link rel="next" href="../hass-agent-documentation/">
+        <link rel="next" href="setup/">
       
       
       <link rel="icon" href="../../assets/images/logo/logo-128-round.png">
@@ -718,6 +718,12 @@
           
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -745,6 +751,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
@@ -754,6 +765,66 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="development-lifecycle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Lifecycle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="finding-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What to work on
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1170,6 +1241,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-files" class="md-nav__link">
+    Github and files
+  </a>
+  
+    <nav class="md-nav" aria-label="Github and files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-organization-repo" class="md-nav__link">
+    The organization repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-repo" class="md-nav__link">
+    Your repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-directory" class="md-nav__link">
+    Local directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1200,6 +1333,21 @@
 
 
 <h1 id="developing-the-hassagent-integration">Developing the HASS.Agent integration<a class="headerlink" href="#developing-the-hassagent-integration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>HASS.Agent's integration development is the same as all custom components you will find on HACS. The basic idea is to run a dev container of HA with your dev version of the integration installed. As you code and edit you can test your changes inside of the dev HA. Once your finished you will copy the files to the repo and create a PR.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dev HA Container</strong> A docker or other container running with a barebones HA installation just for development. You can get that setup by following the <a href="https://developers.home-assistant.io/docs/development_environment/" target="_blank">HA Dev Docs</a> guide.</li>
+<li><strong>VSCode</strong> is highly recommended because of the simple integration with dev containers and complex workflows for running tasks and interfacing with HASS. It is possible to continue without VSCode and use any text editor but we do not provide tutorials for other editors.</li>
+</ul>
+<h2 id="github-and-files">Github and files<a class="headerlink" href="#github-and-files" title="Permanent link">&para;</a></h2>
+<p>The way git and the local folders get setup is a bit different to the standard way for most python apps, but it's not hard to understand.</p>
+<h3 id="the-organization-repo">The organization repo<a class="headerlink" href="#the-organization-repo" title="Permanent link">&para;</a></h3>
+<p>The organization repo is the one found in the <a href="https://github.com/hass-agent" target="_blank">HASS.Agent Githu Organization</a>, it holds the current version of the integration and is what you will fork from.</p>
+<h3 id="your-repo">Your repo<a class="headerlink" href="#your-repo" title="Permanent link">&para;</a></h3>
+<p>You will fork the organization repo and have your own version to do development on, after completing your work you will submit a PR to the organization.</p>
+<h3 id="local-directory">Local directory<a class="headerlink" href="#local-directory" title="Permanent link">&para;</a></h3>
+<p>The local files are a bit different to the way you are probably used to. The way it works is by having a folder somewhere that reflects your fork of the repo and then the actual integration inside of the HA dev container. The reason git doesn't just track the folder in the dev container is that stuff like the README and github workflows will cause HA to error. We will go over this in more detail in the <a href="setup/">setup</a> section.</p>
 
 
   
@@ -1290,13 +1438,13 @@
         
         
           
-          <a href="../hass-agent-documentation/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributing to the HASS.Agent Documentation">
+          <a href="setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Contributing to the HASS.Agent Documentation
+                Setup
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1313,7 +1461,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a> - <a href="#__consent">Change cookie settings</a>
+      Copyright &copy; 2023 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Change cookie settings</a>
 
     </div>
   
