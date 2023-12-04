@@ -6,22 +6,13 @@
 
 ## Overview
 
-#### HASS.Agent uses TWO main version systems
+#### HASS.Agent is based on one version system
 
-##### Client
+All parts off HASS.Agent use semver to keep track of their versions.
 
-- Client
-- Documentation
+## Summary of SemVer
 
-The client and documentation share a version system to make it easy for users to find documentation for any version.
-
-##### Integration
-
-The integration has its own version system similar to HASS's own system.
-
-## Client/Documentation Versioning
-
-HASS.Agent's client and documentation use a semantic-style version system, however some parts are specific to HASS.Agent, so read on.
+This is a general summary of SemVer and how you will indicate different versions throughout development. You may be tempted to skip this if you know SemVer but don't, because how we indicate dev builds and betas is different to others.
 
 ### Stable release versions
 
@@ -80,7 +71,7 @@ The beta version number is to be incremented whenever a new beta version of the 
 
     The stable version for release should be `2.6.0`
 
-    > The dev team has found bugs and is working on a hotfix. They have completed 2 updates to work on this hotfix
+    > The dev team has found bugs and is working on a hotfix. They are in devlopment of the second hotfix right now.
 
     The current beta version should be `2.6.1-beta.1` (1)
 
@@ -88,7 +79,7 @@ The beta version number is to be incremented whenever a new beta version of the 
 
     The stable release version should be `2.6.1`
 
-1.  We use 1 for the `<beta-version>` here, because development update 1 was .0 and development update 2 was .1
+1.  We use 1 for the `<beta-version>` here, because hotfix 1 was .0 and hotfix 2 was .1
 
 ### Other info
 
@@ -106,3 +97,7 @@ Whenever a "parent" version number is incremented the "children" numbers must be
 The documentation operates on version of just `<major>.<minor>` This will still match the client because no major documentation change will happen during a patch of the HASS.Agent client.
 
 The other difference between this version system and the client's version system is that beta version attributes will not exist. In the documentation if the upcoming release is going to be `1.5.0` and the current beta version is `1.5.0-beta.3` then the docs will have `1.5` with the label/attribute `beta`.
+
+## Relationship between the client and the integration
+
+Both the client and the integration are going to be using SemVer, however it will **not** be the same version. Instead when you checkout the installation for HASS.Agent it will tell you what version of the integration is required. The other thing is that most of the integration's development will be backwards compatible and not move up from version `2`.
