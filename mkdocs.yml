@@ -111,6 +111,7 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.keys
   - admonition
   - pymdownx.arithmatex:
       generic: true
@@ -152,6 +153,9 @@ nav:
           - contributing/hass-agent-app/index.md
       - Developing the Integration:
           - contributing/hass-agent-integration/index.md
+          - Setup: contributing/hass-agent-integration/setup.md
+          - Development Lifecycle: contributing/hass-agent-integration/development-lifecycle.md
+          - What to work on: contributing/hass-agent-integration/finding-issues.md
       - Developing the Documentation:
           - contributing/hass-agent-documentation/index.md
           - Easy Editing: contributing/hass-agent-documentation/easy-editing.md
