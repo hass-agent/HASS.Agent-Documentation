@@ -6,7 +6,7 @@
 2. Clone the files to a directory on your computer
 3. Copy the `custom_components` directory
 4. Open your [dev container](#dev-container) files
-5. Paste the `custom_components` directory into the `.config` directory
+5. Paste the `custom_components` directory into the `config` directory
 6. [Start](#start-ha) the dev container
 
 ### Finishing up
