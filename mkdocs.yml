@@ -145,6 +145,8 @@ nav:
       - Installation: getting-started/installation.md
       - Initial Setup and First Run: getting-started/initial-setup.md
       - Other Install Methods: getting-started/other-installs.md
+      - Using Quick Actions: getting-started/quick-actions.md
+      - Using Sensors: getting-started/sensors.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
