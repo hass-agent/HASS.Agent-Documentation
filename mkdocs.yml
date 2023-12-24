@@ -71,7 +71,7 @@ extra:
     provider: mike
   analytics:
     provider: google
-    property: G-415530619
+    property: G-TBLK7V0HW7
     feedback:
       title: Was this page helpful?
       ratings:
