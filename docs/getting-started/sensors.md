@@ -6,7 +6,7 @@ One of the core features of HASS.Agent is the ability to send data about your pc
 
 #### Required properties
 
-1. **TYPE:** Select the type of sensor from the left, there are many options available, a full description is available in the [setup](../setup/quick-actions.md) guide.
+1. **TYPE:** Select the type of sensor from the left, there are many options available, a full description is available in the [setup](../setup/sensors.md) guide.
 2. **Name:** Enter the name for the entity in HA, this is the entity id so it must not contain spaces.
 3. **Update Interval:** Sets the interval for how often the sensor updates, the recommended value is usually fine.
 
@@ -38,7 +38,6 @@ You can use these entities any way you normally would, yaml or interface. Note t
 <div class="grid cards" markdown>
 
 - :material-remote-tv: **[Quick Actions]** – Interact with homeassistant entities and scripts from your taskbar or a hotkey!
-- :material-radar: **[Sensors]** – Send data from your computer to homeassistant to create automations!
 - :octicons-git-merge-24: **[Commands]** – Create commands homeassistant can run to do things on your computer!
 - :material-bell-ring: **[Notifications]** – Send notifications from homeassistant, including actions and images!
 - :material-file-cog: **[Other Features]** – For a guide on all the features and config options in HASS.Agent.
@@ -46,7 +45,6 @@ You can use these entities any way you normally would, yaml or interface. Note t
 </div>
 
 [Quick Actions]: ./quick-actions.md
-[Sensors]: ./sensors.md
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
 [Other Features]: ../setup/index.md
