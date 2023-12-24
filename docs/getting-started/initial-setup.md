@@ -35,7 +35,7 @@ After running the onboarding for HASS.Agent and [installing](./installation.md/#
 #### Checklist
 
 - [ ] HASS.Agent has been [installed](./installation.md) and the [onboarding](#onboarding-and-first-run) has been completed.
-- [ ] The HASS.Agent HACS integration has been [installed](./installation.md/#installing-the-home-assistant-integration).
+- [ ] The HASS.Agent integration has been [installed](./installation.md/#installing-the-home-assistant-integration), or you have chosen to go without it.
 
 ### Configure your computer
 
