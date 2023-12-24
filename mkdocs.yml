@@ -147,6 +147,11 @@ nav:
       - Other Install Methods: getting-started/other-installs.md
       - Using Quick Actions: getting-started/quick-actions.md
       - Using Sensors: getting-started/sensors.md
+      - Using Commands: getting-started/commands.md
+      - Sending Notifications: getting-started/notifications.md
+      - Troubleshooting: getting-started/troubleshooting.md
+  - Setup:
+      - setup/index.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
