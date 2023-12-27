@@ -135,7 +135,8 @@ markdown_extensions:
   - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg # Page Tree
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # Page Tree
 
 
 nav:
@@ -145,6 +146,13 @@ nav:
       - Installation: getting-started/installation.md
       - Initial Setup and First Run: getting-started/initial-setup.md
       - Other Install Methods: getting-started/other-installs.md
+      - Using Quick Actions: getting-started/quick-actions.md
+      - Using Sensors: getting-started/sensors.md
+      - Using Commands: getting-started/commands.md
+      - Sending Notifications: getting-started/notifications.md
+      - Troubleshooting: getting-started/troubleshooting.md
+  - Setup:
+      - setup/index.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
