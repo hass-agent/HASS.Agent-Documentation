@@ -13,13 +13,13 @@
         <meta name="author" content="DrR0X">
       
       
-        <link rel="canonical" href="https://hass-agent.github.io/latest/getting-started/installation/">
+        <link rel="canonical" href="https://hass-agent.github.io/latest/getting-started/quick-actions/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../other-installs/">
       
       
-        <link rel="next" href="../initial-setup/">
+        <link rel="next" href="../sensors/">
       
       
       <link rel="icon" href="../../assets/images/logo/logo-128-round.png">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Installation - Hass Agent Documentation</title>
+        <title>Using Quick Actions - Hass Agent Documentation</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#getting-started-with-quick-actions" class="md-skip">
           Skip to content
         </a>
       
@@ -167,7 +167,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Using Quick Actions
             
           </span>
         </div>
@@ -504,29 +504,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Installation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,54 +515,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-hassagent" class="md-nav__link">
-    Installing HASS.Agent
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-the-home-assistant-integration" class="md-nav__link">
-    Installing the Home Assistant Integration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finishing-up" class="md-nav__link">
-    Finishing up
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -632,9 +564,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../quick-actions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using Quick Actions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -643,6 +595,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-quick-actions" class="md-nav__link">
+    Setting up Quick Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up Quick Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-first-quick-action" class="md-nav__link">
+    Creating your first Quick Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating your first Quick Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-properties" class="md-nav__link">
+    Required properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-config-optional" class="md-nav__link">
+    Extra config optional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-quick-actions-hotkey" class="md-nav__link">
+    Changing the Quick Actions Hotkey
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-your-quick-actions" class="md-nav__link">
+    Using your Quick Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-setup" class="md-nav__link">
+    Further setup
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1501,29 +1534,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#setting-up-quick-actions" class="md-nav__link">
+    Setting up Quick Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up Quick Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-first-quick-action" class="md-nav__link">
+    Creating your first Quick Action
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating your first Quick Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-properties" class="md-nav__link">
+    Required properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-config-optional" class="md-nav__link">
+    Extra config optional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-quick-actions-hotkey" class="md-nav__link">
+    Changing the Quick Actions Hotkey
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-your-quick-actions" class="md-nav__link">
+    Using your Quick Actions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-hassagent" class="md-nav__link">
-    Installing HASS.Agent
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-the-home-assistant-integration" class="md-nav__link">
-    Installing the Home Assistant Integration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#finishing-up" class="md-nav__link">
-    Finishing up
+  <a href="#further-setup" class="md-nav__link">
+    Further setup
   </a>
   
 </li>
@@ -1543,7 +1609,7 @@
                   
 
   
-    <a href="https://github.com/hass-agent/hass-agent.github.io/edit/beta/docs/getting-started/installation.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/hass-agent/hass-agent.github.io/edit/beta/docs/getting-started/quick-actions.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1552,53 +1618,55 @@
     
       
     
-    <a href="https://github.com/hass-agent/hass-agent.github.io/raw/beta/docs/getting-started/installation.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/hass-agent/hass-agent.github.io/raw/beta/docs/getting-started/quick-actions.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<p>HASS.Agent consists of two parts: the client/Windows app and the Home Assistant integration. You will need to install and configure both of these to use most of HASS.Agent's features.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h1 id="getting-started-with-quick-actions">Getting Started with Quick Actions<a class="headerlink" href="#getting-started-with-quick-actions" title="Permanent link">&para;</a></h1>
+<p>After setting up HASS.Agent one of the easisest things to setup is Quick Actions. These are buttons that are available from the taskbar and with a customised hotkey at any time. They can be set to entities or HASS.Agent commands to quickly control elements of your pc or Home Assistant setup.</p>
+<h2 id="setting-up-quick-actions">Setting up Quick Actions<a class="headerlink" href="#setting-up-quick-actions" title="Permanent link">&para;</a></h2>
+<p>To setup Quick Actions you will need to open HASS.Agent and Click "Quick Actions", this will open the config section for Quick Actions.</p>
+<h3 id="creating-your-first-quick-action">Creating your first Quick Action<a class="headerlink" href="#creating-your-first-quick-action" title="Permanent link">&para;</a></h3>
+<h4 id="required-properties">Required properties<a class="headerlink" href="#required-properties" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>TYPE:</strong> Select the type of action you want from the left, most of these are types of Home Assistant entities except for the "HASS.Agent Commands".</li>
+<li><strong>ENTITY:</strong> Select the entity using the "Entity" selector, this will either be the entity name in HA or the name of the HASS.Agent Command.</li>
+<li><strong>ACTION:</strong> Select the action, this can be any of the options listed, it tells HASS.Agent what command the entity should do, for example turn light "on" or "play" on a media player.</li>
+</ol>
+<details class="example" open="open">
+<summary>Example</summary>
+<p>Here is the config for a quick action that send the "play" action to my tv.
+<img alt="Image of the config" src="../../assets/images/screenshots/quick-action-new.png" /></p>
+</details>
+<h4 id="extra-config-optional">Extra config <small>optional</small><a class="headerlink" href="#extra-config-optional" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Home Assistant:</strong> Ensure that your Home Assistant version is newer than <code>2023.6.0</code>. If you need help with Home Assistant, refer to the <a href="https://www.home-assistant.io/installation/" target="_blank">official documentation</a>.</li>
-<li><strong>MQTT:</strong> Set up an MQTT broker and install/configure the MQTT add-on in Home Assistant. A simple guide for MQTT setup can be found <a href="https://www.youtube.com/watch?v=dqTn-Gk4Qeo" target="_blank">here</a>.</li>
-<li><strong>Windows 10/11:</strong> HASS.Agent supports Windows 10 and 11. Older versions may work, but functionality is not guaranteed.</li>
+<li>Add custom description of the action using the description field, this will change the text below the quick action. For example this quick action has the description of "Let there be light!"</li>
 </ul>
-<details class="question">
-<summary>I don't want to install or use MQTT, can I still use HASS.Agent?</summary>
-<p>You don't <strong>have</strong> to have MQTT to use HASS.Agent; however, most features rely on it for bidirectional communication. Without MQTT, only Quick Actions will work.</p>
+<details class="example">
+<summary>Description of "Let there be light!" </summary>
+<p><img alt="Image of the quick action" src="../../assets/images/screenshots/quick-action-description.png" /></p>
 </details>
-<h2 id="installing-hassagent">Installing HASS.Agent<a class="headerlink" href="#installing-hassagent" title="Permanent link">&para;</a></h2>
-<p>To get started with installing HASS.Agent, follow these steps:</p>
-<ol>
-<li>Download the latest installer from <a href="https://github.com/hass-agent/HASS.Agent/releases/latest/download/HASS.Agent.Installer.exe">here</a>.</li>
-<li>Open the installer and follow the on-screen instructions.</li>
-<li><strong>Optional:</strong> The installer allows you to copy the configuration from the previously installed version of HASS.Agent (Pre v2).</li>
-</ol>
-<h2 id="installing-the-home-assistant-integration">Installing the Home Assistant Integration<a class="headerlink" href="#installing-the-home-assistant-integration" title="Permanent link">&para;</a></h2>
-<details class="question inline end" open="open">
-<summary>I don't want to use the HASS.Agent integration at all</summary>
-<p>You do not <strong>have</strong> to use the integration however you will lose access to the Media Player and Notification features</p>
-</details>
-<p>After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:</p>
-<ol>
-<li>Ensure you have HACS installed. If not, follow the installation guide <a href="https://hacs.xyz/docs/setup/download" target="_blank">here</a>.</li>
-<li>Click the button below to install the HASS.Agent integration.</li>
-</ol>
-<p><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=LAB02-Research&amp;repository=HASS.Agent-Integration" target="_blank"><img alt="Add HACS integration to My Homeassistant" src="https://my.home-assistant.io/badges/hacs_repository.svg" /></a></p>
-<details class="question">
-<summary>I don't want to install HACS, can I still install the HASS.Agent integration?</summary>
-<p>Yes, it is possible to install the integration without HACS; however, it is more difficult. Find more information <a href="../other-installs/#installing-the-integration-without-hacs">here</a>.</p>
-</details>
-<h2 id="finishing-up">Finishing up<a class="headerlink" href="#finishing-up" title="Permanent link">&para;</a></h2>
-<p>After installing both the integration and client/Windows app, proceed to the initial setup and configuration.</p>
-<details class="info" open="open">
-<summary>Info</summary>
-<p>After installation, you can delete the <code>HASS.Agent.Installer.exe</code>.</p>
-</details>
+<ul>
+<li>Add a custom hotkey just for this quick action, allowing you to interact with entities without opening the quick actions menu. To set a custom hotkey tick the "Enable Hotkey" box and click on the "Hotkey Combination" box to set it to whatever you want.</li>
+</ul>
+<h3 id="changing-the-quick-actions-hotkey">Changing the Quick Actions Hotkey<a class="headerlink" href="#changing-the-quick-actions-hotkey" title="Permanent link">&para;</a></h3>
+<p>You we're asked to assign a custom hotkey to the Quick Actions menu during onboarding, you can change it at anytime from <code>Configuration &gt; Hotkey</code>.</p>
+<h2 id="using-your-quick-actions">Using your Quick Actions<a class="headerlink" href="#using-your-quick-actions" title="Permanent link">&para;</a></h2>
+<p>To use your quick actions all you have to do is open the quick actions menu using either the hotkey you set or right clicking on the tray icon and selecting "Show Quick Actions".</p>
+<h2 id="further-setup">Further setup<a class="headerlink" href="#further-setup" title="Permanent link">&para;</a></h2>
+<p>Now that you have a quick action up and running you can read up on the full configuration of Quick Actions found in the <a href="../setup/quick-actions.md">setup</a> section.</p>
+<p>Below are some quick links to getting started guides for the other HASS.Agent features.</p>
+<div class="grid cards">
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.014 8.014 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07Z"/></svg></span> <strong><a href="../sensors/">Sensors</a></strong> – Send data from your computer to homeassistant to create automations!</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm-12.5 6a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0Zm0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0ZM5.75 6.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 6.5Zm0 14.5a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 5.75 21Zm12.5-6a1.75 1.75 0 1 0-.001-3.501A1.75 1.75 0 0 0 18.25 15Z"/><path d="M6.5 7.25c0 2.9 2.35 5.25 5.25 5.25h4.5V14h-4.5A6.75 6.75 0 0 1 5 7.25Z"/><path d="M5.75 16.75A.75.75 0 0 1 5 16V8a.75.75 0 0 1 1.5 0v8a.75.75 0 0 1-.75.75Z"/></svg></span> <strong><a href="../commands/">Commands</a></strong> – Create commands homeassistant can run to do things on your computer!</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2 2 2 0 0 1-2-2m9.75-17.81-1.42 1.42A8.982 8.982 0 0 1 21 11h2c0-2.93-1.16-5.75-3.25-7.81M1 11h2c0-2.4.96-4.7 2.67-6.39L4.25 3.19A10.96 10.96 0 0 0 1 11Z"/></svg></span> <strong><a href="../notifications/">Notifications</a></strong> – Send notifications from homeassistant, including actions and images!</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h6.68a7 7 0 0 1-.68-3 7 7 0 0 1 7-7 7 7 0 0 1 1 .08V8l-6-6H6m7 1.5L18.5 9H13V3.5M18 14a.26.26 0 0 0-.26.21l-.19 1.32c-.3.13-.59.29-.85.47l-1.24-.5c-.11 0-.24 0-.31.13l-1 1.73c-.06.11-.04.24.06.32l1.06.82a4.193 4.193 0 0 0 0 1l-1.06.82a.26.26 0 0 0-.06.32l1 1.73c.06.13.19.13.31.13l1.24-.5c.26.18.54.35.85.47l.19 1.32c.02.12.12.21.26.21h2c.11 0 .22-.09.24-.21l.19-1.32c.3-.13.57-.29.84-.47l1.23.5c.13 0 .26 0 .33-.13l1-1.73a.26.26 0 0 0-.06-.32l-1.07-.82c.02-.17.04-.33.04-.5 0-.17-.01-.33-.04-.5l1.06-.82a.26.26 0 0 0 .06-.32l-1-1.73c-.06-.13-.19-.13-.32-.13l-1.23.5c-.27-.18-.54-.35-.85-.47l-.19-1.32A.236.236 0 0 0 20 14h-2m1 3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5c-.84 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5Z"/></svg></span> <strong><a href="../../setup/">Other Features</a></strong> – For a guide on all the features and config options in HASS.Agent.</li>
+</ul>
+</div>
 
 
   
@@ -1672,7 +1740,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+          <a href="../other-installs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Other Install Methods">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1682,20 +1750,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Getting Started
+                Other Install Methods
               </div>
             </div>
           </a>
         
         
           
-          <a href="../initial-setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Initial Setup and First Run">
+          <a href="../sensors/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Sensors">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Initial Setup and First Run
+                Using Sensors
               </div>
             </div>
             <div class="md-footer__button md-icon">
