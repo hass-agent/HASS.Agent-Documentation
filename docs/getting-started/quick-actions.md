@@ -48,6 +48,7 @@ Below are some quick links to getting started guides for the other HASS.Agent fe
 - :material-radar: **[Sensors]** – Send data from your computer to homeassistant to create automations!
 - :octicons-git-merge-24: **[Commands]** – Create commands homeassistant can run to do things on your computer!
 - :material-bell-ring: **[Notifications]** – Send notifications from homeassistant, including actions and images!
+- :material-cast: **[Media Player]** – Manage media on your computer and send text to speech!
 - :material-file-cog: **[Other Features]** – For a guide on all the features and config options in HASS.Agent.
 
 </div>
@@ -55,4 +56,5 @@ Below are some quick links to getting started guides for the other HASS.Agent fe
 [Sensors]: ./sensors.md
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
+[Media Player]: ./media-player.md
 [Other Features]: ../setup/index.md
