@@ -2,6 +2,10 @@
 
 HASS.Agent consists of two parts: the client/Windows app and the Home Assistant integration. You will need to install and configure both of these to use most of HASS.Agent's features.
 
+!!! info "Migrating from pre-2.0.0?"
+
+    If you already have HASS.Agent installed from before 2.0.0 checkout the section at the bottom for [information](#migration-from-pre-200) on migrating.
+
 ## Prerequisites
 
 - **Home Assistant:** Ensure that your Home Assistant version is newer than `2023.6.0`. If you need help with Home Assistant, refer to the [official documentation](https://www.home-assistant.io/installation/){: target="\_blank"}.
@@ -18,7 +22,7 @@ To get started with installing HASS.Agent, follow these steps:
 
 1. Download the latest installer from [here](https://github.com/hass-agent/HASS.Agent/releases/latest/download/HASS.Agent.Installer.exe).
 2. Open the installer and follow the on-screen instructions.
-3. **Optional:** The installer allows you to copy the configuration from the previously installed version of HASS.Agent (Pre v2).
+3. **Optional:** The installer allows you to copy the configuration from the previously installed version of HASS.Agent (Pre-2.0.0).
 
 ## Installing the Home Assistant Integration
 
@@ -44,3 +48,25 @@ After installing both the integration and client/Windows app, proceed to the ini
 ???+ info
 
     After installation, you can delete the `HASS.Agent.Installer.exe`.
+
+## Migration from pre-2.0.0
+
+If you have HASS.Agent from before 2.0.0 you can follow the steps below to migrate to the new one.
+
+### Take backups <small>optional</small>
+
+If you really don't want to lose your previous config you can take a backup of your config by copying the entirety of the folder below somewhere else on your computer.
+
+```
+C:\
+```
+
+### Install 2.0.0+
+
+Install the latest hass.agent client by following the steps [above](#installing-hassagent), make sure to tick the option to migrat config at the end.
+
+There is no need to do anything to the integration, as long as you have the latest version from HACS it will work.
+
+### Remove old HASS.Agent <small>optional</small>
+
+There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent" whereas the new one is called "HASS.Agent 2.0.0".
