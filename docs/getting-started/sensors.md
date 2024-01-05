@@ -17,13 +17,13 @@ One of the core features of HASS.Agent is the ability to send data about your pc
 
 #### Extra config <small>optional</small>
 
-- Add a different name to the id that shows in the HA web interface. The id only needs to be used in yaml configuration.
+- **Friendly Name:** Add a "friendly name" that shows up in dashboards instead of the id, can have any normal characters.
 
 ??? example "Friendly Name of "Gpu Temp" "
 
     ![Image of the quick action](../assets/images/screenshots/sensor-friendly-name.png)
 
-- Enable/Disable availability check, this tells HA whether to check if the computer is online before grabbing the last state. If you want your sensor to always display last state even if the computer has been off for a while turn this on.
+- **Availability check:** Enable/Disable availability check, this tells HA whether to check if the computer is online before grabbing the last state. If you want your sensor to always display last state even if the computer has been off for a while turn this on.
 
 ## Using your sensor
 
@@ -40,6 +40,7 @@ You can use these entities any way you normally would, yaml or interface. Note t
 - :material-remote-tv: **[Quick Actions]** – Interact with homeassistant entities and scripts from your taskbar or a hotkey!
 - :octicons-git-merge-24: **[Commands]** – Create commands homeassistant can run to do things on your computer!
 - :material-bell-ring: **[Notifications]** – Send notifications from homeassistant, including actions and images!
+- :material-cast: **[Media Player]** – Manage media on your computer and send text to speech!
 - :material-file-cog: **[Other Features]** – For a guide on all the features and config options in HASS.Agent.
 
 </div>
@@ -47,4 +48,5 @@ You can use these entities any way you normally would, yaml or interface. Note t
 [Quick Actions]: ./quick-actions.md
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
+[Media Player]: ./media-player.md
 [Other Features]: ../setup/index.md
