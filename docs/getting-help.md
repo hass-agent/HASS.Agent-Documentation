@@ -9,11 +9,11 @@ There are lots of ways you can get help, from the guides in these docs to the pe
 
 ## Documentation
 
-Here in this documentation you will find info on everything about HASS.Agent;
+Here in this documentation you will find info on everything about HASS.Agent, from troubleshooting to advanced configuration examples.
 
 !!! tip "TIP: Use the search bar!"
 
-    We have a search bar at the top right which you can use to find anythign throughout the docs, it will be your best way to get correct info about HASS.Agent.
+    We have a search bar at the top right which you can use to find anything throughout the docs, it will be your best way to get correct info about HASS.Agent.
 
 - First time seeing or using HASS.Agent? Start [here](./getting-started/index.md)
 - If you are using more complex features of HASS.Agent checkout the [setup](./setup/index.md) section
