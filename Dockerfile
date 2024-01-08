@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material:9.4.11
+FROM squidfunk/mkdocs-material:9.5.0
 RUN pip install mike
 
 WORKDIR /app
