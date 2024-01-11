@@ -1,9 +1,10 @@
 FROM squidfunk/mkdocs-material:9.5.0
-RUN pip install mike
 
 WORKDIR /app
 
 COPY . /app
+RUN pip install -r requirements.txt
+
 
 EXPOSE 8000
 
