@@ -10,10 +10,6 @@ on:
         description: "I have set this workflow to run from the beta branch"
         required: true
         type: boolean
-      confirm_sync:
-        description: "I will make sure to sync the beta branch with main after this workflow runs"
-        required: true
-        type: boolean
       new_version:
         description: "The new beta version number"
         required: true
@@ -29,12 +25,6 @@ jobs:
         with:
           python-version: 3.x
           cache: "pip"
-      - name: Install GitHub CLI
-        run: |
-          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-          sudo apt-add-repository https://cli.github.com/packages
-          sudo apt-get update
-          sudo apt-get install gh
       - run: pip install -r requirements.txt
       - name: Fetch full gh-pages and main branches and create user
         run: |
@@ -56,5 +46,6 @@ jobs:
         run: |
           mike deploy -p -u ${{ inputs.new_version }} beta -t beta
       - name: Create Pull Request from beta to main
-        run: |
-          gh pr create --base main --head beta --title "Merge beta into main" --body "Auto-Merge beta into main"
+        run: gh pr create --base main --head beta --title "Merge beta into main" --body "Auto-Merge beta into main"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
