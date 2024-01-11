@@ -96,11 +96,6 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/LAB02-Research/HASS.Agent
-    - icon: fontawesome/solid/mug-hot
-      link: https://ko-fi.com/lab02research
 
 markdown_extensions:
   - tables

@@ -55,10 +55,14 @@ If you have HASS.Agent from before 2.0.0 you can follow the steps below to migra
 
 ### Take backups <small>optional</small>
 
-If you really don't want to lose your previous config you can take a backup of your config by copying the entirety of the folder below somewhere else on your computer.
+If you really don't want to lose your previous config you can take a backup of your config by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:
 
 ```
-C:\
+Main Config
+%appdata%\LAB02 Research\HASS.Agent\config
+
+Satellite Config
+C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service\config
 ```
 
 ### Install 2.0.0+
@@ -69,4 +73,4 @@ There is no need to do anything to the integration, as long as you have the late
 
 ### Remove old HASS.Agent <small>optional</small>
 
-There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent" whereas the new one is called "HASS.Agent 2.0.0".
+There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent" whereas the new one is called "HASS.Agent 2".
