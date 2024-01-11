@@ -1,19 +1,21 @@
 site_name: Hass Agent Documentation
-site_url: https://hass-agent-beta.github.io/
-site_author: DrR0X-glitch
+site_url: https://hass-agent.io/
+site_author: DrR0X
 site_description: >-
   Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
 
-repo_url: https://github.com/LAB02-Research/HASS.Agent/
-repo_name: LAB02Research/HASS.Agent
+repo_url: https://github.com/hass-agent/hass.agent-documentation
+repo_name: HASS.Agent Documentation
+
+edit_uri: edit/beta/docs/
 
 copyright: >
-  Copyright &copy; 2023 <a href="https://github.com/DrR0X-glitch" target="_blank" rel="noopener">DrR0x</a> -
+  Copyright &copy; 2023 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> -
   <a href="#__consent">Change cookie settings</a>
 
 theme:
   name: material
-  custom_dir: theme_override_home
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
@@ -21,13 +23,15 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.tracking
-    - toc.integrate # TOC is table of contents
+    - navigation.indexes
     - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   language: en
   palette:
     - scheme: default
@@ -59,7 +63,7 @@ plugins:
 
 # Add stylesheet for custom color scheme
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 # Add social icons to footer
 extra:
@@ -67,7 +71,20 @@ extra:
     provider: mike
   analytics:
     provider: google
-    property: G-415530619
+    property: G-TBLK7V0HW7
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
   consent:
     actions:
       - accept
@@ -79,43 +96,83 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/LAB02-Research/HASS.Agent
-    - icon: fontawesome/solid/mug-hot
-      link: https://ko-fi.com/lab02research
 
 markdown_extensions:
+  - tables
   - toc:
       permalink: true
+      toc_depth: 4
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.keys
   - admonition
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.mark
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg # Page Tree
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # Page Tree
 
 
 nav:
   - Home: index.md
   - Getting Started:
-      - Start Here: getting-started/index.md
+      - getting-started/index.md
       - Installation: getting-started/installation.md
+      - Initial Setup and First Run: getting-started/initial-setup.md
+      - Other Install Methods: getting-started/other-installs.md
+      - Using Quick Actions: getting-started/quick-actions.md
+      - Using Sensors: getting-started/sensors.md
+      - Using Commands: getting-started/commands.md
+      - Sending Notifications: getting-started/notifications.md
+      - Setting up the Media Player: getting-started/media-player.md
+      - Troubleshooting: getting-started/troubleshooting.md
+  - Setup:
+      - setup/index.md
   - Helping Out:
-      - Start Here: contributing/index.md
-      - Reporting Issues: contributing/reporting-issues.md
+      - contributing/index.md
+      - We Need Help: contributing/need-help.md
+      - Reporting Issues / Features: contributing/reporting-issues.md
       - Developing the App:
-          - Start Here: contributing/hass-agent-app/index.md
+          - contributing/hass-agent-app/index.md
       - Developing the Integration:
-          - Start Here: contributing/hass-agent-integration/index.md
+          - contributing/hass-agent-integration/index.md
+          - Setup: contributing/hass-agent-integration/setup.md
+          - Development Lifecycle: contributing/hass-agent-integration/development-lifecycle.md
+          - What to work on: contributing/hass-agent-integration/finding-issues.md
       - Developing the Documentation:
-          - Start Here: contributing/hass-agent-documentation/index.md
+          - contributing/hass-agent-documentation/index.md
+          - Easy Editing: contributing/hass-agent-documentation/easy-editing.md
+          - Setup: contributing/hass-agent-documentation/setup.md
+          - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
+          - Editing Files: contributing/hass-agent-documentation/editing-files.md
+          - Adding Pages: contributing/hass-agent-documentation/adding-pages.md
+          - Special Pages / Other Files: contributing/hass-agent-documentation/special-files.md
+      - Translating:
+          - contributing/translating/index.md
+      - Extra Resources:
+          - contributing/developer-resources/index.md
+          - Version System: contributing/developer-resources/version-system.md
+          - Current Developers: contributing/developer-resources/current-devs.md
+  - Changelog: changelog.md
+  - Getting Help: getting-help.md

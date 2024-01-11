@@ -45,10 +45,7 @@ jobs:
       - name: Deploy copy of beta with incremented version number for development
         run: |
           mike deploy -p -u ${{ inputs.new_version }} beta -t beta
-      - name: Merge beta branch with main
-        run: |
-          git fetch --unshallow
-          git checkout main
-          git pull
-          git merge --no-ff beta -m "Auto-Merge beta into main"
-          git push
+      - name: Create Pull Request from beta to main
+        run: gh pr create --base main --head beta --title "Merge beta into main" --body "Auto-Merge beta into main"
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}

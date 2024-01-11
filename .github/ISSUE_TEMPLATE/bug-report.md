@@ -1,6 +1,6 @@
 ---
-name: Bug/problem report
-about: Create a bug/issue report for any problems
+name: Bug Report
+about: Create a bug report for any problems while using the documentation
 title: ""
 labels: ""
 assignees: ""
@@ -8,19 +8,17 @@ assignees: ""
 
 Make sure this issue isn't already listed here before submitting.
 
-If you need help with Direct URL's checkout this guide:
-
-https://hass-agent-beta.github.io/contributing/reporting-issues/
+Before creating an issue checkout our guide here: https://hass-agent.github.io/latest/contributing/reporting-issues/
 
 ---
 
 ## Describe the bug/problem
 
-A clear and concise description of what the bug or problem with a section is.
+A clear and concise description of what the bug or problem is.
 
 ## Where does this issue occur?
 
-**Include Direct URL to section; Info above**
+**Include Permalink to the section if applicable. Info in the guide above**
 
 ## Expected behaviour / expected information
 

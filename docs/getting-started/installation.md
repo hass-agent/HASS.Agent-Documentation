@@ -1,101 +1,76 @@
 # Installation
 
-Currently HASS.Agent is temporarily without access to the original REPO, however this is not permanent and will be resolved soon. For now though there are 2 main branches of HASS.Agent. There is the official one, which is older but more tested and stable. Then there is the beta version which is brand new with up-to-date features but less stable. We will go over installation instructions for both.
+HASS.Agent consists of two parts: the client/Windows app and the Home Assistant integration. You will need to install and configure both of these to use most of HASS.Agent's features.
 
-**Quick Install:** Click [here](https://github.com/LAB02-Research/HASS.Agent/releases/latest/download/HASS.Agent.Installer.exe) to download the official(old) build.
+!!! info "Migrating from pre-2.0.0?"
 
-### Installation Methods
+    If you already have HASS.Agent installed from before 2.0.0 checkout the section at the bottom for [information](#migration-from-pre-200) on migrating.
 
-HASS.Agent consists of two main programs; The client and the service. The client is the interface that you will interact with to update settings and access quick actions. The Service(Satellite Service) is what allows HASS.Agent to run commands in the background. This means that the client must be installed for each user whereas the service is installed for the entire machine.
+## Prerequisites
 
-#### Installers
+- **Home Assistant:** Ensure that your Home Assistant version is newer than `2023.6.0`. If you need help with Home Assistant, refer to the [official documentation](https://www.home-assistant.io/installation/){: target="\_blank"}.
+- **MQTT:** Set up an MQTT broker and install/configure the MQTT add-on in Home Assistant. A simple guide for MQTT setup can be found [here](https://www.youtube.com/watch?v=dqTn-Gk4Qeo){: target="\_blank"}.
+- **Windows 10/11:** HASS.Agent supports Windows 10 and 11. Older versions may work, but functionality is not guaranteed.
 
-Installers are simple programs you download and run that will install all necessary files and take you through the full setup. Installers only work for one user. Click [here](#installer-recommended) for this method.
+??? question "I don't want to install or use MQTT, can I still use HASS.Agent?"
 
-#### Manual .zip files
+    You don't **have** to have MQTT to use HASS.Agent; however, most features rely on it for bidirectional communication. Without MQTT, only Quick Actions will work.
 
-You can also manually download the .zip files for both parts of HASS.Agent; the service and the client. Click [here](#manualzip-files) for this method.
+## Installing HASS.Agent
 
-#### Special Case: Installing for multiple users
+To get started with installing HASS.Agent, follow these steps:
 
-If you want to install HASS.Agent on multiple accounts on the same PC, first install using the installer, then use the corresponding .zip package for the remaining accounts.
+1. Download the latest installer from [here](https://github.com/hass-agent/HASS.Agent/releases/latest/download/HASS.Agent.Installer.exe).
+2. Open the installer and follow the on-screen instructions.
+3. **Optional:** The installer allows you to copy the configuration from the previously installed version of HASS.Agent (Pre-2.0.0).
 
-> Note: you only have to install HASS.Agent on those accounts, the service is once-per-machine.
+## Installing the Home Assistant Integration
 
----
+???+ question inline end "I don't want to use the HASS.Agent integration at all"
 
-## Installer (recommended)
+    You do not **have** to use the integration however you will lose access to the Media Player and Notification features
 
-> Note: Requires elevated privileges(Administrator) to install
+After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:
 
-HASS.Agent can use an entry in your user account's registry to launch on login. It's disabled by default, but you'll be offered to enable this during onboarding, or you can always disable/enable using the Configuration window.
+1. Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
+2. Click the button below to install the HASS.Agent integration.
 
-To use notifications and/or the mediaplayer functionality, you'll need to install the [HASS.Agent integration](https://github.com/LAB02-Research/HASS.Agent-Integration). Checkout [this]() guide for more info.
+[![Add HACS integration to My Homeassistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=LAB02-Research&repository=HASS.Agent-Integration){: target="\_blank"}
 
-### Official Installer Release
+??? question "I don't want to install HACS, can I still install the HASS.Agent integration?"
 
-Click [here](https://github.com/LAB02-Research/HASS.Agent/releases/latest/download/HASS.Agent.Installer.exe) to download the official installer.
+    Yes, it is possible to install the integration without HACS; however, it is more difficult. Find more information [here](./other-installs.md/#installing-the-integration-without-hacs).
 
-### Beta Installer Release
+## Finishing up
 
-The current dev team has no access to the original installer so betas are using a separate more bare-bones installer.
+After installing both the integration and client/Windows app, proceed to the initial setup and configuration.
 
-Click [here]() to download the beta installer.
+???+ info
 
----
+    After installation, you can delete the `HASS.Agent.Installer.exe`.
 
-## Manual(.zip files)
+## Migration from pre-2.0.0
 
-If you don't want to (or can't) use the installer, you can also install manually - it's not that hard.
+If you have HASS.Agent from before 2.0.0 you can follow the steps below to migrate to the new one.
 
-Make sure you have dotnet 6 desktop runtime installed, you can [get that here](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.4-windows-x64-installer).
+### Take backups <small>optional</small>
 
-There are two zip files to download with every release; the client and the service. Get them just below.
+If you really don't want to lose your previous config you can take a backup of your config by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:
 
-HASS.Agent needs to be placed in a folder with write access. The default is `%appdata%\LAB02 Research\HASS.Agent`, but anywhere will do.
+```
+Main Config
+%appdata%\LAB02 Research\HASS.Agent\config
 
-The Satellite Service's default folder is `C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service`. You can place it anywhere you want, however, if that's the case you need to manually start `HASS.Agent.Satellite.Service.exe`, wait for it to start, then close it again. This way, it'll have configured a local registry setting telling HASS.Agent where it's stored.
+Satellite Config
+C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service\config
+```
 
-When both are done, you can start the configuration process by opening an **elevated** command prompt in HASS.Agent's directory. Then, execute the following command:
+### Install 2.0.0+
 
-`HASS.Agent.exe update`
+Install the latest hass.agent client by following the steps [above](#installing-hassagent), make sure to tick the option to migrat config at the end.
 
-HASS.Agent will now launch, install and configure the service and firewall rules, then relaunch itself without elevation.
+There is no need to do anything to the integration, as long as you have the latest version from HACS it will work.
 
-All done!
+### Remove old HASS.Agent <small>optional</small>
 
-### Official .zip Release
-
-Click [here](https://github.com/LAB02-Research/HASS.Agent/releases/latest/download/HASS.Agent.zip) to download the latest HASS.Agent package.
-
-Click [here](https://github.com/LAB02-Research/HASS.Agent/releases/latest/download/HASS.Agent.Satellite.Service.zip) to download the latest Satellite Service package.
-
-### Beta .zip Release
-
-Click to download the latest HASS.Agent package.
-
-Click to download the latest Satellite Service package.
-
----
-
-## Build From Scratch (Official only)
-
-If you want, you can also build everything yourself. You'll need to have Visual Studio 2022 installed. Also, make sure you have dotnet 6 desktop runtime installed, you can [get that here](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.4-windows-x64-installer).
-
-There are two main projects:
-
-[HASS.Agent](https://github.com/LAB02-Research/HASS.Agent/tree/main/src)
-
-[HASS.Agent Satellite Service](https://github.com/LAB02-Research/HASS.Agent.Satellite.Service/tree/main/src)
-
-Just get the source through git or GitHub's zip download, launch the solution files, make sure you set `x64` as its output type and build.
-
-If you want to control the entire process: both projects use `HASS.Agent.Shared`, a library which contains models and code mainly for the commands and sensors. It's added as a [nuget](https://www.nuget.org/packages/HASS.Agent.Shared).
-
-You can download its source here:
-
-[HASS.Agent.Shared](https://github.com/LAB02-Research/HASS.Agent.Shared)
-
-Just like before, make sure you set `x64` as its output type and build. Then, remove the nuget reference from both projects, add your own library and rebuild them.
-
-When all this is done, you can follow step 2 'manual' on this page to resume installation.
+There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent" whereas the new one is called "HASS.Agent 2".
