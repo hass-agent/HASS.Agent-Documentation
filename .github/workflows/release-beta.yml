@@ -48,4 +48,4 @@ jobs:
       - name: Create Pull Request from beta to main
         run: gh pr create --base main --head beta --title "Merge beta into main" --body "Auto-Merge beta into main"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
