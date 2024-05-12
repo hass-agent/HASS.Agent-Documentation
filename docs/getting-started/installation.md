@@ -26,16 +26,29 @@ To get started with installing HASS.Agent, follow these steps:
 
 ## Installing the Home Assistant Integration
 
-???+ question inline end "I don't want to use the HASS.Agent integration at all"
+???+ question "I don't want to use the HASS.Agent integration at all"
 
     You do not **have** to use the integration however you will lose access to the Media Player and Notification features
 
 After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:
 
-1. Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
-2. Click the button below to install the HASS.Agent integration.
+![Image title](../assets/images/screenshots/custom-repository.png){ align=right }
 
-[![Add HACS integration to My Homeassistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=LAB02-Research&repository=HASS.Agent-Integration){: target="\_blank"}
+1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
+1.  Click the three dots at the top right of the **HACS** integrations screen
+
+    1.  Select "Custom repositories"
+    1.  Paste in the below info
+
+        1. **Repository:** `https://github.com/hass-agent/HASS.Agent-Integration`
+        1. **Category:** `Integration`
+
+    1.  Click "ADD"
+
+1.  Click the button below to open the integration
+1.  Click "Download" in the bottom right to install
+
+[![Open Hass.Agent Integration](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
 
 ??? question "I don't want to install HACS, can I still install the HASS.Agent integration?"
 
