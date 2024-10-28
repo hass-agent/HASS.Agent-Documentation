@@ -35,7 +35,7 @@ After installing HASS.Agent on your PC, follow these steps to install the Home A
 1. Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
 2. Click the button below to install the HASS.Agent integration.
 
-[![Add HACS integration to My Homeassistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=LAB02-Research&repository=HASS.Agent-Integration){: target="\_blank"}
+[![Add HACS integration to My Homeassistant](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
 
 ??? question "I don't want to install HACS, can I still install the HASS.Agent integration?"
 
