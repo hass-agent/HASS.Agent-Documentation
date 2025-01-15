@@ -1,8 +1,15 @@
 name: Overwrite Beta Version
 on:
-  push:
-    branches:
-      - beta
+  workflow_dispatch:
+    inputs:
+      confirm_prs_resolved:
+        description: "I have made sure all PRs are resolved"
+        required: true
+        type: boolean
+      confirm_branch:
+        description: "I have set this workflow to run from the beta branch"
+        required: true
+        type: boolean
 permissions:
   contents: write
 jobs:
