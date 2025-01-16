@@ -32,7 +32,7 @@ To get started with installing HASS.Agent, follow these steps:
 
 After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:
 
-![Image title](../assets/images/screenshots/custom-repository.png){ align=right }
+![Image title](../assets/images/screenshots/custom-repository.png){ align=right, width="311" }
 
 1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
 1.  Click the three dots at the top right of the **HACS** integrations screen
