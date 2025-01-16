@@ -753,6 +753,63 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#frequent-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequent Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequent Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-naming-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Naming Warning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Naming Warning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ha-automatically-appends-device-names-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      HA automatically appends device names now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-need-to-do-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I need to do anything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1584,6 +1641,63 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#frequent-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequent Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequent Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-naming-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Naming Warning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Naming Warning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ha-automatically-appends-device-names-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      HA automatically appends device names now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-need-to-do-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I need to do anything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1618,6 +1732,25 @@
 <h1 id="troubleshooting-the-installation-and-setup-of-hassagent">Troubleshooting the Installation and setup of HASS.Agent<a class="headerlink" href="#troubleshooting-the-installation-and-setup-of-hassagent" title="Permanent link">&para;</a></h1>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <p>There are lots of places you can get help, we have more info in the <a href="../../getting-help/">Getting Help</a> section.</p>
+<h2 id="frequent-issues">Frequent Issues<a class="headerlink" href="#frequent-issues" title="Permanent link">&para;</a></h2>
+<h3 id="entity-naming-warning">Entity Naming Warning<a class="headerlink" href="#entity-naming-warning" title="Permanent link">&para;</a></h3>
+<p>If you are seeing entity name warnings in the Home Assistant console it is most likely due to a change made a while ago to the way entities are named.</p>
+<details class="info">
+<summary>What changed? Technical overview</summary>
+<h4 id="ha-automatically-appends-device-names-now">HA automatically appends device names now<a class="headerlink" href="#ha-automatically-appends-device-names-now" title="Permanent link">&para;</a></h4>
+<p>The change HA implemented is that it now automatically appends device names to the start of entity names. So if your device is named <code>my-pc</code> and the entity is called gpu-temp HA will automatically join these to create <code>my-pc_gpu-temp</code>.</p>
+<h4 id="why-do-i-need-to-do-anything">Why do I need to do anything<a class="headerlink" href="#why-do-i-need-to-do-anything" title="Permanent link">&para;</a></h4>
+<p>If you don't do anything, and you have currently named your entities with the device at the start(was default in V1) it will show as a console error because the entity will be named: <code>my-pc</code> + <code>my-pc_gpu-temp</code> creating: <code>my-pc_my-pc_gpu-temp</code>.</p>
+</details>
+<h4 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h4>
+<p>HASS.Agent V2 comes bundled with a <code>compat_names</code> arguement that can be passed to the .exe to automatically fix the names. You can use it by following these steps:</p>
+<ol>
+<li>Type in powershell into windows search and run it as admin.</li>
+<li>Use this command to switch to HASS.Agent directory: <code>cd C:\Users\YOURUSERNAME\AppData\Local\Hass.Agent\Client</code></li>
+<li>You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: <code>.\HASS.Agent.exe compat_names</code></li>
+<li>You should see a popup like the one below and no errors in the console, after it completes it will close and you can close all the windows before re-opening HASS.Agent.</li>
+</ol>
+<p><img alt="Compat Names Processing Dialog" src="../../assets/images/screenshots/compat_names.PNG" /></p>
 
 
 
