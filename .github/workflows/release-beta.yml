@@ -46,6 +46,6 @@ jobs:
         run: |
           mike deploy -p -u ${{ inputs.new_version }} beta -t beta
       - name: Create Pull Request from beta to main
-        run: gh pr create --base main --head beta --title "Merge beta into main" --body "Auto-Merge beta into main"
+        run: gh pr create --base main --head ${{ github.ref_name }} --title "Merge beta into main" --body "Auto-Merge beta into main\n> Syncs this beta branch as the stable documentation"
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
