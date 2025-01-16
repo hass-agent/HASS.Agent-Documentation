@@ -82,6 +82,10 @@ C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service\config
 
 Install the latest hass.agent client by following the steps [above](#installing-hassagent), make sure to tick the option to migrat config at the end.
 
+???+ warning "Entity Naming Changes"
+
+    After migrating from pre-2.0.0 you may get console errors due to changes in entity naming, more information and a solution is available [here](./troubleshooting.md/#entity-naming-warning).
+
 There is no need to do anything to the integration, as long as you have the latest version from HACS it will work.
 
 ### Remove old HASS.Agent <small>optional</small>
