@@ -28,27 +28,32 @@ To get started with installing HASS.Agent, follow these steps:
 
 ???+ question "I don't want to use the HASS.Agent integration at all"
 
-    You do not **have** to use the integration however you will lose access to the Media Player and Notification features
+    You don't **have** to use the integration however you will lose access to the Media Player and Notification features.
 
 After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:
 
-![Image title](../assets/images/screenshots/custom-repository.png){ align=right }
+<div class="grid" markdown>
 
-1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
-1.  Click the three dots at the top right of the **HACS** integrations screen
+=== "Steps"
+    1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/use/download/download/){: target="\_blank"}.
+    2.  Click the three dots at the top right of the **HACS** integrations screen
 
-    1.  Select "Custom repositories"
-    1.  Paste in the below info
+        1.  Select "Custom repositories"
+        2.  Paste in the below info
 
-        1. **Repository:** `https://github.com/hass-agent/HASS.Agent-Integration`
-        1. **Category:** `Integration`
+            1. **Repository:** `https://github.com/hass-agent/HASS.Agent-Integration`
+            2. **Category:** `Integration`
 
-    1.  Click "ADD"
+        3.  Click "ADD"
 
-1.  Click the button below to open the integration
-1.  Click "Download" in the bottom right to install
+    3.  Click the button below to open the integration
+    4.  Click "Download" in the bottom right to install
 
-[![Open Hass.Agent Integration](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
+    [![Open Hass.Agent Integration](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
+
+![Image of 3 dots menu](../assets/images/screenshots/custom-repository.png)
+
+</div>
 
 ??? question "I don't want to install HACS, can I still install the HASS.Agent integration?"
 
@@ -60,7 +65,7 @@ After installing both the integration and client/Windows app, proceed to the ini
 
 ???+ info
 
-    After installation, you can delete the `HASS.Agent.Installer.exe`.
+    After installation, you can delete `HASS.Agent.Installer.exe`.
 
 ## Migration from pre-2.0.0
 
@@ -68,13 +73,13 @@ If you have HASS.Agent from before 2.0.0 you can follow the steps below to migra
 
 ### Take backups <small>optional</small>
 
-If you really don't want to lose your previous config you can take a backup of your config by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:
+HASS.Agent v2 has a migration process to copy config from v1, however if you don't want to risk losing your previous config you can take a backup by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:
 
 ```
 Main Config
 %appdata%\LAB02 Research\HASS.Agent\config
 
-Satellite Config
+Satellite Service Config
 C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service\config
 ```
 
@@ -86,8 +91,12 @@ Install the latest hass.agent client by following the steps [above](#installing-
 
     After migrating from pre-2.0.0 you may get console errors due to changes in entity naming, more information and a solution is available [here](./troubleshooting.md/#entity-naming-warning).
 
-There is no need to do anything to the integration, as long as you have the latest version from HACS it will work.
+Install the latest integration as normal with the guide [above](#installing-the-home-assistant-integration).
 
 ### Remove old HASS.Agent <small>optional</small>
 
-There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent" whereas the new one is called "HASS.Agent 2".
+There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent", the new one is called "HASS.Agent 2".
+
+???+ warning
+
+    It is recommended you remove the old integration to ensure there is no conflict, simply select the integration in HACS and you will find delete under the 3 dots.
