@@ -28,7 +28,7 @@ To get started with installing HASS.Agent, follow these steps:
 
 ???+ question "I don't want to use the HASS.Agent integration at all"
 
-    You do not **have** to use the integration however you will lose access to the Media Player and Notification features
+    You don't **have** to use the integration however you will lose access to the Media Player and Notification features.
 
 After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:
 
