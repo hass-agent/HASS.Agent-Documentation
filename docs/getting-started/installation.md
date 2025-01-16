@@ -32,23 +32,28 @@ To get started with installing HASS.Agent, follow these steps:
 
 After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:
 
-![Image title](../assets/images/screenshots/custom-repository.png){ align=right, width="311" }
+<div class="grid" markdown>
 
-1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
-1.  Click the three dots at the top right of the **HACS** integrations screen
+=== "Steps"
+    1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
+    2.  Click the three dots at the top right of the **HACS** integrations screen
 
-    1.  Select "Custom repositories"
-    1.  Paste in the below info
+        1.  Select "Custom repositories"
+        2.  Paste in the below info
 
-        1. **Repository:** `https://github.com/hass-agent/HASS.Agent-Integration`
-        1. **Category:** `Integration`
+            1. **Repository:** `https://github.com/hass-agent/HASS.Agent-Integration`
+            2. **Category:** `Integration`
 
-    1.  Click "ADD"
+        3.  Click "ADD"
 
-1.  Click the button below to open the integration
-1.  Click "Download" in the bottom right to install
+    3.  Click the button below to open the integration
+    4.  Click "Download" in the bottom right to install
 
-[![Open Hass.Agent Integration](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
+    [![Open Hass.Agent Integration](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
+
+![Image of 3 dots menu](../assets/images/screenshots/custom-repository.png)
+
+</div>
 
 ??? question "I don't want to install HACS, can I still install the HASS.Agent integration?"
 
