@@ -4,8 +4,8 @@ site_author: DrR0X
 site_description: >-
   Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
 
-repo_url: https://github.com/hass-agent/hass.agent-documentation
-repo_name: HASS.Agent Documentation
+repo_url: https://github.com/hass-agent/hass.agent
+repo_name: HASS.Agent
 
 edit_uri: edit/beta/docs/
 
