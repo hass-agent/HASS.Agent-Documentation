@@ -1,0 +1,27 @@
+name: Overwrite Nightly Version
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_branch:
+        description: "I have set this workflow to run from the nightly branch"
+        required: true
+        type: boolean
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Fetch full gh-pages branch and create user
+        run: |
+          git fetch origin gh-pages --depth=1
+          git config user.name ci-bot
+          git config user.email ci-bot@example.com
+      - run: |
+          mike deploy -u -p 0.1 nightly -t nightly
