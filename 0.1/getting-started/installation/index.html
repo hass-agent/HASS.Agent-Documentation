@@ -1782,10 +1782,7 @@
 <p>You do not <strong>have</strong> to use the integration however you will lose access to the Media Player and Notification features</p>
 </details>
 <p>After installing HASS.Agent on your PC, follow these steps to install the Home Assistant integration:</p>
-<div class="grid">
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="steps" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="steps">Steps</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p><img align="right" alt="Image title" src="../../assets/images/screenshots/custom-repository.png" /></p>
 <ol>
 <li>Ensure you have HACS installed. If not, follow the installation guide <a href="https://hacs.xyz/docs/setup/download" target="_blank">here</a>.</li>
 <li>
@@ -1810,11 +1807,6 @@
 <li>Click "Download" in the bottom right to install</li>
 </ol>
 <p><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&amp;repository=HASS.Agent-Integration" target="_blank"><img alt="Open Hass.Agent Integration" src="https://my.home-assistant.io/badges/hacs_repository.svg" /></a></p>
-</div>
-</div>
-</div>
-<p><img alt="Image of 3 dots menu" src="../../assets/images/screenshots/custom-repository.png" /></p>
-</div>
 <details class="question">
 <summary>I don't want to install HACS, can I still install the HASS.Agent integration?</summary>
 <p>Yes, it is possible to install the integration without HACS; however, it is more difficult. Find more information <a href="../other-installs/#installing-the-integration-without-hacs">here</a>.</p>
@@ -1828,22 +1820,22 @@
 <h2 id="migration-from-pre-200">Migration from pre-2.0.0<a class="headerlink" href="#migration-from-pre-200" title="Permanent link">&para;</a></h2>
 <p>If you have HASS.Agent from before 2.0.0 you can follow the steps below to migrate to the new one.</p>
 <h3 id="take-backups-optional">Take backups <small>optional</small><a class="headerlink" href="#take-backups-optional" title="Permanent link">&para;</a></h3>
-<p>HASS.Agent v2 has a migration process to copy config from v1, however if you don't want to risk losing your previous config you can take a backup by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:</p>
+<p>If you really don't want to lose your previous config you can take a backup of your config by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Main Config
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>%appdata%\LAB02 Research\HASS.Agent\config
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Satellite Service Config
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Satellite Config
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service\config
 </code></pre></div>
 <h3 id="install-200">Install 2.0.0+<a class="headerlink" href="#install-200" title="Permanent link">&para;</a></h3>
-<p>Install the latest hass.agent client by following the steps <a href="#installing-hassagent">above</a>, <strong>make sure to tick the option to migrate config at the end.</strong></p>
-<p>Install the latest integration as normal with the guide <a href="#installing-the-home-assistant-integration">above</a>.</p>
-<h3 id="remove-old-hassagent-optional">Remove old HASS.Agent <small>optional</small><a class="headerlink" href="#remove-old-hassagent-optional" title="Permanent link">&para;</a></h3>
-<p>There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent", the new one is called "HASS.Agent 2".</p>
+<p>Install the latest hass.agent client by following the steps <a href="#installing-hassagent">above</a>, make sure to tick the option to migrat config at the end.</p>
 <details class="warning" open="open">
-<summary>Warning</summary>
-<p>It is recommended you remove the old integration to ensure there is no conflict, simply select the integration in HACS and you will find delete under the 3 dots.</p>
+<summary>Entity Naming Changes</summary>
+<p>After migrating from pre-2.0.0 you may get console errors due to changes in entity naming, more information and a solution is available <a href="../troubleshooting/#entity-naming-warning">here</a>.</p>
 </details>
+<p>There is no need to do anything to the integration, as long as you have the latest version from HACS it will work.</p>
+<h3 id="remove-old-hassagent-optional">Remove old HASS.Agent <small>optional</small><a class="headerlink" href="#remove-old-hassagent-optional" title="Permanent link">&para;</a></h3>
+<p>There is no need to have the old HASS.Agent installed so you can now remove it from settings or control panel. It will be called "HASS.Agent" whereas the new one is called "HASS.Agent 2".</p>
 
 
 
