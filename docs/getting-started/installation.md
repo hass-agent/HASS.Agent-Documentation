@@ -65,7 +65,7 @@ After installing both the integration and client/Windows app, proceed to the ini
 
 ???+ info
 
-    After installation, you can delete the `HASS.Agent.Installer.exe`.
+    After installation, you can delete `HASS.Agent.Installer.exe`.
 
 ## Migration from pre-2.0.0
 
