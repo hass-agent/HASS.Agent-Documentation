@@ -35,7 +35,7 @@ After installing HASS.Agent on your PC, follow these steps to install the Home A
 <div class="grid" markdown>
 
 === "Steps"
-    1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/setup/download){: target="\_blank"}.
+    1.  Ensure you have HACS installed. If not, follow the installation guide [here](https://hacs.xyz/docs/use/download/download/){: target="\_blank"}.
     2.  Click the three dots at the top right of the **HACS** integrations screen
 
         1.  Select "Custom repositories"
