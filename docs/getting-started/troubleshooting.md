@@ -14,16 +14,29 @@ Unfortunately autodiscovery issues are common, currently the best way to fix it 
 
 #### Solution Steps
 
-1. Remove integration
-      1. Open HACS
-      2. Open `Hass.Agent 2 Integration - Media Player & Notifications`
-      3. Click 3 dots
-      4. Click `Remove`
-2. Restart Home Assistant
-3. Install integration as normal
-4. Restart Home Assistant
+1. Remove integration.
+      1. Open HACS.
+      2. Open `Hass.Agent 2 Integration - Media Player & Notifications`.
+      3. Click 3 dots.
+      4. Click `Remove`.
+2. Restart Home Assistant.
+3. Install integration as normal.
+4. Restart Home Assistant.
 
 This should solve most issues with devices not appearing.
+
+## Old devices showing in Home Assistant after being removed?
+
+If you have old devices showing in Home Assistant after being removed, you can try restarting Home Assistant. If they still show try the following steps:
+
+1. Download and install [MQTT Explorer](https://mqtt-explorer.com/){target="_blank"}.
+2. Open MQTT Explorer.
+3. Connect to your MQTT broker.
+4. Find the topic `homeassistant/device_type/your_device_name/old_entity` and delete it.
+
+???+ tip "What if I delete an active entity?"
+
+    If any **HASS.Agent** entity is removed it will automatically be added, so you don't need to worry about losing any data. Be careful not to remove anything not HASS.Agent related.
 
 ## Frequent Issues
 
@@ -44,8 +57,8 @@ If you are seeing entity name warnings in the Home Assistant console it is most 
 HASS.Agent V2 comes bundled with a `compat_names` arguement that can be passed to the .exe to automatically fix the names. You can use it by following these steps:
 
 1. Type in powershell into windows search and run it as admin.
-2. Use this command to switch to HASS.Agent directory: `cd C:\Users\YOURUSERNAME\AppData\Local\Hass.Agent\Client`
-3. You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: `.\HASS.Agent.exe compat_names`
+2. Use this command to switch to HASS.Agent directory: `cd C:\Users\YOURUSERNAME\AppData\Local\Hass.Agent\Client`.
+3. You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: `.\HASS.Agent.exe compat_names`.
 4. You should see a popup like the one below and no errors in the console, after it completes it will close and you can close all the windows before re-opening HASS.Agent.
 
 ![Compat Names Processing Dialog](../assets/images/screenshots/compat_names.PNG)
