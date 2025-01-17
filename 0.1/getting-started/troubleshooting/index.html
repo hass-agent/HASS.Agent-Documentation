@@ -761,6 +761,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#device-not-showing-in-home-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device not showing in Home Assistant?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device not showing in Home Assistant?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#old-devices-showing-in-home-assistant-after-being-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Old devices showing in Home Assistant after being removed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#frequent-issues" class="md-nav__link">
     <span class="md-ellipsis">
       Frequent Issues
@@ -1649,6 +1682,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#device-not-showing-in-home-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device not showing in Home Assistant?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device not showing in Home Assistant?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#old-devices-showing-in-home-assistant-after-being-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Old devices showing in Home Assistant after being removed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#frequent-issues" class="md-nav__link">
     <span class="md-ellipsis">
       Frequent Issues
@@ -1739,6 +1805,38 @@
 <h1 id="troubleshooting-the-installation-and-setup-of-hassagent">Troubleshooting the Installation and setup of HASS.Agent<a class="headerlink" href="#troubleshooting-the-installation-and-setup-of-hassagent" title="Permanent link">&para;</a></h1>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <p>There are lots of places you can get help, we have more info in the <a href="../../getting-help/">Getting Help</a> section.</p>
+<h2 id="device-not-showing-in-home-assistant">Device not showing in Home Assistant?<a class="headerlink" href="#device-not-showing-in-home-assistant" title="Permanent link">&para;</a></h2>
+<p>Unfortunately autodiscovery issues are common, currently the best way to fix it is to reinstall the integration.</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>Only notifications and the media player will show under the Hass.Agent integration. For Commands and Sensors you need to look under the MQTT integration.</p>
+</details>
+<h4 id="solution-steps">Solution Steps<a class="headerlink" href="#solution-steps" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Remove integration.<ol>
+<li>Open HACS.</li>
+<li>Open <code>Hass.Agent 2 Integration - Media Player &amp; Notifications</code>.</li>
+<li>Click 3 dots.</li>
+<li>Click <code>Remove</code>.</li>
+</ol>
+</li>
+<li>Restart Home Assistant.</li>
+<li>Install integration as normal.</li>
+<li>Restart Home Assistant.</li>
+</ol>
+<p>This should solve most issues with devices not appearing.</p>
+<h2 id="old-devices-showing-in-home-assistant-after-being-removed">Old devices showing in Home Assistant after being removed?<a class="headerlink" href="#old-devices-showing-in-home-assistant-after-being-removed" title="Permanent link">&para;</a></h2>
+<p>If you have old devices showing in Home Assistant after being removed, you can try restarting Home Assistant. If they still show try the following steps:</p>
+<ol>
+<li>Download and install <a href="https://mqtt-explorer.com/" target="_blank">MQTT Explorer</a>.</li>
+<li>Open MQTT Explorer.</li>
+<li>Connect to your MQTT broker.</li>
+<li>Find the topic <code>homeassistant/device_type/your_device_name/old_entity</code> and delete it.</li>
+</ol>
+<details class="tip" open="open">
+<summary>What if I delete an active entity?</summary>
+<p>If any <strong>HASS.Agent</strong> entity is removed it will automatically be added, so you don't need to worry about losing any data. Be careful not to remove anything not HASS.Agent related.</p>
+</details>
 <h2 id="frequent-issues">Frequent Issues<a class="headerlink" href="#frequent-issues" title="Permanent link">&para;</a></h2>
 <h3 id="entity-naming-warning">Entity Naming Warning<a class="headerlink" href="#entity-naming-warning" title="Permanent link">&para;</a></h3>
 <p>If you are seeing entity name warnings in the Home Assistant console it is most likely due to a change made a while ago to the way entities are named.</p>
@@ -1753,8 +1851,8 @@
 <p>HASS.Agent V2 comes bundled with a <code>compat_names</code> arguement that can be passed to the .exe to automatically fix the names. You can use it by following these steps:</p>
 <ol>
 <li>Type in powershell into windows search and run it as admin.</li>
-<li>Use this command to switch to HASS.Agent directory: <code>cd C:\Users\YOURUSERNAME\AppData\Local\Hass.Agent\Client</code></li>
-<li>You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: <code>.\HASS.Agent.exe compat_names</code></li>
+<li>Use this command to switch to HASS.Agent directory: <code>cd C:\Users\YOURUSERNAME\AppData\Local\Hass.Agent\Client</code>.</li>
+<li>You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: <code>.\HASS.Agent.exe compat_names</code>.</li>
 <li>You should see a popup like the one below and no errors in the console, after it completes it will close and you can close all the windows before re-opening HASS.Agent.</li>
 </ol>
 <p><img alt="Compat Names Processing Dialog" src="../../assets/images/screenshots/compat_names.PNG" /></p>
