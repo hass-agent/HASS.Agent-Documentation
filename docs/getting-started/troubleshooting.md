@@ -4,6 +4,27 @@
 
 There are lots of places you can get help, we have more info in the [Getting Help](../getting-help.md) section.
 
+## Device not showing in Home Assistant?
+
+Unfortunately autodiscovery issues are common, currently the best way to fix it is to reinstall the integration.
+
+???+ warning
+
+    Only notifications and the media player will show under the Hass.Agent integration. For Commands and Sensors you need to look under the MQTT integration.
+
+#### Solution Steps
+
+1. Remove integration
+      1. Open HACS
+      2. Open `Hass.Agent 2 Integration - Media Player & Notifications`
+      3. Click 3 dots
+      4. Click `Remove`
+2. Restart Home Assistant
+3. Install integration as normal
+4. Restart Home Assistant
+
+This should solve most issues with devices not appearing.
+
 ## Frequent Issues
 
 ### Entity Naming Warning
