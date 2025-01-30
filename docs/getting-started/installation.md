@@ -75,12 +75,16 @@ If you have HASS.Agent from before 2.0.0 you can follow the steps below to migra
 
 HASS.Agent v2 has a migration process to copy config from v1, however if you don't want to risk losing your previous config you can take a backup by copying the entirety of the config folders somewhere else on your computer. By default they are stored in these 2 folders:
 
-```
-Main Config
-%appdata%\LAB02 Research\HASS.Agent\config
+##### Main Config
 
-Satellite Service Config
-C:\Program Files (x86)\LAB02 Research\HASS.Agent Satellite Service\config
+```
+%localappdata%\HASS.Agent\Client\config
+```
+
+##### Satellite Service Config
+
+```
+C:\Program Files\HASS.Agent Satellite Service\Service\config
 ```
 
 ### Install 2.0.0+
