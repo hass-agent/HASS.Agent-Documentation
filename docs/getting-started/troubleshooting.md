@@ -49,7 +49,7 @@ If you are seeing entity name warnings in the Home Assistant console it is most 
     #### HA automatically appends device names now
     The change HA implemented is that it now automatically appends device names to the start of entity names. So if your device is named `my-pc` and the entity is called gpu-temp HA will automatically join these to create `my-pc_gpu-temp`.
 
-    #### Why do I need to do anything
+    #### Why do I need to do anything?
     If you don't do anything, and you have currently named your entities with the device at the start(was default in V1) it will show as a console error because the entity will be named: `my-pc` + `my-pc_gpu-temp` creating: `my-pc_my-pc_gpu-temp`.
 
 #### Solution
