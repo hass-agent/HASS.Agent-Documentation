@@ -16,7 +16,7 @@ To start off you will need to create your own fork of the documentation repo to 
 
 After clicking fork you will be presented with this screen. You can customise the repo name and description however you **must** make sure to **de-select** "Copy the `main` branch only". You need both the `main` and `beta` branches to contribute.
 
-![Screenshot of creating a fork github page](../../assets/images/screenshots/create-docs-fork.png)
+![Screenshot of creating a fork github page](../../assets/images/screenshots/contributing/docs/create-docs-fork.png)
 
 ### Disabling github actions
 

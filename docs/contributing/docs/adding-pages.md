@@ -4,7 +4,7 @@ You can add new pages anywhere in the documentation if you feel the need to. How
 
 ## Creating the page
 
-You start by creating a new .md with an all lowercase name, you can use `-` dashes in place of spaces. For example this file is called `adding-pages.md` This file should be located in the section you want it, for example; if you want a new page in this documentation contributing section you will create the page in the `docs/contributing/hass-agent-documentation/`.
+You start by creating a new .md with an all lowercase name, you can use `-` dashes in place of spaces. For example this file is called `adding-pages.md` This file should be located in the section you want it, for example; if you want a new page in this documentation contributing section you will create the page in the `docs/contributing/docs/`.
 
 Now you can use a heading 1 to indicate the name of this page. Example: `# Adding new pages`
 
@@ -17,7 +17,7 @@ nav:
   - Home: index.md
 ```
 
-To add your page you need to find the section you have placed your file in, for example a file placed in the `docs/contributing/hass-agent-documentation` should be added under the:
+To add your page you need to find the section you have placed your file in, for example a file placed in the `docs/contributing/docs` should be added under the:
 
 ```yaml
 nav:
@@ -28,7 +28,7 @@ nav:
 You create a new entry by indenting and adding a `- ` and then writing the name of your page that you want in the sidebar navigation, so keep it short. Then you add a `:` and follow it by the directory of the file.
 ???+ note
 
-    This directory starts in the docs folder so you will just write `contributing/hass-agent-documentation`, not `docs/contributing/hass-agent-documentation`.
+    This directory starts in the docs folder so you will just write `contributing/docs`, not `docs/contributing/docs`.
 
 ## Editing and Testing the page
 
