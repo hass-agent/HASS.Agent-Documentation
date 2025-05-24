@@ -150,30 +150,39 @@ nav:
       - Troubleshooting: getting-started/troubleshooting.md
   - Setup:
       - setup/index.md
+      - Commands: 
+          - setup/commands/index.md
+          - All: setup/commands/all-commands.md
+      - Sensors: 
+          - setup/sensors/index.md
+      - Notifications:
+          - setup/notifications/index.md
+      - Media Player: setup/media-player.md
+      - Quick Actions: setup/quick-actions.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
       - Reporting Issues / Features: contributing/reporting-issues.md
       - Developing the App:
-          - contributing/hass-agent-app/index.md
+          - contributing/app/index.md
       - Developing the Integration:
-          - contributing/hass-agent-integration/index.md
-          - Setup: contributing/hass-agent-integration/setup.md
-          - Development Lifecycle: contributing/hass-agent-integration/development-lifecycle.md
-          - What to work on: contributing/hass-agent-integration/finding-issues.md
+          - contributing/integration/index.md
+          - Setup: contributing/integration/setup.md
+          - Development Lifecycle: contributing/integration/development-lifecycle.md
+          - What to work on: contributing/integration/finding-issues.md
       - Developing the Documentation:
-          - contributing/hass-agent-documentation/index.md
-          - Easy Editing: contributing/hass-agent-documentation/easy-editing.md
-          - Setup: contributing/hass-agent-documentation/setup.md
-          - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
-          - Editing Files: contributing/hass-agent-documentation/editing-files.md
-          - Adding Pages: contributing/hass-agent-documentation/adding-pages.md
-          - Special Pages / Other Files: contributing/hass-agent-documentation/special-files.md
+          - contributing/docs/index.md
+          - Easy Editing: contributing/docs/easy-editing.md
+          - Setup: contributing/docs/setup.md
+          - Development Lifecycle: contributing/docs/development-lifecycle.md
+          - Editing Files: contributing/docs/editing-files.md
+          - Adding Pages: contributing/docs/adding-pages.md
+          - Special Pages / Other Files: contributing/docs/special-files.md
       - Translating:
           - contributing/translating/index.md
       - Extra Resources:
-          - contributing/developer-resources/index.md
-          - Version System: contributing/developer-resources/version-system.md
-          - Current Developers: contributing/developer-resources/current-devs.md
+          - contributing/resources/index.md
+          - Version System: contributing/resources/version-system.md
+          - Current Developers: contributing/resources/current-devs.md
   - Changelog: changelog.md
   - Getting Help: getting-help.md
