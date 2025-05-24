@@ -17,7 +17,7 @@ To setup Quick Actions you will need to open HASS.Agent and Click "Quick Actions
 ???+ example
 
     Here is the config for a quick action that send the "play" action to my tv.
-    ![Image of the config](../assets/images/screenshots/quick-action-new.png)
+    ![Image of the config](../assets/images/screenshots/getting-started/quick-action-new.png)
 
 #### Extra config <small>optional</small>
 
@@ -25,7 +25,7 @@ To setup Quick Actions you will need to open HASS.Agent and Click "Quick Actions
 
 ??? example "Description of "Let there be light!" "
 
-    ![Image of the quick action](../assets/images/screenshots/quick-action-description.png)
+    ![Image of the quick action](../assets/images/screenshots/getting-started/quick-action-description.png)
 
 - Add a custom hotkey just for this quick action, allowing you to interact with entities without opening the quick actions menu. To set a custom hotkey tick the "Enable Hotkey" box and click on the "Hotkey Combination" box to set it to whatever you want.
 
