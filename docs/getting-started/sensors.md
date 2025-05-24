@@ -6,14 +6,14 @@ One of the core features of HASS.Agent is the ability to send data about your pc
 
 #### Required properties
 
-1. **TYPE:** Select the type of sensor from the left, there are many options available, a full description is available in the [setup](../setup/sensors.md) guide.
+1. **TYPE:** Select the type of sensor from the left, there are many options available, a full description is available in the [setup](../setup/sensors/index.md) guide.
 2. **Name:** Enter the name for the entity in HA, this is the entity id so it must not contain spaces.
 3. **Update Interval:** Sets the interval for how often the sensor updates, the recommended value is usually fine.
 
 ???+ example
 
     Here is the config for a sensor that monitors the gpu temperature.
-    ![Image of the config](../assets/images/screenshots/sensor-new.png)
+    ![Image of the config](../assets/images/screenshots/setup/sensors/new-sensor.png)
 
 #### Extra config <small>optional</small>
 
@@ -21,7 +21,7 @@ One of the core features of HASS.Agent is the ability to send data about your pc
 
 ??? example "Friendly Name of "Gpu Temp" "
 
-    ![Image of the quick action](../assets/images/screenshots/sensor-friendly-name.png)
+    ![Image of the quick action](../assets/images/screenshots/getting-started/sensor-friendly-name.png)
 
 - **Availability check:** Enable/Disable availability check, this tells HA whether to check if the computer is online before grabbing the last state. If you want your sensor to always display last state even if the computer has been off for a while turn this on.
 

@@ -6,7 +6,7 @@
 
 !!! warning
 
-    **Make sure you understand the HASS.Agent client version system before continuing. You can find info on it [here](../developer-resources/version-system.md/#clientdocumentation-versioning).**
+    **Make sure you understand the HASS.Agent client version system before continuing. You can find info on it [here](../resources/version-system.md).**
 
 ## Overview
 

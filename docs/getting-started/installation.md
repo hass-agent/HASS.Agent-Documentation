@@ -51,7 +51,7 @@ After installing HASS.Agent on your PC, follow these steps to install the Home A
 
     [![Open Hass.Agent Integration](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hass-agent&repository=HASS.Agent-Integration){: target="\_blank"}
 
-![Image of 3 dots menu](../assets/images/screenshots/custom-repository.png)
+![Image of 3 dots menu](../assets/images/screenshots/getting-started/custom-repository.png)
 
 </div>
 

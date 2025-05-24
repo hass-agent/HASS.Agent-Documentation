@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material:9.5.0
+FROM squidfunk/mkdocs-material:9.6.14
 
 WORKDIR /app
 

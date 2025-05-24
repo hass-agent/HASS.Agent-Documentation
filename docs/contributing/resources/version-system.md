@@ -100,4 +100,4 @@ The other difference between this version system and the client's version system
 
 ## Relationship between the client and the integration
 
-Both the client and the integration are going to be using SemVer, however it will **not** be the same version. Instead when you checkout the installation for HASS.Agent it will tell you what version of the integration is required. The other thing is that most of the integration's development will be backwards compatible and not move up from version `2`.
+Both the client and the integration are going to be using SemVer, however it will **not** be the same version. Instead when you checkout the installation for HASS.Agent it will tell you what version of the integration is required. Most of the integration's development will be backwards compatible and not move up from version `2`.

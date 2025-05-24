@@ -61,4 +61,4 @@ HASS.Agent V2 comes bundled with a `compat_names` arguement that can be passed t
 3. You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: `.\HASS.Agent.exe compat_names`.
 4. You should see a popup like the one below and no errors in the console, after it completes it will close and you can close all the windows before re-opening HASS.Agent.
 
-![Compat Names Processing Dialog](../assets/images/screenshots/compat_names.PNG)
+![Compat Names Processing Dialog](../assets/images/screenshots/getting-started/compat_names.PNG)
