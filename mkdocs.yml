@@ -152,11 +152,13 @@ nav:
       - setup/index.md
       - Commands: 
           - setup/commands/index.md
-          - All: setup/commands/all-commands.md
+          - All: setup/commands/all.md
       - Sensors: 
           - setup/sensors/index.md
+          - All: setup/sensors/all.md
       - Notifications:
           - setup/notifications/index.md
+          - All: setup/notifications/all.md
       - Media Player: setup/media-player.md
       - Quick Actions: setup/quick-actions.md
   - Helping Out:
