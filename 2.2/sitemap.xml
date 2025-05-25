@@ -25,63 +25,63 @@
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/developer-resources/</loc>
+         <loc>https://hass-agent.io/latest/contributing/app/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/developer-resources/current-devs/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/developer-resources/version-system/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/adding-pages/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-app/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/development-lifecycle/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/easy-editing/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/adding-pages/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/editing-files/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/development-lifecycle/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/setup/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/easy-editing/</loc>
+         <loc>https://hass-agent.io/latest/contributing/docs/special-files/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/editing-files/</loc>
+         <loc>https://hass-agent.io/latest/contributing/integration/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/setup/</loc>
+         <loc>https://hass-agent.io/latest/contributing/integration/development-lifecycle/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-documentation/special-files/</loc>
+         <loc>https://hass-agent.io/latest/contributing/integration/finding-issues/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-integration/</loc>
+         <loc>https://hass-agent.io/latest/contributing/integration/setup/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-integration/development-lifecycle/</loc>
+         <loc>https://hass-agent.io/latest/contributing/resources/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-integration/finding-issues/</loc>
+         <loc>https://hass-agent.io/latest/contributing/resources/current-devs/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
-         <loc>https://hass-agent.io/latest/contributing/hass-agent-integration/setup/</loc>
+         <loc>https://hass-agent.io/latest/contributing/resources/version-system/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
@@ -129,7 +129,43 @@
          <lastmod>2025-05-25</lastmod>
     </url>
     <url>
+         <loc>https://hass-agent.io/latest/getting-started/webviews/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
          <loc>https://hass-agent.io/latest/setup/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/media-player/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/quick-actions/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/commands/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/commands/all/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/notifications/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/notifications/all/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/sensors/</loc>
+         <lastmod>2025-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://hass-agent.io/latest/setup/sensors/all/</loc>
          <lastmod>2025-05-25</lastmod>
     </url>
 </urlset>

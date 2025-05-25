@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://hass-agent.io/latest/changelog/">
       
       
-        <link rel="prev" href="../contributing/developer-resources/current-devs/">
+        <link rel="prev" href="../contributing/resources/current-devs/">
       
       
         <link rel="next" href="../getting-help/">
@@ -71,9 +71,7 @@
 
     
     
-     
-<script src="https://embed.released.so/1/embed.js" defer></script>
-
+    
   </head>
   
   
@@ -91,6 +89,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -115,7 +118,10 @@
 </style>
 
 <strong>
-  <a href="/latest/contributing/need-help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
+  <a href="/latest/contributing/need-help"
+    >We need help! If you have experience in C# or Python we would love to have
+    you help out. Click here for more.</a
+  >
 </strong>
 
 
@@ -132,9 +138,46 @@
           <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
                You're not viewing the latest version.
-<a href="../..">
+<a href="#" id="go-to-latest">
   <strong>Click here to go to latest.</strong>
 </a>
+
+<script>
+  document
+    .getElementById("go-to-latest")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+
+      fetch("/versions.json")
+        .then((response) => response.json())
+        .then((data) => {
+          if (!Array.isArray(data)) {
+            console.error("Invalid versions.json format");
+            return;
+          }
+
+          // Find the version with alias 'latest'
+          const latestEntry = data.find(
+            (v) => Array.isArray(v.aliases) && v.aliases.includes("latest")
+          );
+          const latestVersion = latestEntry?.version;
+
+          if (!latestVersion) {
+            console.error("Latest version not found in versions.json");
+            return;
+          }
+
+          const currentPath = window.location.pathname;
+          const versionPattern = /^\/([\d.]+)(\/.*)?$/;
+          const match = currentPath.match(versionPattern);
+
+          const pathWithoutVersion = match ? match[2] || "/" : currentPath;
+          const newUrl = "/" + latestVersion + pathWithoutVersion;
+          window.location.href = newUrl;
+        })
+        .catch((err) => console.error("Failed to fetch versions.json", err));
+    });
+</script>
 
             </div>
             <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
@@ -265,7 +308,7 @@
     
     <div class="md-container" data-md-component="container">
       
-       
+      
         
           
             
@@ -404,42 +447,6 @@
           
         
       
-<style>
-  /* Application header should be static for the landing page */
-  .md-header {
-    position: initial;
-  }
-
-  /* Remove spacing, as we cannot hide it completely */
-  .md-main__inner {
-    margin: 0;
-  }
-
-  /* Hide main content for now */
-  .md-content {
-    display: none;
-  }
-
-  /* Hide table of contents */
-  @media screen and (min-width: 60em) {
-    .md-sidebar--secondary {
-      display: none;
-    }
-  }
-
-  /* Hide navigation */
-  @media screen and (min-width: 76.25em) {
-    .md-sidebar--primary {
-      display: none;
-    }
-  }
-
-  body {
-    background-color: #1e2129;
-  }
-</style>
-<released-page color-scheme="dark" channel-id="156352a6-a4f4-4507-b115-18184f3e4d24"></released-page>
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -511,6 +518,8 @@
       
         
           
+        
+      
         
       
         
@@ -767,6 +776,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../getting-started/webviews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Webviews
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../getting-started/troubleshooting/" class="md-nav__link">
         
   
@@ -803,6 +835,16 @@
           
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -832,6 +874,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
@@ -841,6 +888,325 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../setup/commands/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/commands/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../setup/sensors/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Sensors
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/sensors/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../setup/notifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Notifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/notifications/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/media-player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media Player
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/quick-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -998,7 +1364,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/hass-agent-app/" class="md-nav__link ">
+            <a href="../contributing/app/" class="md-nav__link ">
               
   
   
@@ -1065,7 +1431,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/hass-agent-integration/" class="md-nav__link ">
+            <a href="../contributing/integration/" class="md-nav__link ">
               
   
   
@@ -1100,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-integration/setup/" class="md-nav__link">
+      <a href="../contributing/integration/setup/" class="md-nav__link">
         
   
   
@@ -1123,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-integration/development-lifecycle/" class="md-nav__link">
+      <a href="../contributing/integration/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1146,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-integration/finding-issues/" class="md-nav__link">
+      <a href="../contributing/integration/finding-issues/" class="md-nav__link">
         
   
   
@@ -1212,7 +1578,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/hass-agent-documentation/" class="md-nav__link ">
+            <a href="../contributing/docs/" class="md-nav__link ">
               
   
   
@@ -1247,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/easy-editing/" class="md-nav__link">
+      <a href="../contributing/docs/easy-editing/" class="md-nav__link">
         
   
   
@@ -1270,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/setup/" class="md-nav__link">
+      <a href="../contributing/docs/setup/" class="md-nav__link">
         
   
   
@@ -1293,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/development-lifecycle/" class="md-nav__link">
+      <a href="../contributing/docs/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1316,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/editing-files/" class="md-nav__link">
+      <a href="../contributing/docs/editing-files/" class="md-nav__link">
         
   
   
@@ -1339,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/adding-pages/" class="md-nav__link">
+      <a href="../contributing/docs/adding-pages/" class="md-nav__link">
         
   
   
@@ -1362,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/special-files/" class="md-nav__link">
+      <a href="../contributing/docs/special-files/" class="md-nav__link">
         
   
   
@@ -1481,7 +1847,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/developer-resources/" class="md-nav__link ">
+            <a href="../contributing/resources/" class="md-nav__link ">
               
   
   
@@ -1516,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/developer-resources/version-system/" class="md-nav__link">
+      <a href="../contributing/resources/version-system/" class="md-nav__link">
         
   
   
@@ -1539,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/developer-resources/current-devs/" class="md-nav__link">
+      <a href="../contributing/resources/current-devs/" class="md-nav__link">
         
   
   
@@ -1583,6 +1949,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1595,6 +1976,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hassagent-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      HASS.Agent App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HASS.Agent App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2.1.1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 - Feb 06, 2025
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2.1.0" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0 - Sep 28, 2024
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1639,6 +2072,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hassagent-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      HASS.Agent App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HASS.Agent App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2.1.1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 - Feb 06, 2025
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2.1.0" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.0 - Sep 28, 2024
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1649,7 +2125,7 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
-                 
+                
                   
 
 
@@ -1670,18 +2146,75 @@
   
 
 
-  <h1>Changelog</h1>
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="hassagent-app">HASS.Agent App<a class="headerlink" href="#hassagent-app" title="Permanent link">&para;</a></h2>
+<h3 id="2.1.1">2.1.1 <small>- Feb 06, 2025</small><a class="headerlink" href="#2.1.1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/230" target="_blank">#230</a>: MQTT autodiscovery messages were not republished after connection was lost and recovered.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/229" target="_blank">#229</a>: URI attached to a notification button wouldn't open properly.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/221" target="_blank">#221</a>: Satellite Service exe path is now properly enclosed in double quotes according to good security practices.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/220" target="_blank">#220</a>: Media playback via Music Assistant wasn't working correctly.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/204" target="_blank">#204</a>: Fixed PowershellCommand argument handling where passing arguments containing spaces/quotes would cause the command to fail.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/205" target="_blank">#205</a>: Fixed issue where restarting "Windows Management Instrumentation (WMI)" while HASS.Agent is running causes all WMI based sensors to stop functioning.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/185" target="_blank">#185</a>: Media player now respects the user-provided value in mute service call.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/186" target="_blank">#186</a>: Notification image not being shown when relative "/media/pics/image.png" was used instead of full URL.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/187" target="_blank">#187</a>: UI not displaying properly on high-DPI devices with scaling other than 100%.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/159" target="_blank">#159</a>: Fixed some documentation links pointing to non-existing pages.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/161" target="_blank">#161</a>: Fixed issue where pressing ESC while having Alt+Tab pressed caused HASS.Agent windows to close.</li>
+<li>Fixed SetVolumeCommand ignoring provided value and not handling float values properly.</li>
+<li>Fixed internal AudioManager not properly clamping values if provided one was below 0 or above 100.</li>
+</ul>
+<h3 id="2.1.0">2.1.0 <small>- Sep 28, 2024</small><a class="headerlink" href="#2.1.0" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/41" target="_blank">#41</a>: Added "SetAudioInputCommand".</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/42" target="_blank">#42</a>: Added "ScreenshotSensor", functioning as camera entity.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/51" target="_blank">#51</a>: Added option to ignore the MQTT/connection grace period when system wakes from hibernation.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/55" target="_blank">#55</a>: Added option to use modern (white on transparent) icon for the HASS.Agent's trayicon.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/58" target="_blank">#58</a>: Added note to "PowershellSensor" description as a reminder to Home Assistant's 255 character limit for the payload/state.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/69" target="_blank">#69</a>: Added experimental functionality to scan Home Assistant NFC tags for devices equipped with a reader.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/74" target="_blank">#74</a>: Added additional check for German keyboard layouts that might interfere with default HotKey.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/77" target="_blank">#77</a>: Added "ProcessName" attribute to "ActiveWindowSensor".</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/79" target="_blank">#79</a>: Added "Advanced Settings" for all single value sensors that allow device_class, unit_of_measurement &amp; state_class to be overriden.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/98" target="_blank">#98</a>: Added action support for "MultipleKeys" command.</li>
+<li>Separated installer process into two - client and satellite, allowing for non-privileged user installation.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/56" target="_blank">#56</a>: All dependencies have been bumped to the newest possible version.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/124" target="_blank">#124</a>: Added new command to show/hide the built in webview.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/125" target="_blank">#125</a>: Added "Trigger" option to the Quick Actions allowing for triggering the Home Assistant automation.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/126" target="_blank">#126</a>: Added "Press" option to the Quick Actions allowing for Home Assistant button activation.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/140" target="_blank">#140</a>: Added additional notification features to match the Android feature set (ability to set tags and clear notifications).</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/39" target="_blank">#39</a>: "SetAudioOutputCommand" and "SetApplicationVolume" commands are now properly configurable from the UI.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/40" target="_blank">#40</a>: Updated VirtualDesktop management library to stop it crashing on some Windows 11 systems.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/45" target="_blank">#45</a>: Fixed sensor state being evaluated constantly, ignoring the configured update interval.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/47" target="_blank">#47</a>: Fixed issue where "PowershellCommand" arguments were not being bound/parsed properly when provided with payload/action.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/50" target="_blank">#50</a>: Fixed "ActiveWindow" sensor not using proper encoding, resulting in some characters being replaced with "?".</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/5" target="_blank">#5</a>: Sensor/command discovery payload messages are now sent on HASS.Agent start and configuration change instead of constantly.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/57" target="_blank">#57</a>: Changed "MicrophoneProcessSensor" description to more accurately describe its function.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/70" target="_blank">#70</a>: Ensured all UI windows are closed when main one is.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/71" target="_blank">#71</a>: MQTT Discovery message is properly cleared after device is renamed.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/76" target="_blank">#76</a>: Microphone sensor now properly clears attributes with application names.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/92" target="_blank">#92</a>: "ActiveWindowSensor" now properly reports attributes.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/78" target="_blank">#78</a>: Fixed potential null reference for WMI sensors.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/82" target="_blank">#82</a>: Corrected sensors' state and device classes so that they match the measurement.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/84" target="_blank">#84</a>: Fixed screeenshot sensor not working correctly with systems using custom scaling.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/85" target="_blank">#85</a>: Multiple fixes to audio sensors and management (including potential memory leak and crashes).</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/101" target="_blank">#101</a>: Additional fixes to audio sensors and management (related to memory leaks and crashes).</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/102" target="_blank">#102</a>: Media player not properly reporting mute status.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/88" target="_blank">#88</a>: Fixed issue where command's friendly name was not being saved.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/90" target="_blank">#90</a>: Fixed issue where Windows Update sensors did not have a unique ID.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/113" target="_blank">#113</a>: Satellite service installer now respects user's choice of installation path.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/122" target="_blank">#122</a>: Fixed issue where new audio management was not handling COM thread compartments correctly, causing sensors/commands to fail.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/123" target="_blank">#123</a>: Satellite sensors now properly save "round", "ignore availability" and "advanced settings".</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/133" target="_blank">#133</a>: Fixed installer not having enough time to stop the satellite service.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/134" target="_blank">#134</a>: Fixed internal devices sensors causing log spam if one of the configured ones are not able to provide measurement.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/141" target="_blank">#141</a>: Webview now respects taskbars being located at top and sides of the screen.</li>
+<li><a href="https://github.com/hass-agent/Hass.Agent/pull/169" target="_blank">#169</a>: Satellite sensors and commands now properly save friendly name.</li>
+</ul>
 
 
 
 
 
 
-
-
-
-  
-  
 
 
 
@@ -1741,8 +2274,6 @@
 
 
                 
-<released-widget channel-id="19883fcf-9c0f-45a3-8b50-f67ebca6fbbd"></released-widget>
-
               </article>
             </div>
           
@@ -1767,7 +2298,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../contributing/developer-resources/current-devs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Current Developers">
+          <a href="../contributing/resources/current-devs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Current Developers">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>

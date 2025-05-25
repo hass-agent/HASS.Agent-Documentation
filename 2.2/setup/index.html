@@ -19,7 +19,7 @@
         <link rel="prev" href="../getting-started/troubleshooting/">
       
       
-        <link rel="next" href="../contributing/">
+        <link rel="next" href="commands/">
       
       
       <link rel="icon" href="../assets/images/logo/logo-128-round.png">
@@ -71,9 +71,7 @@
 
     
     
-     
-<script src="https://embed.released.so/1/embed.js" defer></script>
-
+    
   </head>
   
   
@@ -120,7 +118,10 @@
 </style>
 
 <strong>
-  <a href="/latest/contributing/need-help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
+  <a href="/latest/contributing/need-help"
+    >We need help! If you have experience in C# or Python we would love to have
+    you help out. Click here for more.</a
+  >
 </strong>
 
 
@@ -137,9 +138,46 @@
           <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
                You're not viewing the latest version.
-<a href="../..">
+<a href="#" id="go-to-latest">
   <strong>Click here to go to latest.</strong>
 </a>
+
+<script>
+  document
+    .getElementById("go-to-latest")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+
+      fetch("/versions.json")
+        .then((response) => response.json())
+        .then((data) => {
+          if (!Array.isArray(data)) {
+            console.error("Invalid versions.json format");
+            return;
+          }
+
+          // Find the version with alias 'latest'
+          const latestEntry = data.find(
+            (v) => Array.isArray(v.aliases) && v.aliases.includes("latest")
+          );
+          const latestVersion = latestEntry?.version;
+
+          if (!latestVersion) {
+            console.error("Latest version not found in versions.json");
+            return;
+          }
+
+          const currentPath = window.location.pathname;
+          const versionPattern = /^\/([\d.]+)(\/.*)?$/;
+          const match = currentPath.match(versionPattern);
+
+          const pathWithoutVersion = match ? match[2] || "/" : currentPath;
+          const newUrl = "/" + latestVersion + pathWithoutVersion;
+          window.location.href = newUrl;
+        })
+        .catch((err) => console.error("Failed to fetch versions.json", err));
+    });
+</script>
 
             </div>
             <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
@@ -500,6 +538,8 @@
       
         
       
+        
+      
     
     
     
@@ -736,6 +776,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../getting-started/webviews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Webviews
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../getting-started/troubleshooting/" class="md-nav__link">
         
   
@@ -774,6 +837,16 @@
           
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -806,6 +879,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
@@ -815,6 +893,334 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="commands/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="commands/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="sensors/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Sensors
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sensors/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="notifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Notifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="notifications/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="media-player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media Player
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quick-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -972,7 +1378,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/hass-agent-app/" class="md-nav__link ">
+            <a href="../contributing/app/" class="md-nav__link ">
               
   
   
@@ -1039,7 +1445,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/hass-agent-integration/" class="md-nav__link ">
+            <a href="../contributing/integration/" class="md-nav__link ">
               
   
   
@@ -1074,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-integration/setup/" class="md-nav__link">
+      <a href="../contributing/integration/setup/" class="md-nav__link">
         
   
   
@@ -1097,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-integration/development-lifecycle/" class="md-nav__link">
+      <a href="../contributing/integration/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1120,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-integration/finding-issues/" class="md-nav__link">
+      <a href="../contributing/integration/finding-issues/" class="md-nav__link">
         
   
   
@@ -1186,7 +1592,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/hass-agent-documentation/" class="md-nav__link ">
+            <a href="../contributing/docs/" class="md-nav__link ">
               
   
   
@@ -1221,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/easy-editing/" class="md-nav__link">
+      <a href="../contributing/docs/easy-editing/" class="md-nav__link">
         
   
   
@@ -1244,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/setup/" class="md-nav__link">
+      <a href="../contributing/docs/setup/" class="md-nav__link">
         
   
   
@@ -1267,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/development-lifecycle/" class="md-nav__link">
+      <a href="../contributing/docs/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1290,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/editing-files/" class="md-nav__link">
+      <a href="../contributing/docs/editing-files/" class="md-nav__link">
         
   
   
@@ -1313,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/adding-pages/" class="md-nav__link">
+      <a href="../contributing/docs/adding-pages/" class="md-nav__link">
         
   
   
@@ -1336,7 +1742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/hass-agent-documentation/special-files/" class="md-nav__link">
+      <a href="../contributing/docs/special-files/" class="md-nav__link">
         
   
   
@@ -1455,7 +1861,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/developer-resources/" class="md-nav__link ">
+            <a href="../contributing/resources/" class="md-nav__link ">
               
   
   
@@ -1490,7 +1896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/developer-resources/version-system/" class="md-nav__link">
+      <a href="../contributing/resources/version-system/" class="md-nav__link">
         
   
   
@@ -1513,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/developer-resources/current-devs/" class="md-nav__link">
+      <a href="../contributing/resources/current-devs/" class="md-nav__link">
         
   
   
@@ -1634,7 +2040,7 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
-                 
+                
                   
 
 
@@ -1726,8 +2132,6 @@
 
 
                 
-<released-widget channel-id="19883fcf-9c0f-45a3-8b50-f67ebca6fbbd"></released-widget>
-
               </article>
             </div>
           
@@ -1769,13 +2173,13 @@
         
         
           
-          <a href="../contributing/" class="md-footer__link md-footer__link--next" aria-label="Next: Developing / Contributing">
+          <a href="commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Commands">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Developing / Contributing
+                Commands
               </div>
             </div>
             <div class="md-footer__button md-icon">

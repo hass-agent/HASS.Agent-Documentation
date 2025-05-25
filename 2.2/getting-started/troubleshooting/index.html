@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://hass-agent.io/latest/getting-started/troubleshooting/">
       
       
-        <link rel="prev" href="../media-player/">
+        <link rel="prev" href="../webviews/">
       
       
         <link rel="next" href="../../setup/">
@@ -71,9 +71,7 @@
 
     
     
-     
-<script src="https://embed.released.so/1/embed.js" defer></script>
-
+    
   </head>
   
   
@@ -120,7 +118,10 @@
 </style>
 
 <strong>
-  <a href="/latest/contributing/need-help">We need help! If you have experience in C# or Python we would love to have you help out. Click here for more.</a>
+  <a href="/latest/contributing/need-help"
+    >We need help! If you have experience in C# or Python we would love to have
+    you help out. Click here for more.</a
+  >
 </strong>
 
 
@@ -137,9 +138,46 @@
           <aside class="md-banner md-banner--warning">
             <div class="md-banner__inner md-grid md-typeset">
                You're not viewing the latest version.
-<a href="../../..">
+<a href="#" id="go-to-latest">
   <strong>Click here to go to latest.</strong>
 </a>
+
+<script>
+  document
+    .getElementById("go-to-latest")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+
+      fetch("/versions.json")
+        .then((response) => response.json())
+        .then((data) => {
+          if (!Array.isArray(data)) {
+            console.error("Invalid versions.json format");
+            return;
+          }
+
+          // Find the version with alias 'latest'
+          const latestEntry = data.find(
+            (v) => Array.isArray(v.aliases) && v.aliases.includes("latest")
+          );
+          const latestVersion = latestEntry?.version;
+
+          if (!latestVersion) {
+            console.error("Latest version not found in versions.json");
+            return;
+          }
+
+          const currentPath = window.location.pathname;
+          const versionPattern = /^\/([\d.]+)(\/.*)?$/;
+          const match = currentPath.match(versionPattern);
+
+          const pathWithoutVersion = match ? match[2] || "/" : currentPath;
+          const newUrl = "/" + latestVersion + pathWithoutVersion;
+          window.location.href = newUrl;
+        })
+        .catch((err) => console.error("Failed to fetch versions.json", err));
+    });
+</script>
 
             </div>
             <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
@@ -502,6 +540,8 @@
       
         
       
+        
+      
     
     
     
@@ -738,6 +778,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../webviews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Webviews
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -800,19 +863,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#device-not-showing-in-home-assistant" class="md-nav__link">
+  <a href="#debugging-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Device not showing in Home Assistant?
+      Debugging Tips
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Device not showing in Home Assistant?">
+    <nav class="md-nav" aria-label="Debugging Tips">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solution-steps" class="md-nav__link">
+  <a href="#mqtt-explorer" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution Steps
+      MQTT Explorer
     </span>
   </a>
   
@@ -820,15 +883,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#old-devices-showing-in-home-assistant-after-being-removed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Old devices showing in Home Assistant after being removed?
-    </span>
-  </a>
   
 </li>
       
@@ -843,44 +897,47 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#device-not-showing-in-home-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device not showing in Home Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#old-devices-showing-in-home-assistant-after-being-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Old devices showing in Home Assistant after being removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#entity-naming-warning" class="md-nav__link">
     <span class="md-ellipsis">
       Entity Naming Warning
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Entity Naming Warning">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#ha-automatically-appends-device-names-now" class="md-nav__link">
+  <a href="#mqtt-connection-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      HA automatically appends device names now
+      MQTT Connection Loop
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#why-do-i-need-to-do-anything" class="md-nav__link">
+  <a href="#old-version-causing-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Why do I need to do anything?
+      Old Version Causing Issues
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solution
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -918,6 +975,16 @@
           
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -947,6 +1014,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
@@ -956,6 +1028,325 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../setup/commands/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/commands/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../setup/sensors/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Sensors
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sensors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/sensors/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../setup/notifications/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Notifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/notifications/all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    All
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/media-player/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media Player
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/quick-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Actions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1113,7 +1504,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/hass-agent-app/" class="md-nav__link ">
+            <a href="../../contributing/app/" class="md-nav__link ">
               
   
   
@@ -1180,7 +1571,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/hass-agent-integration/" class="md-nav__link ">
+            <a href="../../contributing/integration/" class="md-nav__link ">
               
   
   
@@ -1215,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-integration/setup/" class="md-nav__link">
+      <a href="../../contributing/integration/setup/" class="md-nav__link">
         
   
   
@@ -1238,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-integration/development-lifecycle/" class="md-nav__link">
+      <a href="../../contributing/integration/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1261,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-integration/finding-issues/" class="md-nav__link">
+      <a href="../../contributing/integration/finding-issues/" class="md-nav__link">
         
   
   
@@ -1327,7 +1718,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/hass-agent-documentation/" class="md-nav__link ">
+            <a href="../../contributing/docs/" class="md-nav__link ">
               
   
   
@@ -1362,7 +1753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-documentation/easy-editing/" class="md-nav__link">
+      <a href="../../contributing/docs/easy-editing/" class="md-nav__link">
         
   
   
@@ -1385,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-documentation/setup/" class="md-nav__link">
+      <a href="../../contributing/docs/setup/" class="md-nav__link">
         
   
   
@@ -1408,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-documentation/development-lifecycle/" class="md-nav__link">
+      <a href="../../contributing/docs/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1431,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-documentation/editing-files/" class="md-nav__link">
+      <a href="../../contributing/docs/editing-files/" class="md-nav__link">
         
   
   
@@ -1454,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-documentation/adding-pages/" class="md-nav__link">
+      <a href="../../contributing/docs/adding-pages/" class="md-nav__link">
         
   
   
@@ -1477,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/hass-agent-documentation/special-files/" class="md-nav__link">
+      <a href="../../contributing/docs/special-files/" class="md-nav__link">
         
   
   
@@ -1596,7 +1987,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/developer-resources/" class="md-nav__link ">
+            <a href="../../contributing/resources/" class="md-nav__link ">
               
   
   
@@ -1631,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/developer-resources/version-system/" class="md-nav__link">
+      <a href="../../contributing/resources/version-system/" class="md-nav__link">
         
   
   
@@ -1654,7 +2045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/developer-resources/current-devs/" class="md-nav__link">
+      <a href="../../contributing/resources/current-devs/" class="md-nav__link">
         
   
   
@@ -1765,19 +2156,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#device-not-showing-in-home-assistant" class="md-nav__link">
+  <a href="#debugging-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Device not showing in Home Assistant?
+      Debugging Tips
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Device not showing in Home Assistant?">
+    <nav class="md-nav" aria-label="Debugging Tips">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solution-steps" class="md-nav__link">
+  <a href="#mqtt-explorer" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution Steps
+      MQTT Explorer
     </span>
   </a>
   
@@ -1785,15 +2176,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#old-devices-showing-in-home-assistant-after-being-removed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Old devices showing in Home Assistant after being removed?
-    </span>
-  </a>
   
 </li>
       
@@ -1808,44 +2190,47 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#device-not-showing-in-home-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device not showing in Home Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#old-devices-showing-in-home-assistant-after-being-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Old devices showing in Home Assistant after being removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#entity-naming-warning" class="md-nav__link">
     <span class="md-ellipsis">
       Entity Naming Warning
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Entity Naming Warning">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#ha-automatically-appends-device-names-now" class="md-nav__link">
+  <a href="#mqtt-connection-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      HA automatically appends device names now
+      MQTT Connection Loop
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#why-do-i-need-to-do-anything" class="md-nav__link">
+  <a href="#old-version-causing-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Why do I need to do anything?
+      Old Version Causing Issues
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solution
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1865,7 +2250,7 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
-                 
+                
                   
 
 
@@ -1889,13 +2274,22 @@
 <h1 id="troubleshooting-the-installation-and-setup-of-hassagent">Troubleshooting the Installation and setup of HASS.Agent<a class="headerlink" href="#troubleshooting-the-installation-and-setup-of-hassagent" title="Permanent link">&para;</a></h1>
 <h2 id="getting-help">Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
 <p>There are lots of places you can get help, we have more info in the <a href="../../getting-help/">Getting Help</a> section.</p>
-<h2 id="device-not-showing-in-home-assistant">Device not showing in Home Assistant?<a class="headerlink" href="#device-not-showing-in-home-assistant" title="Permanent link">&para;</a></h2>
+<h2 id="debugging-tips">Debugging Tips<a class="headerlink" href="#debugging-tips" title="Permanent link">&para;</a></h2>
+<h3 id="mqtt-explorer">MQTT Explorer<a class="headerlink" href="#mqtt-explorer" title="Permanent link">&para;</a></h3>
+<p>MQTT Explorer is a great tool for debugging MQTT issues. To use it:</p>
+<ol>
+<li>Download and install <a href="https://mqtt-explorer.com/" target="_blank">MQTT Explorer</a>.</li>
+<li>Open MQTT Explorer.</li>
+<li>Connect to your MQTT broker.</li>
+</ol>
+<h2 id="frequent-issues">Frequent Issues<a class="headerlink" href="#frequent-issues" title="Permanent link">&para;</a></h2>
+<h3 id="device-not-showing-in-home-assistant">Device not showing in Home Assistant<a class="headerlink" href="#device-not-showing-in-home-assistant" title="Permanent link">&para;</a></h3>
 <p>Unfortunately autodiscovery issues are common, currently the best way to fix it is to reinstall the integration.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>Only notifications and the media player will show under the Hass.Agent integration. For Commands and Sensors you need to look under the MQTT integration.</p>
 </details>
-<h4 id="solution-steps">Solution Steps<a class="headerlink" href="#solution-steps" title="Permanent link">&para;</a></h4>
+<p><strong>Solution</strong></p>
 <ol>
 <li>Remove integration.<ol>
 <li>Open HACS.</li>
@@ -1909,29 +2303,26 @@
 <li>Restart Home Assistant.</li>
 </ol>
 <p>This should solve most issues with devices not appearing.</p>
-<h2 id="old-devices-showing-in-home-assistant-after-being-removed">Old devices showing in Home Assistant after being removed?<a class="headerlink" href="#old-devices-showing-in-home-assistant-after-being-removed" title="Permanent link">&para;</a></h2>
+<h3 id="old-devices-showing-in-home-assistant-after-being-removed">Old devices showing in Home Assistant after being removed<a class="headerlink" href="#old-devices-showing-in-home-assistant-after-being-removed" title="Permanent link">&para;</a></h3>
 <p>If you have old devices showing in Home Assistant after being removed, you can try restarting Home Assistant. If they still show try the following steps:</p>
 <ol>
-<li>Download and install <a href="https://mqtt-explorer.com/" target="_blank">MQTT Explorer</a>.</li>
-<li>Open MQTT Explorer.</li>
-<li>Connect to your MQTT broker.</li>
+<li>Open <a href="#mqtt-explorer">MQTT Explorer</a>.</li>
 <li>Find the topic <code>homeassistant/device_type/your_device_name/old_entity</code> and delete it.</li>
 </ol>
 <details class="tip" open="open">
 <summary>What if I delete an active entity?</summary>
 <p>If any <strong>HASS.Agent</strong> entity is removed it will automatically be added, so you don't need to worry about losing any data. Be careful not to remove anything not HASS.Agent related.</p>
 </details>
-<h2 id="frequent-issues">Frequent Issues<a class="headerlink" href="#frequent-issues" title="Permanent link">&para;</a></h2>
 <h3 id="entity-naming-warning">Entity Naming Warning<a class="headerlink" href="#entity-naming-warning" title="Permanent link">&para;</a></h3>
 <p>If you are seeing entity name warnings in the Home Assistant console it is most likely due to a change made a while ago to the way entities are named.</p>
 <details class="info">
 <summary>What changed? Technical overview</summary>
-<h4 id="ha-automatically-appends-device-names-now">HA automatically appends device names now<a class="headerlink" href="#ha-automatically-appends-device-names-now" title="Permanent link">&para;</a></h4>
-<p>The change HA implemented is that it now automatically appends device names to the start of entity names. So if your device is named <code>my-pc</code> and the entity is called gpu-temp HA will automatically join these to create <code>my-pc_gpu-temp</code>.</p>
-<h4 id="why-do-i-need-to-do-anything">Why do I need to do anything?<a class="headerlink" href="#why-do-i-need-to-do-anything" title="Permanent link">&para;</a></h4>
-<p>If you don't do anything, and you have currently named your entities with the device at the start(was default in V1) it will show as a console error because the entity will be named: <code>my-pc</code> + <code>my-pc_gpu-temp</code> creating: <code>my-pc_my-pc_gpu-temp</code>.</p>
+<p><strong>HA automatically appends device names now</strong>
+The change HA implemented is that it now automatically appends device names to the start of entity names. So if your device is named <code>my-pc</code> and the entity is called gpu-temp HA will automatically join these to create <code>my-pc_gpu-temp</code>.</p>
+<p><strong>Why do I need to do anything?</strong>
+If you don't do anything, and you have currently named your entities with the device at the start(was default in V1) it will show as a console error because the entity will be named: <code>my-pc</code> + <code>my-pc_gpu-temp</code> creating: <code>my-pc_my-pc_gpu-temp</code>.</p>
 </details>
-<h4 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h4>
+<p><strong>Solution</strong></p>
 <p>HASS.Agent V2 comes bundled with a <code>compat_names</code> arguement that can be passed to the .exe to automatically fix the names. You can use it by following these steps:</p>
 <ol>
 <li>Type in powershell into windows search and run it as admin.</li>
@@ -1939,7 +2330,18 @@
 <li>You should now be in an admin powershell window inside of the hass.agent directory, type in the following command: <code>.\HASS.Agent.exe compat_names</code>.</li>
 <li>You should see a popup like the one below and no errors in the console, after it completes it will close and you can close all the windows before re-opening HASS.Agent.</li>
 </ol>
-<p><img alt="Compat Names Processing Dialog" src="../../assets/images/screenshots/compat_names.PNG" /></p>
+<p><img alt="Compat Names Processing Dialog" src="../../assets/images/screenshots/getting-started/compat_names.PNG" /></p>
+<h3 id="mqtt-connection-loop">MQTT Connection Loop<a class="headerlink" href="#mqtt-connection-loop" title="Permanent link">&para;</a></h3>
+<p>If MQTT is changing from <code>running</code> to <code>connecting</code> you possibly have 2 installations with the same Client ID.</p>
+<p>Client ID is found under <code>Configuration &gt; MQTT</code>, each installation needs a different one, even if on the same machine.</p>
+<p><strong>If you have 2 windows users they need different Client IDs.</strong></p>
+<h3 id="old-version-causing-issues">Old Version Causing Issues<a class="headerlink" href="#old-version-causing-issues" title="Permanent link">&para;</a></h3>
+<p>If you have an older version of HASS.Agent enabled it can cause issues for the latest one.</p>
+<ol>
+<li>Remove or Disable any versions of HASS.Agent not currently being used.</li>
+<li>Open <a href="#mqtt-explorer">MQTT Explorer</a>.</li>
+<li>Delete any topics with <code>Lab02</code> as these are pre-2.0 HASS.Agent.</li>
+</ol>
 
 
 
@@ -2005,8 +2407,6 @@
 
 
                 
-<released-widget channel-id="19883fcf-9c0f-45a3-8b50-f67ebca6fbbd"></released-widget>
-
               </article>
             </div>
           
@@ -2031,7 +2431,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../media-player/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setting up the Media Player">
+          <a href="../webviews/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using Webviews">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2041,7 +2441,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Setting up the Media Player
+                Using Webviews
               </div>
             </div>
           </a>
