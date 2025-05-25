@@ -147,6 +147,7 @@ nav:
       - Using Commands: getting-started/commands.md
       - Sending Notifications: getting-started/notifications.md
       - Setting up the Media Player: getting-started/media-player.md
+      - Using Webviews: getting-started/webviews.md
       - Troubleshooting: getting-started/troubleshooting.md
   - Setup:
       - setup/index.md
