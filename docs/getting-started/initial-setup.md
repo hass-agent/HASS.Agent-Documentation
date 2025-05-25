@@ -19,6 +19,11 @@ During onboarding, on page 3, you'll be prompted for an API token and your Home 
 
 For the MQTT configuration, provide your MQTT broker's username, password, URI, and port.
 
+???+ warning "WARNING: You must use a different Client ID for each installation"
+
+    Even if on the same machine, each installation of HASS.Agent needs to have a different Client ID.
+    **If you have 2 windows users they both need to have different Client IDs.**
+
 Here are the steps for getting the MQTT broker if you are using the mosquitto add-on in homeassistant. For other mqtt brokers you will need to checkout their own guides.
 
 1. **Username and Password** This depends on how you have setup the Mosquitto Add-on, but assuming you have done it in the recommended way you will have created a separate Home Assistant user for the MQTT broker. If that's the case go ahead and use it's username and password for this section. If you haven't yet setup authentication for the Home Assistant Mosquitto add-on then checkout [this](https://youtu.be/dqTn-Gk4Qeo?si=pqcLDV7mNtVqzAhh&t=326){: target="\_blank"} video.
