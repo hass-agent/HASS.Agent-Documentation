@@ -4,6 +4,16 @@
 
 There are lots of places you can get help, we have more info in the [Getting Help](../getting-help.md) section.
 
+## Debugging Tips
+
+### MQTT Explorer
+
+MQTT Explorer is a great tool for debugging MQTT issues. To use it:
+
+1. Download and install [MQTT Explorer](https://mqtt-explorer.com/){target="_blank"}.
+2. Open MQTT Explorer.
+3. Connect to your MQTT broker.
+
 ## Frequent Issues
 
 ### Device not showing in Home Assistant
@@ -31,10 +41,8 @@ This should solve most issues with devices not appearing.
 
 If you have old devices showing in Home Assistant after being removed, you can try restarting Home Assistant. If they still show try the following steps:
 
-1. Download and install [MQTT Explorer](https://mqtt-explorer.com/){target="_blank"}.
-2. Open MQTT Explorer.
-3. Connect to your MQTT broker.
-4. Find the topic `homeassistant/device_type/your_device_name/old_entity` and delete it.
+1. Open [MQTT Explorer](#mqtt-explorer).
+2. Find the topic `homeassistant/device_type/your_device_name/old_entity` and delete it.
 
 ???+ tip "What if I delete an active entity?"
 
@@ -70,3 +78,11 @@ If MQTT is changing from `running` to `connecting` you possibly have 2 installat
 Client ID is found under `Configuration > MQTT`, each installation needs a different one, even if on the same machine.
 
 **If you have 2 windows users they need different Client IDs.**
+
+### Old Version Causing Issues
+
+If you have an older version of HASS.Agent enabled it can cause issues for the latest one.
+
+1. Remove or Disable any versions of HASS.Agent not currently being used.
+2. Open [MQTT Explorer](#mqtt-explorer).
+3. Delete any topics with `Lab02` as these are pre-2.0 HASS.Agent.
