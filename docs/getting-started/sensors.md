@@ -12,7 +12,7 @@ One of the core features of HASS.Agent is the ability to send data about your pc
 
 ???+ example
 
-    Here is the config for a sensor that monitors the gpu temperature.
+    Here is the config for a sensor that monitors the user state.
     ![Image of the config](../assets/images/screenshots/setup/sensors/new-sensor.png)
 
 #### Extra config <small>optional</small>
