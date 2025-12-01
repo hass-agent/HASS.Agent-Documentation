@@ -10,62 +10,61 @@ repo_name: HASS.Agent
 edit_uri: edit/beta/docs/
 
 copyright: >
-  Copyright &copy; 2023-2025 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> -
-  <a href="#__consent">Change cookie settings</a>
+  Copyright &copy; 2023-2025 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Change cookie settings</a>
 
 theme:
   name: material
   custom_dir: overrides
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.path
-    - navigation.top
-    - navigation.footer
-    - navigation.tracking
-    - navigation.indexes
-    - toc.follow
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotate
-    - content.code.copy
-    - content.action.edit
-    - content.action.view
-    - announce.dismiss
+  - navigation.tabs
+  - navigation.sections
+  - navigation.path
+  - navigation.top
+  - navigation.footer
+  - navigation.tracking
+  - navigation.indexes
+  - toc.follow
+  - search.suggest
+  - search.highlight
+  - content.tabs.link
+  - content.code.annotate
+  - content.code.copy
+  - content.action.edit
+  - content.action.view
+  - announce.dismiss
   language: en
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: custom
-      accent: purple
-    - scheme: slate
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-      primary: custom
-      accent: purple
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+    primary: custom
+    accent: purple
+  - scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+    primary: custom
+    accent: purple
   favicon: assets/images/logo/logo-128-round.png
   logo: assets/images/logo/logo-128.png
 
 plugins:
-  - mike:
-      alias_type: redirect
-      canonical_version: latest
-  # - social:
-  #     enabled: !ENV [CI, false]
-  #     cards_layout: default/variant
-  #     cards_layout_options:
-  #       background_image: layouts/HASS.Agent-Social-Card.png
-  #       background_color: transparent
-  #       color: #ffffff
-  - search
+- mike:
+    alias_type: redirect
+    canonical_version: latest
+# - social:
+#     enabled: !ENV [CI, false]
+#     cards_layout: default/variant
+#     cards_layout_options:
+#       background_image: layouts/HASS.Agent-Social-Card.png
+#       background_color: transparent
+#       color: #ffffff
+- search
 
 # Add stylesheet for custom color scheme
 extra_css:
-  - assets/stylesheets/extra.css
+- assets/stylesheets/extra.css
 
 # Add social icons to footer
 extra:
@@ -77,115 +76,109 @@ extra:
     feedback:
       title: Was this page helpful?
       ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >-
-            Thanks for your feedback!
+      - icon: material/emoticon-happy-outline
+        name: This page was helpful
+        data: 1
+        note: >-
+          Thanks for your feedback!
+      - icon: material/emoticon-sad-outline
+        name: This page could be improved
+        data: 0
+        note: >-
+          Thanks for your feedback!
   consent:
     actions:
-      - accept
-      - manage
+    - accept
+    - manage
     title: Cookie consent
     description: >-
-      We use cookies to fetch github information, recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      We use cookies to fetch github information, recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
 
 markdown_extensions:
-  - tables
-  - toc:
-      permalink: true
-      toc_depth: 4
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.keys
-  - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-      clickable_checkbox: true
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  - pymdownx.mark
-  - attr_list
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # Page Tree
-
-
+- tables
+- toc:
+    permalink: true
+    toc_depth: 4
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.keys
+- admonition
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+    clickable_checkbox: true
+- footnotes
+- pymdownx.details
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format ""
+- pymdownx.tabbed:
+    alternate_style: true
+    slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+- pymdownx.mark
+- attr_list
+- md_in_html
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji ""
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
 nav:
-  - Home: index.md
-  - Getting Started:
-      - getting-started/index.md
-      - Installation: getting-started/installation.md
-      - Initial Setup and First Run: getting-started/initial-setup.md
-      - Other Install Methods: getting-started/other-installs.md
-      - Using Quick Actions: getting-started/quick-actions.md
-      - Using Sensors: getting-started/sensors.md
-      - Using Commands: getting-started/commands.md
-      - Sending Notifications: getting-started/notifications.md
-      - Setting up the Media Player: getting-started/media-player.md
-      - Using Webviews: getting-started/webviews.md
-      - Troubleshooting: getting-started/troubleshooting.md
-  - Setup:
-      - setup/index.md
-      - Commands: 
-          - setup/commands/index.md
-          - All: setup/commands/all.md
-      - Sensors: 
-          - setup/sensors/index.md
-          - All: setup/sensors/all.md
-      - Notifications:
-          - setup/notifications/index.md
-          - All: setup/notifications/all.md
-      - Media Player: setup/media-player.md
-      - Quick Actions: setup/quick-actions.md
-  - Helping Out:
-      - contributing/index.md
-      - We Need Help: contributing/need-help.md
-      - Reporting Issues / Features: contributing/reporting-issues.md
-      - Developing the App:
-          - contributing/app/index.md
-      - Developing the Integration:
-          - contributing/integration/index.md
-          - Setup: contributing/integration/setup.md
-          - Development Lifecycle: contributing/integration/development-lifecycle.md
-          - What to work on: contributing/integration/finding-issues.md
-      - Developing the Documentation:
-          - contributing/docs/index.md
-          - Easy Editing: contributing/docs/easy-editing.md
-          - Setup: contributing/docs/setup.md
-          - Development Lifecycle: contributing/docs/development-lifecycle.md
-          - Editing Files: contributing/docs/editing-files.md
-          - Adding Pages: contributing/docs/adding-pages.md
-          - Special Pages / Other Files: contributing/docs/special-files.md
-      - Translating:
-          - contributing/translating/index.md
-      - Extra Resources:
-          - contributing/resources/index.md
-          - Version System: contributing/resources/version-system.md
-          - Current Developers: contributing/resources/current-devs.md
-  - Changelog: changelog.md
-  - Getting Help: getting-help.md
+- Home: index.md
+- Getting Started:
+  - getting-started/index.md
+  - Installation: getting-started/installation.md
+  - Initial Setup and First Run: getting-started/initial-setup.md
+  - Other Install Methods: getting-started/other-installs.md
+  - Using Quick Actions: getting-started/quick-actions.md
+  - Using Sensors: getting-started/sensors.md
+  - Using Commands: getting-started/commands.md
+  - Sending Notifications: getting-started/notifications.md
+  - Setting up the Media Player: getting-started/media-player.md
+  - Using Webviews: getting-started/webviews.md
+  - Troubleshooting: getting-started/troubleshooting.md
+- Setup:
+  - setup/index.md
+  - Commands:
+    - setup/commands/index.md
+    - All: setup/commands/all.md
+  - Sensors:
+    - setup/sensors/index.md
+    - setup/sensors/gpu-temperature.md
+  - Notifications:
+    - setup/notifications/index.md
+    - All: setup/notifications/all.md
+  - Media Player: setup/media-player.md
+  - Quick Actions: setup/quick-actions.md
+- Helping Out:
+  - contributing/index.md
+  - We Need Help: contributing/need-help.md
+  - Reporting Issues / Features: contributing/reporting-issues.md
+  - Developing the App:
+    - contributing/app/index.md
+  - Developing the Integration:
+    - contributing/integration/index.md
+    - Setup: contributing/integration/setup.md
+    - Development Lifecycle: contributing/integration/development-lifecycle.md
+    - What to work on: contributing/integration/finding-issues.md
+  - Developing the Documentation:
+    - contributing/docs/index.md
+    - Easy Editing: contributing/docs/easy-editing.md
+    - Setup: contributing/docs/setup.md
+    - Development Lifecycle: contributing/docs/development-lifecycle.md
+    - Editing Files: contributing/docs/editing-files.md
+    - Adding Pages: contributing/docs/adding-pages.md
+    - Special Pages / Other Files: contributing/docs/special-files.md
+  - Translating:
+    - contributing/translating/index.md
+  - Extra Resources:
+    - contributing/resources/index.md
+    - Version System: contributing/resources/version-system.md
+    - Current Developers: contributing/resources/current-devs.md
+- Changelog: changelog.md
+- Getting Help: getting-help.md

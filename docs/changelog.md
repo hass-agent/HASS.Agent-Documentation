@@ -10,7 +10,7 @@
     **It has been left present for backward compatibility reasons, however it will always return 0.**
 
     Please see the awesome writeup by [@DarkAutumn](https://github.com/DarkAutumn){:target="_blank"} for more details [#43(comment)](https://github.com/hass-agent/HASS.Agent/issues/43#issuecomment-2349373416){:target="_blank"}.
-    Please see [GPU Temperature](./setup/sensors/all.md/#gpu-temperature) for how you can get GPU temperature information using standalone version of Libre Hardware Monitor.
+    Please see [GPU Temperature](./setup/sensors/gpu-temperature.md) for how you can get GPU temperature information using standalone version of Libre Hardware Monitor.
 
 - [#281](https://github.com/hass-agent/HASS.Agent/pull/281){:target="_blank"}: Added support for "HumanPresence" internal device sensor.
 - [#298](https://github.com/hass-agent/HASS.Agent/pull/298){:target="_blank"}: Added new "NamedActiveWindow" binary sensor that can tell you if a window containing a specified name is currently active or not.

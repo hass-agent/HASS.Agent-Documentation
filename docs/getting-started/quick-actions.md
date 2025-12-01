@@ -29,6 +29,10 @@ To setup Quick Actions you will need to open HASS.Agent and Click "Quick Actions
 
 - Add a custom hotkey just for this quick action, allowing you to interact with entities without opening the quick actions menu. To set a custom hotkey tick the "Enable Hotkey" box and click on the "Hotkey Combination" box to set it to whatever you want.
 
+???+ warning "Hotkeys cannot contain `backspace` or `escape`"
+
+    The `backspace` and `escape` keys can't be used as they clear the currently selected hotkey.
+
 ### Changing the Quick Actions Hotkey
 
 You we're asked to assign a custom hotkey to the Quick Actions menu during onboarding, you can change it at anytime from `Configuration > Hotkey`.
