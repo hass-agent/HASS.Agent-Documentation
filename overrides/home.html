@@ -1,5 +1,3 @@
-<!-- Custom HTML site displayed as the Home chapter -->
-
 {% extends "main.html" %} {% block tabs %} {{ super() }}
 <style>
   /* Application header should be static for the landing page */
@@ -212,7 +210,10 @@
     <div class="content">
       <div class="text-content">
         <h1>Welcome to HASS.Agent</h1>
-        <p>A windows Home Assistant client(Companion App) that provides powerful features for automating your windows system.</p>
+        <p>
+          A windows Home Assistant client(Companion App) that provides powerful
+          features for automating your windows system.
+        </p>
         <a href="getting-started" class="cta-button">Get Started</a>
       </div>
       <div class="logo">
@@ -224,61 +225,60 @@
 
 <section class="feature-section">
   <div class="container">
-    <div class="feature">
-      <a href="setup/sensors">
-        <img src="assets/images/icons/sensors.png" alt="Sensors Icon" />
-        <h2>Sensors</h2>
-        <p>Send all sorts of telemetry data from windows to home assistant.</p>
-        <h3>Examples:</h3>
-        <ul>
-          <li>Current CPU Load</li>
-          <li>Are you using webcam</li>
-          <li>Are you logged in</li>
-        </ul>
-      </a>
-    </div>
-    <div class="feature">
-      <a href="setup/commands">
-        <img src="assets/images/icons/commands.png" alt="Commands Icon" />
-        <h2>Commands</h2>
-        <p>Control your pc by interacting with entities in home assistant.</p>
-        <h3>Examples:</h3>
-        <ul>
-          <li>Open App</li>
-          <li>Shutdown/logoff/restart</li>
-          <li>Run powershell command</li>
-        </ul>
-      </a>
-    </div>
-    <div class="feature">
-      <a href="setup/notifications">
-        <img src="assets/images/icons/bell-regular.svg" alt="Notifications Icon" />
-        <h2>Notifications</h2>
-        <p>Send dynamic windows notifications with images and actions from home assistant.</p>
-        <h3>Examples:</h3>
-        <ul>
-          <li>Send from automations</li>
-          <li>Attach images</li>
-          <li>Add actions</li>
-        </ul>
-      </a>
-    </div>
-    <div class="feature">
-      <a href="setup/quick-actions">
-        <img src="assets/images/icons/quick-actions.png" alt="Quick Actions Icon" />
-        <h2>Quick Actions</h2>
-        <p>Add any home assistant entity to your taskbar for quick access.</p>
-        <h3>Examples:</h3>
-        <ul>
-          <li>Toggle lights</li>
-          <li>Run scripts</li>
-          <li>Start Vacuum</li>
-        </ul>
-      </a>
-    </div>
+    <a class="feature" href="setup/sensors">
+      <img src="assets/images/icons/sensors.png" alt="Sensors Icon" />
+      <h2>Sensors</h2>
+      <p>Send all sorts of telemetry data from windows to home assistant.</p>
+      <h3>Examples:</h3>
+      <ul>
+        <li>Current CPU Load</li>
+        <li>Are you using webcam</li>
+        <li>Are you logged in</li>
+      </ul>
+    </a>
+    <a class="feature" href="setup/commands">
+      <img src="assets/images/icons/commands.png" alt="Commands Icon" />
+      <h2>Commands</h2>
+      <p>Control your pc by interacting with entities in home assistant.</p>
+      <h3>Examples:</h3>
+      <ul>
+        <li>Open App</li>
+        <li>Shutdown/logoff/restart</li>
+        <li>Run powershell command</li>
+      </ul>
+    </a>
+    <a class="feature" href="setup/notifications">
+      <img
+        src="assets/images/icons/bell-regular.svg"
+        alt="Notifications Icon"
+      />
+      <h2>Notifications</h2>
+      <p>
+        Send dynamic windows notifications with images and actions from home
+        assistant.
+      </p>
+      <h3>Examples:</h3>
+      <ul>
+        <li>Send from automations</li>
+        <li>Attach images</li>
+        <li>Add actions</li>
+      </ul>
+    </a>
+    <a class="feature" href="setup/quick-actions">
+      <img
+        src="assets/images/icons/quick-actions.png"
+        alt="Quick Actions Icon"
+      />
+      <h2>Quick Actions</h2>
+      <p>Add any home assistant entity to your taskbar for quick access.</p>
+      <h3>Examples:</h3>
+      <ul>
+        <li>Toggle lights</li>
+        <li>Run scripts</li>
+        <li>Start Vacuum</li>
+      </ul>
+    </a>
   </div>
 </section>
 
 {% endblock %}
-<!-- Content -->
-{% block content %}{% endblock %}
