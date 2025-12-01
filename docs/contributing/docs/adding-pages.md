@@ -4,7 +4,7 @@ You can add new pages anywhere in the documentation if you feel the need to. How
 
 ## Creating the page
 
-You start by creating a new .md with an all lowercase name, you can use `-` dashes in place of spaces. For example this file is called `adding-pages.md` This file should be located in the section you want it, for example; if you want a new page in this documentation contributing section you will create the page in the `docs/contributing/docs/`.
+You start by creating a new `.md` file with an all lowercase name, you can use `-` dashes in place of spaces. For example this file is called `adding-pages.md` This file should be located in the section you want it, for example; if you want a new page in this documentation contributing section you will create the page in the `docs/contributing/docs/`.
 
 Now you can use a heading 1 to indicate the name of this page. Example: `# Adding new pages`
 
@@ -25,7 +25,7 @@ nav:
       - Developing the Documentation:
 ```
 
-You create a new entry by indenting and adding a `- ` and then writing the name of your page that you want in the sidebar navigation, so keep it short. Then you add a `:` and follow it by the directory of the file.
+You create a new entry by adding a `- ` and then writing the name of your page that you want in the sidebar navigation, so keep it short. Then you add a `:` followed by the directory of the file.
 ???+ note
 
     This directory starts in the docs folder so you will just write `contributing/docs`, not `docs/contributing/docs`.
@@ -33,3 +33,23 @@ You create a new entry by indenting and adding a `- ` and then writing the name 
 ## Editing and Testing the page
 
 You can now edit the page and fill it with content, all of the changes should show in your browser and the page should be visible in the left navigation sidebar.
+
+## Further Reading
+
+<div class="grid cards" markdown>
+
+- **[Easy Editing]** – Simplest way to edit the documentation.
+- **[Setup]** – Setup the local development environment.
+- **[Development Lifecycle]** – Lifecycle of changes to the documentation.
+- **[Editing Files]** – Overview of markdown features used for the docs, such as these cards.
+- **[Adding Pages]** – Add new pages to the nav and sidebars.
+- **[Special Files]** – For special pages and other files.
+
+</div>
+
+[Easy Editing]: ./easy-editing.md
+[Setup]: ./setup.md
+[Development Lifecycle]: ./development-lifecycle.md
+[Editing Files]: ./editing-files.md
+[Adding Pages]: ./adding-pages.md
+[Special Files]: ./special-files.md
