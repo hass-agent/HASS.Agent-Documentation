@@ -8,37 +8,19 @@
 
 To start off you will need to create your own fork of the documentation repo to track your changes. To do this go ahead and navigate to [this](https://github.com/hass-agent/hass-agent.github.io){: target="\_blank"} repo. You will need to create a fork of this repo, a tutorial for this can be found [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo){: target="\_blank"}.
 
-### Forking all branches
-
-!!! warning
-
-    Make sure you do this step correctly or you will have problems later on.
-
-After clicking fork you will be presented with this screen. You can customise the repo name and description however you **must** make sure to **de-select** "Copy the `main` branch only". You need both the `main` and `beta` branches to contribute.
-
-![Screenshot of creating a fork github page](../../assets/images/screenshots/contributing/docs/create-docs-fork.png)
-
 ### Disabling github actions
 
 You will want to disable github actions so that nothing goes wrong. You can do that in the settings menu like this:
 
 Settings --> Actions / General --> Disable actions --> save
 
-### Deleting `gh-pages` branch
-
-You wil not need the `gh-pages` branch so you can delete it like this.
-
-Select the current branch --> View all branches --> Select the delete icon next to the `gh-pages` branch
-
 ## Setting up the local branches
 
-Now you will want to navigate to a directory on your pc for HASS.Agent, I will be using `HASS.Agent`
-
-Now go ahead and create at least one new folder named `hass-agent-docs-beta`.
+Now you will want to navigate to a directory on your pc for HASS.Agent, I will be using `hass-agent`
 
 ### Clone the branches to each folder
 
-Open a command prompt in the `HASS.agent` directory and clone the `beta` branch of your forked repo into the `hass-agent-docs-beta` folder. You can use the `-b beta` flag for this.
+Open a terminal in the `hass-agent` directory and clone your forked repo for the docs.
 
 ## Setting up local environment
 
@@ -54,10 +36,24 @@ To setup the local docker environment all you need to do is run the following co
 docker-compose up
 ```
 
-This will build and setup the local docker and activate the live reload editing page. You can view this page at [localhost:8000](http://localhost:8000){: target="\_blank"}.
+This will build and setup the local docker environment and serve the docs with live reload. You can view this page at [localhost:8000](http://localhost:8000){: target="\_blank"}, any edits to files will cause it to rebuild automatically.
 
-As long as this page successfully shows the documentation you can continue on to the development lifecycle and editing pages.
+## Further Reading
 
-???+ info "Hotfixes on the main branch"
+<div class="grid cards" markdown>
 
-    If you want to put hotfixes onto the main branch you can repeat the steps from [here](#setting-up-the-local-branches).
+- **[Easy Editing]** – Simplest way to edit the documentation.
+- **[Setup]** – Setup the local development environment.
+- **[Development Lifecycle]** – Lifecycle of changes to the documentation.
+- **[Editing Files]** – Overview of markdown features used for the docs, such as these cards.
+- **[Adding Pages]** – Add new pages to the nav and sidebars.
+- **[Special Files]** – For special pages and other files.
+
+</div>
+
+[Easy Editing]: ./easy-editing.md
+[Setup]: ./setup.md
+[Development Lifecycle]: ./development-lifecycle.md
+[Editing Files]: ./editing-files.md
+[Adding Pages]: ./adding-pages.md
+[Special Files]: ./special-files.md
