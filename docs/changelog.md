@@ -2,7 +2,7 @@
 
 ## HASS.Agent App
 
-### 2.2.0 <small>- Sep 14, 2025</small> { id="2.2.0" }
+### 2.2.0 <small>- TODO, 2025</small> { id="2.2.0" }
 
 ??? danger "Breaking changes to GPU Temperature sensor"
 
@@ -12,42 +12,57 @@
     Please see the awesome writeup by [@DarkAutumn](https://github.com/DarkAutumn){:target="_blank"} for more details [#43(comment)](https://github.com/hass-agent/HASS.Agent/issues/43#issuecomment-2349373416){:target="_blank"}.
     Please see [GPU Temperature](./setup/sensors/gpu-temperature.md) for how you can get GPU temperature information using standalone version of Libre Hardware Monitor.
 
-- [#281](https://github.com/hass-agent/HASS.Agent/pull/281){:target="_blank"}: Added support for "HumanPresence" internal device sensor.
-- [#298](https://github.com/hass-agent/HASS.Agent/pull/298){:target="_blank"}: Added new "NamedActiveWindow" binary sensor that can tell you if a window containing a specified name is currently active or not.
-- [#299](https://github.com/hass-agent/HASS.Agent/pull/299){:target="_blank"}: Added new "AccentColor" sensor that provides #RRGGBB values for Windows' accent colors.
-- [#253](https://github.com/hass-agent/HASS.Agent/issues/253){:target="_blank"}: Added WebSocket support for MQTT connections (experimental).
-- [#322](https://github.com/hass-agent/HASS.Agent/pull/322){:target="_blank"}: Added x86 (32bit) support to the project and the published artifacts.
-- [#325](https://github.com/hass-agent/HASS.Agent/pull/325){:target="_blank"}: Added ability to "hold" the KeyCommand for a longer time by making it a switch type.
-- [#246](https://github.com/hass-agent/HASS.Agent/pull/246){:target="_blank"}: Added support for selecting on which screen WebView will appear.
-- [#199](https://github.com/hass-agent/HASS.Agent/pull/199){:target="_blank"}: Added support for button helpers (input_button) for quick actions.
-- [#247](https://github.com/hass-agent/HASS.Agent/pull/247){:target="_blank"}: Fixed issue where the user would be presented with "You're running the newest version" even though the internet was unavailable.
-- [#294](https://github.com/hass-agent/HASS.Agent/pull/294){:target="_blank"}: Fixed relative URIs in the notifications not opening properly when clicked on.
-- [#300](https://github.com/hass-agent/HASS.Agent/pull/300){:target="_blank"}: Fixed typo in the onboarding screen.
-- [#301](https://github.com/hass-agent/HASS.Agent/pull/301){:target="_blank"}: Fixed quick actions window not scaling properly with the system scale.
-- [#302](https://github.com/hass-agent/HASS.Agent/pull/302){:target="_blank"}: Fixed repeating audio sensors error log when no default input or output is present because it was removed.
-- [#303](https://github.com/hass-agent/HASS.Agent/pull/303){:target="_blank"}: Fixed (once and for all?) issues with hotkey and German keyboard layouts by changing the default one to Shift+Control+Q.
-- [#306](https://github.com/hass-agent/HASS.Agent/pull/306){:target="_blank"}: Fixed issue where InnoSetup installer parameters would not be passed on to the Satellite Service installer.
-- [#326](https://github.com/hass-agent/HASS.Agent/pull/326){:target="_blank"}: Fixed satellite service missing AudioManager initialisation, causing AudioSensor not to work properly.
-- [#333](https://github.com/hass-agent/HASS.Agent/pull/333){:target="_blank"}: Fixed HASS.Agent refusing to start after a bluetooth dongle was removed with RadioCommand configured.
-- [#156](https://github.com/hass-agent/HASS.Agent/pull/156){:target="_blank"}: Fixed note regarding Home Assistant long-lived token generation and minor wording tweak.
-- [#249](https://github.com/hass-agent/HASS.Agent/pull/249){:target="_blank"}: Fixed the tray icon being blurry when using RDP extensively.
-- [#318](https://github.com/hass-agent/HASS.Agent/pull/318){:target="_blank"}: Fixed code typo in printer sensor's code.
-- [#338](https://github.com/hass-agent/HASS.Agent/pull/338){:target="_blank"}: Fixed issue where an error of one internal device sensor would cause issues with the configuration of others.
-- [#239](https://github.com/hass-agent/HASS.Agent/pull/239){:target="_blank"}: Fixed update notification being shown at startup even though general update notifications were disabled.
+- [#281](https://github.com/hass-agent/HASS.Agent/pull/281){:target="\_blank"}: Added support for "HumanPresence" internal device sensor.
+- [#298](https://github.com/hass-agent/HASS.Agent/pull/298){:target="\_blank"}: Added new "NamedActiveWindow" binary sensor that can tell you if a window containing a specified name is currently active or not.
+- [#299](https://github.com/hass-agent/HASS.Agent/pull/299){:target="\_blank"}: Added new "AccentColor" sensor that provides #RRGGBB values for Windows' accent colors.
+- [#253](https://github.com/hass-agent/HASS.Agent/issues/253){:target="\_blank"}: Added WebSocket support for MQTT connections (experimental).
+- [#322](https://github.com/hass-agent/HASS.Agent/pull/322){:target="\_blank"}: Added x86 (32bit) support to the project and the published artifacts.
+- [#325](https://github.com/hass-agent/HASS.Agent/pull/325){:target="\_blank"}: Added ability to "hold" the KeyCommand for a longer time by making it a switch type.
+- [#246](https://github.com/hass-agent/HASS.Agent/pull/246){:target="\_blank"}: Added support for selecting on which screen WebView will appear.
+- [#199](https://github.com/hass-agent/HASS.Agent/pull/199){:target="\_blank"}: Added support for button helpers (input_button) for quick actions.
+- [#369](https://github.com/hass-agent/HASS.Agent/pull/369){:target="\_blank"}: Added support for Fan domain for Quick Actions.
+- [#377](https://github.com/hass-agent/HASS.Agent/pull/377){:target="\_blank"}: Added configuration backup that is done before migration from LAB02 version actually happens.
+- [#378](https://github.com/hass-agent/HASS.Agent/pull/378){:target="\_blank"}: Added WinFormsSleep command (version of sleep command using specifically WinForms API).
+- [#379](https://github.com/hass-agent/HASS.Agent/pull/379){:target="\_blank"}: Added ability to test MQTT connection during onboarding process.
+- [#379](https://github.com/hass-agent/HASS.Agent/pull/379){:target="\_blank"}: Added missing "use WebSocket" option to MQTT onboarding step.
+- [#380](https://github.com/hass-agent/HASS.Agent/pull/380){:target="\_blank"}: Added "MonitorSleepPowerPlan" command to turn off screen by temporarily modifying the power plan (should not cause the device to go to sleep).
+- [#383](https://github.com/hass-agent/HASS.Agent/pull/383){:target="\_blank"}: Added permission checks for both client (issues with administrative permissions) and service (not running as system).
+- [#247](https://github.com/hass-agent/HASS.Agent/pull/247){:target="\_blank"}: Fixed issue where the user would be presented with "You're running the newest version" even though the internet was unavailable.
+- [#294](https://github.com/hass-agent/HASS.Agent/pull/294){:target="\_blank"}: Fixed relative URIs in the notifications not opening properly when clicked on.
+- [#300](https://github.com/hass-agent/HASS.Agent/pull/300){:target="\_blank"}: Fixed typo in the onboarding screen.
+- [#301](https://github.com/hass-agent/HASS.Agent/pull/301){:target="\_blank"}: Fixed quick actions window not scaling properly with the system scale.
+- [#302](https://github.com/hass-agent/HASS.Agent/pull/302){:target="\_blank"}: Fixed repeating audio sensors error log when no default input or output is present because it was removed.
+- [#303](https://github.com/hass-agent/HASS.Agent/pull/303){:target="\_blank"}: Fixed (once and for all?) issues with hotkey and German keyboard layouts by changing the default one to Shift+Control+Q.
+- [#306](https://github.com/hass-agent/HASS.Agent/pull/306){:target="\_blank"}: Fixed issue where InnoSetup installer parameters would not be passed on to the Satellite Service installer.
+- [#326](https://github.com/hass-agent/HASS.Agent/pull/326){:target="\_blank"}: Fixed satellite service missing AudioManager initialisation, causing AudioSensor not to work properly.
+- [#333](https://github.com/hass-agent/HASS.Agent/pull/333){:target="\_blank"}: Fixed HASS.Agent refusing to start after a bluetooth dongle was removed with RadioCommand configured.
+- [#156](https://github.com/hass-agent/HASS.Agent/pull/156){:target="\_blank"}: Fixed note regarding Home Assistant long-lived token generation and minor wording tweak.
+- [#249](https://github.com/hass-agent/HASS.Agent/pull/249){:target="\_blank"}: Fixed the tray icon being blurry when using RDP extensively.
+- [#318](https://github.com/hass-agent/HASS.Agent/pull/318){:target="\_blank"}: Fixed code typo in printer sensor's code.
+- [#338](https://github.com/hass-agent/HASS.Agent/pull/338){:target="\_blank"}: Fixed issue where an error of one internal device sensor would cause issues with the configuration of others.
+- [#239](https://github.com/hass-agent/HASS.Agent/pull/239){:target="\_blank"}: Fixed update notification being shown at startup even though general update notifications were disabled.
+- [#346](https://github.com/hass-agent/HASS.Agent/pull/346){:target="\_blank"}: Fixed HASS.Agent crash when no WebView screen was explicitly configured.
+- [#352](https://github.com/hass-agent/HASS.Agent/pull/352){:target="\_blank"}: Changed Satellite Service installation logic to limit the possibility of upgrades failing silently and/or leaving Libre Hardware Monitor files.
+- [#358](https://github.com/hass-agent/HASS.Agent/pull/358){:target="\_blank"}: Fixed rare issue where LocalAPI would not work due to device configuration missing.
+- [#372](https://github.com/hass-agent/HASS.Agent/pull/372){:target="\_blank"}: Fixed Home Assistant MQTT warning log regarding "object_id" deprecation.
+- [#376](https://github.com/hass-agent/HASS.Agent/pull/376){:target="\_blank"}: Fixed device discovery messages not being properly removed when device name is changed.
+- [#381](https://github.com/hass-agent/HASS.Agent/pull/381){:target="\_blank"}: Fixed order of sensors and commands so they are sorted alphabetically by the first letter.
+- [#384](https://github.com/hass-agent/HASS.Agent/pull/384){:target="\_blank"}: Fixed onboarding donation message so it's clear all donations go towards the original creator of HASS.Agent - Sam.
+- [#388](https://github.com/hass-agent/HASS.Agent/pull/388){:target="\_blank"}: Fixed MQTT entities changing ID after device rename.
 
 ### 2.1.1 <small>- Feb 06, 2025</small> { id="2.1.1" }
 
-- [#230](https://github.com/hass-agent/Hass.Agent/pull/230){:target="_blank"}: MQTT autodiscovery messages were not republished after connection was lost and recovered.
-- [#229](https://github.com/hass-agent/Hass.Agent/pull/229){:target="_blank"}: URI attached to a notification button wouldn't open properly.
-- [#221](https://github.com/hass-agent/Hass.Agent/pull/221){:target="_blank"}: Satellite Service exe path is now properly enclosed in double quotes according to good security practices.
-- [#220](https://github.com/hass-agent/Hass.Agent/pull/220){:target="_blank"}: Media playback via Music Assistant wasn't working correctly.
-- [#204](https://github.com/hass-agent/Hass.Agent/pull/204){:target="_blank"}: Fixed PowershellCommand argument handling where passing arguments containing spaces/quotes would cause the command to fail.
-- [#205](https://github.com/hass-agent/Hass.Agent/pull/205){:target="_blank"}: Fixed issue where restarting "Windows Management Instrumentation (WMI)" while HASS.Agent is running causes all WMI based sensors to stop functioning.
-- [#185](https://github.com/hass-agent/Hass.Agent/pull/185){:target="_blank"}: Media player now respects the user-provided value in mute service call.
-- [#186](https://github.com/hass-agent/Hass.Agent/pull/186){:target="_blank"}: Notification image not being shown when relative "/media/pics/image.png" was used instead of full URL.
-- [#187](https://github.com/hass-agent/Hass.Agent/pull/187){:target="_blank"}: UI not displaying properly on high-DPI devices with scaling other than 100%.
-- [#159](https://github.com/hass-agent/Hass.Agent/pull/159){:target="_blank"}: Fixed some documentation links pointing to non-existing pages.
-- [#161](https://github.com/hass-agent/Hass.Agent/pull/161){:target="_blank"}: Fixed issue where pressing ESC while having Alt+Tab pressed caused HASS.Agent windows to close.
+- [#230](https://github.com/hass-agent/Hass.Agent/pull/230){:target="\_blank"}: MQTT autodiscovery messages were not republished after connection was lost and recovered.
+- [#229](https://github.com/hass-agent/Hass.Agent/pull/229){:target="\_blank"}: URI attached to a notification button wouldn't open properly.
+- [#221](https://github.com/hass-agent/Hass.Agent/pull/221){:target="\_blank"}: Satellite Service exe path is now properly enclosed in double quotes according to good security practices.
+- [#220](https://github.com/hass-agent/Hass.Agent/pull/220){:target="\_blank"}: Media playback via Music Assistant wasn't working correctly.
+- [#204](https://github.com/hass-agent/Hass.Agent/pull/204){:target="\_blank"}: Fixed PowershellCommand argument handling where passing arguments containing spaces/quotes would cause the command to fail.
+- [#205](https://github.com/hass-agent/Hass.Agent/pull/205){:target="\_blank"}: Fixed issue where restarting "Windows Management Instrumentation (WMI)" while HASS.Agent is running causes all WMI based sensors to stop functioning.
+- [#185](https://github.com/hass-agent/Hass.Agent/pull/185){:target="\_blank"}: Media player now respects the user-provided value in mute service call.
+- [#186](https://github.com/hass-agent/Hass.Agent/pull/186){:target="\_blank"}: Notification image not being shown when relative "/media/pics/image.png" was used instead of full URL.
+- [#187](https://github.com/hass-agent/Hass.Agent/pull/187){:target="\_blank"}: UI not displaying properly on high-DPI devices with scaling other than 100%.
+- [#159](https://github.com/hass-agent/Hass.Agent/pull/159){:target="\_blank"}: Fixed some documentation links pointing to non-existing pages.
+- [#161](https://github.com/hass-agent/Hass.Agent/pull/161){:target="\_blank"}: Fixed issue where pressing ESC while having Alt+Tab pressed caused HASS.Agent windows to close.
 - Fixed SetVolumeCommand ignoring provided value and not handling float values properly.
 - Fixed internal AudioManager not properly clamping values if provided one was below 0 or above 100.
 
