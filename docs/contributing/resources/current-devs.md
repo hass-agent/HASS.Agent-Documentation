@@ -9,23 +9,20 @@ Here you can find the list of current developers and what they help contribute. 
 
 ??? question "Get added to this list"
 
-    If you actively maintain the codebase for a week or more, head over to the Discord server and ask one of the lead devs to verify you and add you to this list.
+    If you make a contribution head over to the [Discord server](https://discord.com/invite/JfZj98xqJr){: target="\_blank"} and ask one of the lead devs to verify you and add you to this list.
 
 === "Client/App"
 
     **Lead Dev**
 
-    - **[amadeo-alex](https://github.com/amadeo-alex){: target="\_blank"}:** Creator of the unofficial version of HASS.Agent
-        - Discord: [Amadeo](https://discord.com/users/135056992745029632){: target="\_blank"}
+    - **[amadeo-alex](https://github.com/amadeo-alex){: target="\_blank"}**
 
     **Other Contributors**
 
-    - **[MinimumDowntime](https://github.com/MinimumDowntime){: target="\_blank"}:** Github Actions Workflows
-        - Discord: [Automaton](https://discord.com/users/350097059640115200){: target="\_blank"}
+    - **[MinimumDowntime](https://github.com/MinimumDowntime){: target="\_blank"}**
 
 === "Documentation"
 
     **Lead Dev**
 
-    - **[DrR0x-Glitch](https://github.com/drr0x){: target="\_blank"}:** Creator of this documentation
-        - Discord: [DrR0x](https://discord.com/users/638245963240046592){: target="\_blank"}
+    - **[DrR0X-Glitch](https://github.com/DrR0X-Glitch){: target="\_blank"}**
