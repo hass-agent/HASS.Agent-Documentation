@@ -5,8 +5,8 @@
 </p>
 <p align="center">
   <strong>
-    View the documentation 
-    <a href="https://hass-agent.io/">here</a>
+    View the documentation at
+    <a href="https://hass-agent.io/">hass-agent.io</a>
   </strong>
 </p>
 <br clear="left" />
@@ -19,13 +19,13 @@ This repository contains all the files used to create [HASS.Agent's documentatio
 
 ### Branches
 
-- `main` --> contains the current "latest" docs version
-- `beta` --> contains the current "beta" docs version
-- `gh-pages` --> deployable (builded) version
+- `main` --> contains the current stable docs version, visible as "latest"
+- `release-x.x` --> contains the next docs version, visible as "beta"
+- `gh-pages` --> deployed (built) version
 
 ## Deployed Documentation
 
-The documentation is deployed here on github pages, you can view it [here](https://hass-agent.io/).
+The documentation is deployed here on github pages, you can view it at [hass-agent.io](https://hass-agent.io/).
 
 ## Development / Contributing
 

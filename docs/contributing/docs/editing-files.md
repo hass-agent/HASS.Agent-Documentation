@@ -35,15 +35,7 @@ At the root of the project you will see a directory structure similar to this:
 
 - `docs`: This folder contains all of the files used to make the pages of the documentation. This is where you will find the markdown files.
 
-- `overrides/`: This folder contains "Theme Overrides", which allow us to have very fine control over the documentation.
-
-#### Other directories
-
-There are some other files/folders you will find in your project directory such as `venv/`, `.gitignore` and `README.md`. These are all files that will not need to be edited so I don't explain them here.
-
-!!! note "Special Files"
-
-    Most of these files/folders are talked about in more detail on the [Special Files](./special-files.md) page.
+- `overrides/`: This folder contains "Theme Overrides", which allow us to have very fine control over the documentation. These are explained [here](./special-files.md).
 
 ### `docs/` Directory Structure
 
@@ -68,7 +60,7 @@ This folder contains the assets used in the documentation. This folder mainly co
 
 #### Special Directories
 
-- `layouts/`: Contains the images and layouts used across the documentation for specific usecases. Currently it just hold data for Jinja templates that make up the social cards.
+- `layouts/`: Contains the images and layouts used across the documentation for specific usecases. Currently it just holds data for Jinja templates that make up the social cards.
 
 - `stylesheets/`: Contains the extra `*.css` files used to overwrite documentation styling. Things such as the color scheme is found here.
 
@@ -315,5 +307,25 @@ You can create either static admonitions or collapsible ones. Collapsible ones a
 The documentation has multiple diagrams spread across the pages that can be edited from the markdown files. All of these are based on [mermaidjs](http://mermaid.js.org/syntax/flowchart.html){: target="\_blank"}.
 
 The documentation basically exlusively uses flowcharts for better styling but all mermaid types are technically supported. You can find docs on the flowcharts [here](http://mermaid.js.org/syntax/flowchart.html){: target="\_blank"}, and more information about our implementation of mermaidjs [here](https://squidfunk.github.io/mkdocs-material/reference/diagrams/){: target="\_blank"}.
+
+## Further Reading
+
+<div class="grid cards" markdown>
+
+- **[Easy Editing]** – Simplest way to edit the documentation.
+- **[Setup]** – Setup the local development environment.
+- **[Development Lifecycle]** – Lifecycle of changes to the documentation.
+- **[Editing Files]** – Overview of markdown features used for the docs, such as these cards.
+- **[Adding Pages]** – Add new pages to the nav and sidebars.
+- **[Special Files]** – For special pages and other files.
+
+</div>
+
+[Easy Editing]: ./easy-editing.md
+[Setup]: ./setup.md
+[Development Lifecycle]: ./development-lifecycle.md
+[Editing Files]: ./editing-files.md
+[Adding Pages]: ./adding-pages.md
+[Special Files]: ./special-files.md
 
 [^1]: The example footnote, you can use the enter button here to return to where you were:

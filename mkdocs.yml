@@ -10,8 +10,7 @@ repo_name: HASS.Agent
 edit_uri: edit/beta/docs/
 
 copyright: >
-  Copyright &copy; 2023-2025 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> -
-  <a href="#__consent">Change cookie settings</a>
+  Copyright &copy; 2023-2025 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Change cookie settings</a>
 
 theme:
   name: material
@@ -93,10 +92,7 @@ extra:
       - manage
     title: Cookie consent
     description: >-
-      We use cookies to fetch github information, recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      We use cookies to fetch github information, recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
 
 markdown_extensions:
   - tables
@@ -120,7 +116,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_code_format ""
   - pymdownx.tabbed:
       alternate_style: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
@@ -130,11 +126,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # Page Tree
-
-
+      emoji_index: !!python/name:material.extensions.emoji.twemoji ""
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg ""
 nav:
   - Home: index.md
   - Getting Started:
@@ -147,33 +140,46 @@ nav:
       - Using Commands: getting-started/commands.md
       - Sending Notifications: getting-started/notifications.md
       - Setting up the Media Player: getting-started/media-player.md
+      - Using Webviews: getting-started/webviews.md
+      - Frequently Asked Questions: getting-started/faq.md
       - Troubleshooting: getting-started/troubleshooting.md
   - Setup:
       - setup/index.md
+      - Commands:
+          - setup/commands/index.md
+          - All: setup/commands/all.md
+      - Sensors:
+          - setup/sensors/index.md
+          - setup/sensors/gpu-temperature.md
+      - Notifications:
+          - setup/notifications/index.md
+          - All: setup/notifications/all.md
+      - Media Player: setup/media-player.md
+      - Quick Actions: setup/quick-actions.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
       - Reporting Issues / Features: contributing/reporting-issues.md
       - Developing the App:
-          - contributing/hass-agent-app/index.md
+          - contributing/app/index.md
       - Developing the Integration:
-          - contributing/hass-agent-integration/index.md
-          - Setup: contributing/hass-agent-integration/setup.md
-          - Development Lifecycle: contributing/hass-agent-integration/development-lifecycle.md
-          - What to work on: contributing/hass-agent-integration/finding-issues.md
+          - contributing/integration/index.md
+          - Setup: contributing/integration/setup.md
+          - Development Lifecycle: contributing/integration/development-lifecycle.md
+          - What to work on: contributing/integration/finding-issues.md
       - Developing the Documentation:
-          - contributing/hass-agent-documentation/index.md
-          - Easy Editing: contributing/hass-agent-documentation/easy-editing.md
-          - Setup: contributing/hass-agent-documentation/setup.md
-          - Development Lifecycle: contributing/hass-agent-documentation/development-lifecycle.md
-          - Editing Files: contributing/hass-agent-documentation/editing-files.md
-          - Adding Pages: contributing/hass-agent-documentation/adding-pages.md
-          - Special Pages / Other Files: contributing/hass-agent-documentation/special-files.md
+          - contributing/docs/index.md
+          - Easy Editing: contributing/docs/easy-editing.md
+          - Setup: contributing/docs/setup.md
+          - Development Lifecycle: contributing/docs/development-lifecycle.md
+          - Editing Files: contributing/docs/editing-files.md
+          - Adding Pages: contributing/docs/adding-pages.md
+          - Special Pages / Other Files: contributing/docs/special-files.md
       - Translating:
           - contributing/translating/index.md
       - Extra Resources:
-          - contributing/developer-resources/index.md
-          - Version System: contributing/developer-resources/version-system.md
-          - Current Developers: contributing/developer-resources/current-devs.md
+          - contributing/resources/index.md
+          - Version System: contributing/resources/version-system.md
+          - Current Developers: contributing/resources/current-devs.md
   - Changelog: changelog.md
   - Getting Help: getting-help.md

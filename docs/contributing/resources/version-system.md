@@ -21,7 +21,7 @@ An example of a released version number: `1.5.4`
 
 #### Major
 
-The major version number is rarely changed, if you are reading this documentation you will most likely never have to change this. But for your information it is only changed when breaking API updates are added. So version `2.*.*` client, is **not** backwards compatible with version `2.*.*`. This also means that all versions of `1.*.*` will be backwards compatible, there may be small warnings or missing features but all previous API calls and features work as intended. Basically this version number only needs to be incremented when no backwards compatability is added. This also forces the dev team to not release backwards compatible updates very often.
+The major version number is rarely changed, if you are reading this documentation you will most likely never have to change this. But for your information it is only changed when breaking API updates are added. So version `2.*.*` client, is **not** backwards compatible with version `1.*.*`. This also means that all versions of `2.*.*` will be backwards compatible with each other, there may be small warnings or missing features but all previous API calls and features work as intended. This promotes backwards compatibility.
 
 ???+ example
 
@@ -41,7 +41,7 @@ The minor version number is to be incremented whenever new features are added in
 
 #### Patch
 
-The patch version number is to be incremented whenever bug fixes(patches) are released in a backwards compatible way. All bug fixes are to be released in a backwards compatible way anyway, so basically everytime a patch is released, this number will be incremented. The important thing to note about the patch version number is that **no new features** can be added.
+The patch version number is to be incremented whenever bug fixes(patches) are released in a backwards compatible way. The important thing to note about the patch version number is that **no new features** can be added.
 
 ???+ example
 
@@ -52,8 +52,8 @@ The patch version number is to be incremented whenever bug fixes(patches) are re
 
 ### Beta developmental versions
 
-During the development of a new version of the HASS.Agent client beta versions of the code will exist. These versions will be denoted like this: `<major>.<minor>.<patch>-beta.<beta-version>` You will notice the only difference is the addition of the `-beta` flag and the fourth version number `<beta-version>`
-The first beta version of the example upcoming `1.5.3` release would look like this: `1.5.3-beta.0`
+During the development of a new version of the HASS.Agent client, beta versions of the code will exist. These versions will be denoted like this: `<major>.<minor>.<patch>-beta<beta-version>` You will notice the only difference is the addition of the `-beta` flag and the fourth version number `<beta-version>`
+The first beta version of the example upcoming `1.5.3` release would look like this: `1.5.3-beta1`.
 
 #### Beta version
 
@@ -63,7 +63,7 @@ The beta version number is to be incremented whenever a new beta version of the 
 
     > The current stable version is `2.5.4` and the dev team is working on a new feature
 
-    The beta version during the first development update should be `2.6.0-beta.0`
+    The beta version during the first development update should be `2.6.0-beta1`
 
     Everytime a new development update is added to this feature the last number should be incremented.
 
@@ -71,21 +71,21 @@ The beta version number is to be incremented whenever a new beta version of the 
 
     The stable version for release should be `2.6.0`
 
-    > The dev team has found bugs and is working on a hotfix. They are in devlopment of the second hotfix right now.
+    > The dev team has found bugs and is working on a hotfix. They are in devlopment of the **second** hotfix right now.
 
-    The current beta version should be `2.6.1-beta.1` (1)
+    The current beta version should be `2.6.1-beta2` (1)
 
     > They have now completed this hotfix
 
     The stable release version should be `2.6.1`
 
-1.  We use 1 for the `<beta-version>` here, because hotfix 1 was .0 and hotfix 2 was .1
+1.  We use 2 for the `<beta-version>` here, because this is the second beta.
 
 ### Other info
 
 #### Resetting numbers
 
-Whenever a "parent" version number is incremented the "children" numbers must be rest to zero.
+Whenever a "parent" version number is incremented the "children" numbers must be reset to zero.
 
 ???+ example
 
@@ -96,8 +96,8 @@ Whenever a "parent" version number is incremented the "children" numbers must be
 
 The documentation operates on version of just `<major>.<minor>` This will still match the client because no major documentation change will happen during a patch of the HASS.Agent client.
 
-The other difference between this version system and the client's version system is that beta version attributes will not exist. In the documentation if the upcoming release is going to be `1.5.0` and the current beta version is `1.5.0-beta.3` then the docs will have `1.5` with the label/attribute `beta`.
+The docs will denote betas with the `beta` label in the version selector, and it will point to the upcoming feature release verion. If the upcoming release is going to be `1.5.0` and the current beta version is `1.5.0-beta.3` then the docs will have `1.5` with the label/attribute `beta`.
 
 ## Relationship between the client and the integration
 
-Both the client and the integration are going to be using SemVer, however it will **not** be the same version. Instead when you checkout the installation for HASS.Agent it will tell you what version of the integration is required. The other thing is that most of the integration's development will be backwards compatible and not move up from version `2`.
+Both the client and the integration are going to be using SemVer, however it will **not** be the same version. Instead when you checkout the installation for HASS.Agent it will tell you what version of the integration is required. Most of the integration's development will be backwards compatible and not move up from version `2`.

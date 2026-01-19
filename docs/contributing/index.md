@@ -20,11 +20,11 @@ If you are a programmer and want to help out check out these sections:
 
 ### C# and windows apps
 
-If you have experience in C# and creating native windows applications, we could use your help with creating the HASS.Agent client and Satellite service. If you would like to learn more, check out the dedicated section [here](hass-agent-app/index.md).
+If you have experience in C# and creating native windows applications, we could use your help with creating the HASS.Agent client and Satellite service. If you would like to learn more, check out the dedicated section [here](app/index.md).
 
 ### Python and Homeassistant integrations
 
-If you have experience in python and creating homeassistant integrations, you can help us develop the HACS integration that connects to HASS.Agent. If you would like to learn more, check out the dedicated section [here](hass-agent-integration/index.md).
+If you have experience in python and creating homeassistant integrations, you can help us develop the HACS integration that connects to HASS.Agent. If you would like to learn more, check out the dedicated section [here](integration/index.md).
 
 ## Helping out with the Documentation
 
@@ -33,5 +33,5 @@ You don't need to be a programmer or developer to help out with the documentatio
 There are three main ways you can edit the documentation:
 
 - **Easiest Way:** The easiest way to contribute is to submit github issues or message developers in the discord server to have them make the edits for you, more info on this [here](./reporting-issues.md).
-- **Simple Markdown Way:** There is an easy markdown editor hosted by github that you can use to make small changes to pages, find info on that [here](./hass-agent-documentation/easy-editing.md).
-- **Local/Full Project:** If you want to add new pages or features and test changes locally you can use docker and VSCode to edit the documentation, more info [here](./hass-agent-documentation/index.md).
+- **Simple Markdown Way:** There is an easy markdown editor hosted by github that you can use to make small changes to pages, find info on that [here](./docs/easy-editing.md).
+- **Local/Full Project:** If you want to add new pages or features and test changes locally you can use docker and VSCode to edit the documentation, more info [here](./docs/index.md).

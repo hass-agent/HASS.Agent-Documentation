@@ -14,9 +14,9 @@ This is as simple as using it how you would anywhere else, you can add it to das
 - **Entity:** Your pc name, it should be autocompleted.
 - **Message:** Any message you want sent to the computer as audio.
 
-### This is what it should look like
+### Example Text-to-speech call
 
-![Screenshot of the text-to-speech service call](../assets/images/screenshots/text-to-speech.png)
+![Screenshot of the text-to-speech service call](../assets/images/screenshots/getting-started/text-to-speech.png)
 
 ## Further Reading
 

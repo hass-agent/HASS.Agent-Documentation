@@ -6,14 +6,14 @@ One of the main reasons for creating HASS.Agent is the ability to use commands a
 
 #### Required properties
 
-1. **TYPE:** Select the type of command from the left, there are many options available, a full description of each is available in the [setup](../setup/commands.md) guide.
+1. **TYPE:** Select the type of command from the left, there are many options available, a full description of each is available in the [setup](../setup/commands/index.md) guide.
 2. **Entity Type:** Select what entitiy you want in home assistant. This can be any of the options, but only certain commands will actually return states to HA. So we recommend just using Button for most commands.
 3. **Name:** Enter the name for the entity in HA, this is the entity id so it must not contain spaces.
 
 ???+ example
 
     Here is the config for a command that shuts down the computer.
-    ![Image of the config](../assets/images/screenshots/command-example.png)
+    ![Image of the config](../assets/images/screenshots/getting-started/command-example.png)
 
 #### Extra config <small>optional</small>
 
@@ -21,7 +21,7 @@ One of the main reasons for creating HASS.Agent is the ability to use commands a
 
 ??? example "Friendly Name of "Fully Shutdown" "
 
-    ![Image of the quick action](../assets/images/screenshots/command-friendly-name.png)
+    ![Image of the quick action](../assets/images/screenshots/getting-started/command-friendly-name.png)
 
 - Enable/Disable availability check, this tells HA whether to check if the computer is online before grabbing the last state. If you want your sensor to always display last state even if the computer has been off for a while turn this on.
 

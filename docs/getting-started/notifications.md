@@ -68,7 +68,7 @@ sequence:
 
 This notification will warn the user about their vaccuum being full and will include two buttons that ask the user for input on whether to pause or go home.
 
-Because these are a lot more complicated, this guide will not explain anything that we are configuring. If you need info on that checkout the [setup](../setup/notifications.md) page.
+Because these are a lot more complicated, this guide will not explain anything that we are configuring. If you need info on that checkout the [setup](../setup/notifications/index.md) page.
 
 ### UI editor
 
