@@ -10,11 +10,11 @@
 
 ## Overview
 
-The HASS.Agent docs are built on MKDocs, which is a python based tool that allows you to write documentation in simple markdown. Most of the docs is written in markdown and is therefore easily editable. However submitting these edits and testing them requires a basic understanding of git and github version control.
+The HASS.Agent docs are built with MkDocs Material, versioned with `mike`, and served locally through Docker. The site content is mostly simple markdown, so editing pages is straightforward, but submitting changes and testing them locally still requires a basic understanding of git and GitHub.
 
 ### The documentation versions
 
-At the top of the documentation you will find a selector to the write of the title. This is a version selector that allows you to view different versions of the documentation. You will notice there are three special versions and the rest follow the format of `*.*`:
+At the top of the documentation you will find a version selector to the right of the title. This lets you view different published versions of the docs. You will notice there are three special versions and the rest follow the format of `*.*`:
 
 | Version   | Description                                                                                             |
 | --------- | ------------------------------------------------------------------------------------------------------- |
@@ -23,13 +23,13 @@ At the top of the documentation you will find a selector to the write of the tit
 | `latest`  | The current latest release of HASS.Agent, this is also the default version.                             |
 | `*.*`     | Older versions of the docs, these are not editable. These are known as `old-versions` Example: `1.5`    |
 
-## Github Structure
+## GitHub Structure
 
-The repo for the documentation is linked at the top right of the documentation at all times and is also available [here](https://github.com/hass-agent/hass-agent.github.io){: target="\_blank"}. Go ahead and open it in another tab to reference as you go through this section.
+The documentation source lives in the [HASS.Agent-Documentation repo](https://github.com/hass-agent/HASS.Agent-Documentation){: target="\_blank"}. This is the repo you should fork and open PRs against when contributing to the docs.
 
 ### Branches Overview
 
-The repo contains two permanent branches:
+The repo contains these long-lived branches:
 
 | Branch     | Description                                                                                                                                                                                    |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,15 +38,25 @@ The repo contains two permanent branches:
 
 #### Release Branches
 
-Each upcoming feature release will get its own branch: `release-x.x`, that is tracked by the `beta`[^1] label.
+Each upcoming feature release gets its own branch: `release-x.x`. The `beta`[^1] docs version is deployed from that release branch while the upcoming version is still being written and reviewed.
+
+#### Testing Branches
+
+Temporary testing branches can also be used for previewing changes. The `nightly`[^1] docs version is intended for temporary testing branches, including user PR work when needed.
 
 ### Deploying the documentation
 
-After merges occur to either the `beta` or `main` branch specific github workflows will run that wil automatically build and deploy the correct version of the documentation. Therefore you **do not** need to ever do any sort of building or deploying.
+Updates to `main` automatically refresh the published `latest` alias. Release and testing versions are handled through GitHub workflows, so contributors do **not** need to build or deploy the site manually.
 
 #### Releasing the `beta` version
 
-When it comes time to release the `beta`[^1] version of the documentation as the `latest`[^1] version, one of the admins of the github will manually trigger a workflow that will deploy and build the `release-x.x` branch as the `latest`[^1] version and also deploy a copy for the `beta`[^1] version. After the deployment a merge will be triggered to merge the `release-x.x` branch with the `main` branch.
+When it is time to release the `beta`[^1] documentation as `latest`[^1], one of the project admins runs the release workflow from the current `release-x.x` branch. That workflow promotes the current beta docs to `latest`, keeps a copy of the release branch published as `beta`, and opens a PR to merge the release branch back into `main`.
+
+## Languages and i18n
+
+The documentation uses `mkdocs-static-i18n` with a folder-based structure. English source files live in `docs/en/`, and each additional language gets its own matching folder such as `docs/de/`.
+
+If a translated page does not exist yet, the site falls back to the English page and shows a translation notice. For information on translating documentation pages, go to [Translating Documentation](../translating/documentation.md).
 
 ## Further Reading
 

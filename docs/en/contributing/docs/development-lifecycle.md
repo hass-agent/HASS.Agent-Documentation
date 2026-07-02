@@ -8,7 +8,7 @@ This page contains all the information about the development lifecycle of the do
 
 ### Starting development
 
-To start off you will run `docker-compose up` to start the docker container and live reload server.
+To start off you will run `docker compose up` to start the Docker container and live reload server.
 
 ### Modifying and saving markdown files
 
@@ -26,11 +26,15 @@ After all edits have been made you can commit the changes to your repo. You shou
 
 ### Creating a PR
 
-After you finalise your edits and have commited them all to your fork you can create a PR back to the documentation repo. Once again the same rules apply as commit messages, try to make them specific. After submitting your PR it will be reviewed and if accepted by one of our admins it will be merged into the live docs.
+After you finalise your edits and have commited them all to your fork you can create a PR back to the documentation repo. Once again the same rules apply as commit messages, try to make them specific. After submitting your PR it will be reviewed and if accepted by one of our admins it will be merged.
 
 ## Done
 
-Your changes will now be live here on the documentation! You can check them out by navigating to the page you modified.
+Documentation publishing depends on which branch your changes land in:
+
+- Changes merged to `main` update the `latest` docs.
+- Upcoming release work happens in `release-x.x` branches and is published as `beta`.
+- Temporary testing work can be published to `nightly` when needed.
 
 ### Lifecycle
 
@@ -40,7 +44,7 @@ This is a diagram of the development lifecycle:
 flowchart LR
   pick-branch(Pick a Branch) --> start-dev(Start Development) --> make-changes(Make Changes) --> errors?{Errors?} --> |Yes| make-changes
 
-  errors? --> |No| commit(Commit changes) --> pr(Create PR) --> |PR Approved| merge([Merge PR, start again]) --> pick-branch
+  errors? --> |No| commit(Commit changes) --> pr(Create PR) --> |PR Approved| merge([Merge into main or release branch, start again]) --> pick-branch
 ```
 
 ## Further Reading

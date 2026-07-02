@@ -16,18 +16,22 @@ At the root of the project you will see a directory structure similar to this:
 ├───.github
 │   ├───ISSUE_TEMPLATE
 │   └───workflows
+├───docker-compose.yml
+├───Dockerfile
 ├───docs
 ├───overrides
 │   ├───home.html
 │   └───main.html
-├───mkdocs.yaml
+├───mkdocs.yml
 └───requirements.txt
 ```
 
 #### Important files
 
-- `mkdocs.yaml`: The top-level configuration of the documentation. Holds information such as the navtree and plugins used.
+- `mkdocs.yml`: The top-level configuration of the documentation. Holds information such as the nav tree, plugins, versioning, and i18n setup.
 - `requirements.txt`: Used to hold all versions of dependencies required for the documentation. You will not need to edit this.
+- `docker-compose.yml`: Starts the local docs preview environment.
+- `Dockerfile`: Defines the local docs image used for previewing with Docker.
 
 #### Important directories
 
@@ -43,38 +47,43 @@ The `docs/` folder is where you will be spending the majority of the time. It co
 
 ```bash
 ├───assets
-│   └───images
-│       ├───icons
-│       ├───logo
-│       └───screenshots
-├───contributing
-├───getting-started
-├───layouts
-├───stylesheets
-└───index.md
+│   ├───images
+│   │   ├───icons
+│   │   ├───logo
+│   │   └───screenshots
+│   └───stylesheets
+├───en
+│   ├───contributing
+│   ├───getting-started
+│   ├───layouts
+│   ├───setup
+│   ├───changelog.md
+│   ├───getting-help.md
+│   └───index.md
+└───de
 ```
 
 #### Assets
 
-This folder contains the assets used in the documentation. This folder mainly contains images at the moment. You will find it is organised into subfolders, in this case just `images/`. When you need to reference any image you will be navigating here.
+This folder contains the shared assets used in the documentation. It currently contains images and stylesheets that are used across locales.
 
 #### Special Directories
 
-- `layouts/`: Contains the images and layouts used across the documentation for specific usecases. Currently it just holds data for Jinja templates that make up the social cards.
+- `layouts/`: Contains locale-specific layout assets used across the documentation for specific use cases. Currently it mainly holds data for Jinja templates that make up the social cards.
 
-- `stylesheets/`: Contains the extra `*.css` files used to overwrite documentation styling. Things such as the color scheme is found here.
+- `stylesheets/`: Contains the extra `*.css` files used to overwrite documentation styling. In this repo those stylesheets live under `docs/assets/stylesheets/`.
 
 #### Other Directories
 
-The rest of the directories found here are sections of the documentation. Each one of these directories corresponds to a section. For example the `contributing/` directory corresponds to the "Helping Out" section you are in right now.
+Each locale folder contains the actual documentation sections. For example, `docs/en/contributing/` corresponds to the "Helping Out" section you are in right now.
 
 #### `index.md` - special file
 
-`index.md` is a special file that you will find in every folder that holds `*.md` files. This file is the "Home" of every folder. So when it is in the root `docs/` folder it is the homepage for the entire site. Another example is the one in the `contributing/` folder that is the home of the "Helping Out" section, and so on and so forth.
+`index.md` is a special file that you will find in every folder that holds `*.md` files. This file is the "Home" of every folder. So when it is in `docs/en/` it is the English homepage for the entire site. Another example is the one in `docs/en/contributing/`, which is the home of the "Helping Out" section, and so on.
 
 !!! note "Special Case: Homepage"
 
-    The `index.md` file in the root `docs/` directory doesn't contain any actual markdown. This is because it is a fully custom page that is written in html and css as a theme override, there is more information about it [here](./special-files.md/#homepage).
+    The `index.md` file in `docs/en/` does not contain any actual markdown. This is because it is a fully custom page that is written in HTML and CSS as a theme override. There is more information about it [here](./special-files.md/#homepage).
 
 ## Intro to Markdown
 
@@ -98,7 +107,7 @@ You will notice all of these require a certain character followed by a space. If
 We use the standard markdown implementation for hyper links however some extra attributes can be added. Here is a standard link with the text home and the link to the homepage:
 
 ```md
-[home](https://hass-agent.github.io/latest/)
+[home](https://hass-agent.io/latest/)
 ```
 
 #### Inside Links
