@@ -1,0 +1,285 @@
+{% extends "main.html" %} {% block tabs %} {{ super() }}
+<style>
+  /* Application header should be static for the landing page */
+  .md-header {
+    position: initial;
+  }
+
+  /* Remove spacing, as we cannot hide it completely */
+  .md-main__inner {
+    margin: 0;
+  }
+
+  /* Hide main content for now */
+  .md-content {
+    display: none;
+  }
+
+  /* Hide table of contents */
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
+  /* Hide navigation */
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d30;
+    font-family: Arial, sans-serif;
+  }
+
+  .markdown-body {
+    color: black;
+  }
+
+  .container {
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    background-color: #41bdf5;
+    padding: 100px 100px;
+  }
+
+  .hero-section .content {
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .text-content {
+    width: 60%;
+    padding: 50px;
+  }
+
+  .logo {
+    width: 40%;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4e4e57;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .cta-button:hover {
+    outline: 2px solid white;
+  }
+
+  .feature-section {
+    color: white;
+    background-color: #2d2d30;
+    padding: 80px 0;
+  }
+
+  .feature-section .container {
+    max-width: 85%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .feature {
+    flex: 0 0 calc(25% - 40px);
+    text-align: center;
+    margin: 10px;
+    padding: 50px 20px 20px;
+    background-color: #3f3f46;
+  }
+
+  .feature:hover {
+    outline: 1px solid white;
+  }
+
+  .feature h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .feature p {
+    font-size: 18px;
+  }
+
+  .feature img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .feature ul {
+    list-style-type: disc;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .feature li {
+    padding: 3px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+
+    .hero-section {
+      padding: 40px 20px;
+    }
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text-content {
+      order: 1;
+      width: 100%;
+      padding: 20px 0 0;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100%;
+      order: 0;
+    }
+
+    .cta-button {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .feature-section {
+      padding: 40px 0;
+    }
+
+    .feature {
+      flex: 0 0 calc(100% - 20px);
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .feature p {
+      font-size: 16px;
+    }
+
+    .feature h2,
+    .feature h3 {
+      font-size: 20px;
+    }
+
+    .feature img {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 8px;
+    }
+  }
+</style>
+
+<section class="hero-section">
+  <div class="container">
+    <div class="content">
+      <div class="text-content">
+        <h1>Willkommen bei HASS.Agent</h1>
+        <p>
+          Ein Home Assistant Client fuer Windows, der leistungsstarke
+          Funktionen zur Automatisierung deines Windows-Systems bereitstellt.
+        </p>
+        <a href="getting-started" class="cta-button">Erste Schritte</a>
+      </div>
+      <div class="logo">
+        <img src="{{ base_url }}/assets/images/logo/logo-256.png" alt="HASS.Agent Logo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="container">
+    <a class="feature" href="getting-started/sensors">
+      <img src="{{ base_url }}/assets/images/icons/sensors.png" alt="Sensoren Symbol" />
+      <h2>Sensoren</h2>
+      <p>Sende verschiedenste Telemetriedaten von Windows an Home Assistant.</p>
+      <h3>Beispiele:</h3>
+      <ul>
+        <li>Aktuelle CPU-Auslastung</li>
+        <li>Ob du die Webcam verwendest</li>
+        <li>Ob du angemeldet bist</li>
+      </ul>
+    </a>
+    <a class="feature" href="getting-started/commands">
+      <img src="{{ base_url }}/assets/images/icons/commands.png" alt="Befehle Symbol" />
+      <h2>Befehle</h2>
+      <p>Steuere deinen PC ueber Entitaeten in Home Assistant.</p>
+      <h3>Beispiele:</h3>
+      <ul>
+        <li>App oeffnen</li>
+        <li>Herunterfahren/Neustarten</li>
+        <li>PowerShell-Befehl ausfuehren</li>
+      </ul>
+    </a>
+    <a class="feature" href="getting-started/notifications">
+      <img
+        src="{{ base_url }}/assets/images/icons/bell-regular.svg"
+        alt="Benachrichtigungen Symbol"
+      />
+      <h2>Benachrichtigungen</h2>
+      <p>
+        Sende dynamische Windows-Benachrichtigungen mit Bildern und Aktionen
+        aus Home Assistant.
+      </p>
+      <h3>Beispiele:</h3>
+      <ul>
+        <li>Sicherheitswarnungen</li>
+        <li>Wichtige Erinnerungen</li>
+        <li>Interaktive Aktionen</li>
+      </ul>
+    </a>
+    <a class="feature" href="getting-started/quick-actions">
+      <img
+        src="{{ base_url }}/assets/images/icons/quick-actions.png"
+        alt="Schnellaktionen Symbol"
+      />
+      <h2>Schnellaktionen</h2>
+      <p>
+        Fuehre Home Assistant Skripte, Szenen und andere Aktionen direkt ueber
+        Windows aus.
+      </p>
+      <h3>Beispiele:</h3>
+      <ul>
+        <li>Lichter schalten</li>
+        <li>Szenen aktivieren</li>
+        <li>Automationen starten</li>
+      </ul>
+    </a>
+  </div>
+</section>
+{% endblock %}
