@@ -148,6 +148,7 @@ nav:
       - Commands:
           - setup/commands/index.md
           - All: setup/commands/all.md
+          - Press Key: setup/commands/press-key.md
       - Sensors:
           - setup/sensors/index.md
           - setup/sensors/gpu-temperature.md
