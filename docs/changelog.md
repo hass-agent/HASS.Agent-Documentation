@@ -2,7 +2,7 @@
 
 ## HASS.Agent App
 
-### 2.2.0 <small>- Jan 19, 2025</small> { id="2.2.0" }
+### 2.2.0 <small>- Jan 19, 2026</small> { id="2.2.0" }
 
 ??? danger "Breaking changes to GPU Temperature sensor"
 
