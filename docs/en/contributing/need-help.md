@@ -25,7 +25,7 @@ Thank you to everyone who has supported the project so far, together we continue
 - **[C#](./index.md/#c-and-windows-apps)** is the main language HASS.Agent uses, it is used to build out all of the client and interface you interact with on your computer.
 - **[Python](./index.md/#python-and-homeassistant-integrations)** is the language used to develop the homeassistant integration that connects to the entities and sensors.
 - **[Markdown/documentation](./index.md/#helping-out-with-the-documentation)** Markdown is used to develop the documentation, if you haven't heard of it yet it is basically just plain text, very easy to learn.
-- **[Translating](#)** is a very important part of HASS.Agent that we cannot do on our own, it's extremely simple, you read a phrase in english and write the version in your chosen language.
+- **[Translating](./translating/index.md)** is a very important part of HASS.Agent that we cannot do on our own, it's extremely simple, you read a phrase in english and write the version in your chosen language.
 
 ## Current Code Maintainers/Developers
 

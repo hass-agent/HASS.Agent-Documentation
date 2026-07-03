@@ -1,13 +1,13 @@
-site_name: Hass Agent Documentation
+site_name: HASS.Agent Documentation
 site_url: https://hass-agent.io/
 site_author: DrR0X
 site_description: >-
-  Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks
+  Access your Home Assistant instance from any windows machine - send notifications, collect data and automate repetitive tasks
 
 repo_url: https://github.com/hass-agent/hass.agent
 repo_name: HASS.Agent
 
-edit_uri: edit/beta/docs/
+edit_uri: https://github.com/hass-agent/HASS.Agent-Documentation/edit/main/docs/
 
 copyright: >
   Copyright &copy; 2023-2026 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Change cookie settings</a>
@@ -30,7 +30,6 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.action.edit
-    - content.action.view
     - announce.dismiss
   language: en
   palette:
@@ -53,6 +52,40 @@ plugins:
   - mike:
       alias_type: redirect
       canonical_version: latest
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          site_name: HASS.Agent Dokumentation
+          site_description: >-
+            Greifen Sie von jedem Windows-PC auf Ihr Home Assistant zu – senden Sie Benachrichtigungen, sammeln Sie Daten und automatisieren Sie wiederkehrende Aufgaben.
+          copyright: >-
+            Copyright &copy; 2023-2026 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Cookie-Einstellungen ändern</a>
+          extra:
+            consent:
+              title: Cookie-Einwilligung
+              description: >-
+                Wir verwenden Cookies, um GitHub-Informationen abzurufen, Ihre wiederholten Besuche und Einstellungen zu erkennen sowie die Wirksamkeit unserer Dokumentation zu messen und festzustellen, ob Benutzer das finden, wonach sie suchen. Mit Ihrer Einwilligung helfen Sie uns, unsere Dokumentation zu verbessern.
+          nav_translations:
+            Home: Startseite
+            Getting Started: Erste Schritte
+            Setup: Einrichtung
+            Helping Out: Mithelfen
+            Changelog: Änderungsprotokoll
+            Getting Help: Hilfe erhalten
+        - locale: "null"
+          name: Help translating
+          build: false
+          fixed_link: https://www.hass-agent.io/latest/contributing/translating/
   # - social:
   #     enabled: !ENV [CI, false]
   #     cards_layout: default/variant
@@ -178,6 +211,7 @@ nav:
           - Special Pages / Other Files: contributing/docs/special-files.md
       - Translating:
           - contributing/translating/index.md
+          - Translating the Documentation: contributing/translating/documentation.md
       - Extra Resources:
           - contributing/resources/index.md
           - Version System: contributing/resources/version-system.md

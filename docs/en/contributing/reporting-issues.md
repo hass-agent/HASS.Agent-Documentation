@@ -13,7 +13,7 @@ Submitting issues on GitHub allows for structured tracking and collaboration. Fo
 1.  **Navigate to the Relevant Repository:**
 
     - [For Windows app features/issues](https://github.com/hass-agent/HASS.Agent/issues){: target="\_blank"}
-    - [For Documentation features/issues](https://github.com/hass-agent/hass-agent.github.io/issues){: target="\_blank"}
+    - [For Documentation features/issues](https://github.com/hass-agent/HASS.Agent-Documentation/issues){: target="\_blank"}
     - [For Integration issues](https://github.com/hass-agent/HASS.Agent-Integration/issues){: target="\_blank"}
 
 2.  **Access the "Issues" Tab:**

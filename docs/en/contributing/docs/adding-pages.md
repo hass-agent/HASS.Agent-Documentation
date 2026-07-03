@@ -4,7 +4,7 @@ You can add new pages anywhere in the documentation if you feel the need to. How
 
 ## Creating the page
 
-You start by creating a new `.md` file with an all lowercase name, you can use `-` dashes in place of spaces. For example this file is called `adding-pages.md` This file should be located in the section you want it, for example; if you want a new page in this documentation contributing section you will create the page in the `docs/contributing/docs/`.
+You start by creating a new `.md` file with an all lowercase name, you can use `-` dashes in place of spaces. For example this file is called `adding-pages.md`. This file should be located in the section you want it. For example, if you want a new English page in this documentation contributing section you would create the page in `docs/en/contributing/docs/`.
 
 Now you can use a heading 1 to indicate the name of this page. Example: `# Adding new pages`
 
@@ -17,7 +17,7 @@ nav:
   - Home: index.md
 ```
 
-To add your page you need to find the section you have placed your file in, for example a file placed in the `docs/contributing/docs` should be added under the:
+To add your page you need to find the section you have placed your file in. For example, a file placed in `docs/en/contributing/docs/` should be added under the:
 
 ```yaml
 nav:
@@ -28,11 +28,15 @@ nav:
 You create a new entry by adding a `- ` and then writing the name of your page that you want in the sidebar navigation, so keep it short. Then you add a `:` followed by the directory of the file.
 ???+ note
 
-    This directory starts in the docs folder so you will just write `contributing/docs`, not `docs/contributing/docs`.
+    This directory starts in the locale docs folder, so for English you will write `contributing/docs`, not `docs/en/contributing/docs`.
 
 ## Editing and Testing the page
 
 You can now edit the page and fill it with content, all of the changes should show in your browser and the page should be visible in the left navigation sidebar.
+
+## Translated pages
+
+If you are adding a page that should also exist in another language, mirror the same path under that locale folder. For translation-specific guidance, use [Translating the Documentation](../translating/documentation.md).
 
 ## Further Reading
 

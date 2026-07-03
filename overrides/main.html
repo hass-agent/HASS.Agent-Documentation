@@ -48,20 +48,47 @@
 <!-- Announcement bar -->
 {% block announce %}
 
+{% set announcement = {
+  "en": {
+    "need_help": "We need help! If you have experience in C# or Python we would love to have you help out.",
+    "need_help_link": "Click here for more.",
+    "translation": "This page isn't available in your language yet. You're viewing the English version.",
+    "translation_link": "Help translate it →"
+  },
+  "de": {
+    "need_help": "Wir brauchen Hilfe! Wenn du Erfahrung mit C# oder Python hast, würden wir uns über deine Unterstützung freuen.",
+    "need_help_link": "Mehr erfahren.",
+    "translation": "Diese Seite ist noch nicht auf Deutsch verfügbar. Du siehst derzeit die englische Version.",
+    "translation_link": "Hilf bei der Übersetzung →"
+  }
+} %}
+
+{% set locale = announcement.get(i18n_page_locale, announcement["en"]) %}
+
 <style>
   .md-announce a:hover {
     color: currentColor;
   }
+
   .md-announce strong {
     white-space: nowrap;
   }
 </style>
 
-<strong>
-  <a href="/latest/contributing/need-help"
-    >We need help! If you have experience in C# or Python we would love to have
-    you help out. Click here for more.</a
-  >
-</strong>
+{% if i18n_page_locale != "en" and i18n_file_locale != i18n_page_locale %}
+
+  {{ locale.translation }}
+  <a href="/latest/{{ i18n_page_locale }}/contributing/translating/documentation">
+    <strong>{{ locale.translation_link }}</strong>
+  </a>
+
+{% else %}
+
+  {{ locale.need_help }}
+  <a href="/latest/{{ i18n_page_locale }}/contributing/need-help">
+    <strong>{{ locale.need_help_link }}</strong>
+  </a>
+
+{% endif %}
 
 {% endblock %}

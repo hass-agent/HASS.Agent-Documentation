@@ -1,6 +1,6 @@
 # Easier method of editing the documentation
 
-You can easily edit parts of pages by clicking the edit button at the top right of any page. It will link you to github and help you fork the repo and edit the file.
+You can easily edit parts of pages by clicking the edit button at the top right of any page. That button opens the page source in the `HASS.Agent-Documentation` repo on GitHub and helps you fork the docs repo and edit the file directly in your browser.
 
 ## Further Reading
 
