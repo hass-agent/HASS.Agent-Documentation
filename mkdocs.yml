@@ -86,13 +86,6 @@ plugins:
           name: Help translating
           build: false
           fixed_link: https://www.hass-agent.io/latest/contributing/translating/
-  # - social:
-  #     enabled: !ENV [CI, false]
-  #     cards_layout: default/variant
-  #     cards_layout_options:
-  #       background_image: layouts/HASS.Agent-Social-Card.png
-  #       background_color: transparent
-  #       color: #ffffff
   - search
 
 # Add stylesheet for custom color scheme
