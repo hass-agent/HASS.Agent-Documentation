@@ -1,13 +1,13 @@
 <!-- Elements added to main will be displayed on all pages -->
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="de" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks">
+        <meta name="description" content="Greifen Sie von jedem Windows-PC auf Ihr Home Assistant zu – senden Sie Benachrichtigungen, sammeln Sie Daten und automatisieren Sie wiederkehrende Aufgaben.">
       
       
         <meta name="author" content="DrR0X">
@@ -17,6 +17,12 @@
       
       
         
+          <link rel="alternate" href="/latest/setup/sensors/gpu-temperature/" hreflang="en">
+        
+          <link rel="alternate" href="/latest/de/setup/sensors/gpu-temperature/" hreflang="de">
+        
+          <link rel="alternate" href="https://www.hass-agent.io/latest/contributing/translating/" hreflang="null">
+        
       
       
       <link rel="icon" href="/latest/assets/images/logo/logo-128-round.png">
@@ -24,7 +30,7 @@
     
     
       
-        <title>Hass Agent Documentation</title>
+        <title>HASS.Agent Dokumentation</title>
       
     
     
@@ -92,28 +98,35 @@
         <aside class="md-banner">
           <div class="md-banner__inner md-grid md-typeset">
             
-              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+              <button class="md-banner__button md-icon" aria-label="Nicht mehr anzeigen">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
               </button>
             
             
 
+
+
+
+
 <style>
   .md-announce a:hover {
     color: currentColor;
   }
+
   .md-announce strong {
     white-space: nowrap;
   }
 </style>
 
-<strong>
-  <a href="/latest/contributing/need-help"
-    >We need help! If you have experience in C# or Python we would love to have
-    you help out. Click here for more.</a
-  >
-</strong>
+
+
+  We need help! If you have experience in C# or Python we would love to have you help out.
+  <a href="/latest//contributing/need-help">
+    <strong>Click here for more.</strong>
+  </a>
+
+
 
 
           </div>
@@ -180,8 +193,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/latest/." title="Hass Agent Documentation" class="md-header__button md-logo" aria-label="Hass Agent Documentation" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="/latest/de/" title="HASS.Agent Dokumentation" class="md-header__button md-logo" aria-label="HASS.Agent Dokumentation" data-md-component="logo">
       
   <img src="/latest/assets/images/logo/logo-128.png" alt="logo">
 
@@ -194,7 +207,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Hass Agent Documentation
+            HASS.Agent Dokumentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -237,6 +250,38 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/latest/setup/sensors/gpu-temperature/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/latest/de/setup/sensors/gpu-temperature/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://www.hass-agent.io/latest/contributing/translating/" hreflang="null" class="md-select__link">
+              Help translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -248,16 +293,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Suche">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -270,7 +315,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Suche wird initialisiert
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -282,7 +327,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/hass-agent/hass.agent" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/hass-agent/hass.agent" title="Zum Repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -303,7 +348,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -313,13 +358,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="/latest/." class="md-tabs__link">
+      <a href="/latest/de/" class="md-tabs__link">
         
   
   
     
   
-  Home
+  Startseite
 
       </a>
     </li>
@@ -334,13 +379,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/getting-started/" class="md-tabs__link">
+        <a href="/latest/de/getting-started/" class="md-tabs__link">
           
   
   
     
   
-  Getting Started
+  Erste Schritte
 
         </a>
       </li>
@@ -356,13 +401,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/setup/" class="md-tabs__link">
+        <a href="/latest/de/setup/" class="md-tabs__link">
           
   
   
     
   
-  Setup
+  Einrichtung
 
         </a>
       </li>
@@ -378,13 +423,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="/latest/contributing/" class="md-tabs__link">
+        <a href="/latest/de/contributing/" class="md-tabs__link">
           
   
   
     
   
-  Helping Out
+  Mithelfen
 
         </a>
       </li>
@@ -398,13 +443,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="/latest/changelog/" class="md-tabs__link">
+      <a href="/latest/de/changelog/" class="md-tabs__link">
         
   
   
     
   
-  Changelog
+  Änderungsprotokoll
 
       </a>
     </li>
@@ -417,13 +462,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="/latest/getting-help/" class="md-tabs__link">
+      <a href="/latest/de/getting-help/" class="md-tabs__link">
         
   
   
     
   
-  Getting Help
+  Hilfe erhalten
 
       </a>
     </li>
@@ -452,16 +497,16 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/latest/." title="Hass Agent Documentation" class="md-nav__button md-logo" aria-label="Hass Agent Documentation" data-md-component="logo">
+    <a href="/latest/de/" title="HASS.Agent Dokumentation" class="md-nav__button md-logo" aria-label="HASS.Agent Dokumentation" data-md-component="logo">
       
   <img src="/latest/assets/images/logo/logo-128.png" alt="logo">
 
     </a>
-    Hass Agent Documentation
+    HASS.Agent Dokumentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/hass-agent/hass.agent" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/hass-agent/hass.agent" title="Zum Repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -481,14 +526,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/." class="md-nav__link">
+      <a href="/latest/de/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Home
+    Startseite
   
 
     
@@ -553,14 +598,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/getting-started/" class="md-nav__link ">
+            <a href="/latest/de/getting-started/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Getting Started
+    Erste Schritte
   
 
     
@@ -582,7 +627,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Getting Started
+    Erste Schritte
   
 
           </label>
@@ -597,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/installation/" class="md-nav__link">
+      <a href="/latest/de/getting-started/installation/" class="md-nav__link">
         
   
   
@@ -625,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/initial-setup/" class="md-nav__link">
+      <a href="/latest/de/getting-started/initial-setup/" class="md-nav__link">
         
   
   
@@ -653,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/other-installs/" class="md-nav__link">
+      <a href="/latest/de/getting-started/other-installs/" class="md-nav__link">
         
   
   
@@ -681,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/quick-actions/" class="md-nav__link">
+      <a href="/latest/de/getting-started/quick-actions/" class="md-nav__link">
         
   
   
@@ -709,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/sensors/" class="md-nav__link">
+      <a href="/latest/de/getting-started/sensors/" class="md-nav__link">
         
   
   
@@ -737,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/commands/" class="md-nav__link">
+      <a href="/latest/de/getting-started/commands/" class="md-nav__link">
         
   
   
@@ -765,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/notifications/" class="md-nav__link">
+      <a href="/latest/de/getting-started/notifications/" class="md-nav__link">
         
   
   
@@ -793,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/media-player/" class="md-nav__link">
+      <a href="/latest/de/getting-started/media-player/" class="md-nav__link">
         
   
   
@@ -821,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/webviews/" class="md-nav__link">
+      <a href="/latest/de/getting-started/webviews/" class="md-nav__link">
         
   
   
@@ -849,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/faq/" class="md-nav__link">
+      <a href="/latest/de/getting-started/faq/" class="md-nav__link">
         
   
   
@@ -877,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-started/troubleshooting/" class="md-nav__link">
+      <a href="/latest/de/getting-started/troubleshooting/" class="md-nav__link">
         
   
   
@@ -945,14 +990,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/setup/" class="md-nav__link ">
+            <a href="/latest/de/setup/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Setup
+    Einrichtung
   
 
     
@@ -974,7 +1019,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Setup
+    Einrichtung
   
 
           </label>
@@ -1016,7 +1061,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/setup/commands/" class="md-nav__link ">
+            <a href="/latest/de/setup/commands/" class="md-nav__link ">
               
   
   
@@ -1060,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/setup/commands/all/" class="md-nav__link">
+      <a href="/latest/de/setup/commands/all/" class="md-nav__link">
         
   
   
@@ -1088,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/setup/commands/press-key/" class="md-nav__link">
+      <a href="/latest/de/setup/commands/press-key/" class="md-nav__link">
         
   
   
@@ -1149,7 +1194,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/setup/sensors/" class="md-nav__link ">
+            <a href="/latest/de/setup/sensors/" class="md-nav__link ">
               
   
   
@@ -1193,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/setup/sensors/gpu-temperature/" class="md-nav__link">
+      <a href="/latest/de/setup/sensors/gpu-temperature/" class="md-nav__link">
         
   
   
@@ -1254,7 +1299,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/setup/notifications/" class="md-nav__link ">
+            <a href="/latest/de/setup/notifications/" class="md-nav__link ">
               
   
   
@@ -1298,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/setup/notifications/all/" class="md-nav__link">
+      <a href="/latest/de/setup/notifications/all/" class="md-nav__link">
         
   
   
@@ -1334,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/setup/media-player/" class="md-nav__link">
+      <a href="/latest/de/setup/media-player/" class="md-nav__link">
         
   
   
@@ -1362,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/setup/quick-actions/" class="md-nav__link">
+      <a href="/latest/de/setup/quick-actions/" class="md-nav__link">
         
   
   
@@ -1434,14 +1479,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/contributing/" class="md-nav__link ">
+            <a href="/latest/de/contributing/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Helping Out
+    Mithelfen
   
 
     
@@ -1463,7 +1508,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Helping Out
+    Mithelfen
   
 
           </label>
@@ -1478,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/need-help/" class="md-nav__link">
+      <a href="/latest/de/contributing/need-help/" class="md-nav__link">
         
   
   
@@ -1506,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/reporting-issues/" class="md-nav__link">
+      <a href="/latest/de/contributing/reporting-issues/" class="md-nav__link">
         
   
   
@@ -1557,7 +1602,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/contributing/app/" class="md-nav__link ">
+            <a href="/latest/de/contributing/app/" class="md-nav__link ">
               
   
   
@@ -1633,7 +1678,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/contributing/integration/" class="md-nav__link ">
+            <a href="/latest/de/contributing/integration/" class="md-nav__link ">
               
   
   
@@ -1677,14 +1722,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/integration/setup/" class="md-nav__link">
+      <a href="/latest/de/contributing/integration/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup
+    Einrichtung
   
 
     
@@ -1705,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/integration/development-lifecycle/" class="md-nav__link">
+      <a href="/latest/de/contributing/integration/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1733,7 +1778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/integration/finding-issues/" class="md-nav__link">
+      <a href="/latest/de/contributing/integration/finding-issues/" class="md-nav__link">
         
   
   
@@ -1804,7 +1849,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/contributing/docs/" class="md-nav__link ">
+            <a href="/latest/de/contributing/docs/" class="md-nav__link ">
               
   
   
@@ -1848,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/docs/easy-editing/" class="md-nav__link">
+      <a href="/latest/de/contributing/docs/easy-editing/" class="md-nav__link">
         
   
   
@@ -1876,14 +1921,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/docs/setup/" class="md-nav__link">
+      <a href="/latest/de/contributing/docs/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup
+    Einrichtung
   
 
     
@@ -1904,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/docs/development-lifecycle/" class="md-nav__link">
+      <a href="/latest/de/contributing/docs/development-lifecycle/" class="md-nav__link">
         
   
   
@@ -1932,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/docs/editing-files/" class="md-nav__link">
+      <a href="/latest/de/contributing/docs/editing-files/" class="md-nav__link">
         
   
   
@@ -1960,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/docs/adding-pages/" class="md-nav__link">
+      <a href="/latest/de/contributing/docs/adding-pages/" class="md-nav__link">
         
   
   
@@ -1988,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/docs/special-files/" class="md-nav__link">
+      <a href="/latest/de/contributing/docs/special-files/" class="md-nav__link">
         
   
   
@@ -2030,6 +2075,8 @@
           
         
       
+        
+      
     
     
     
@@ -2047,7 +2094,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/contributing/translating/" class="md-nav__link ">
+            <a href="/latest/de/contributing/translating/" class="md-nav__link ">
               
   
   
@@ -2064,6 +2111,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
@@ -2077,6 +2129,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/latest/de/contributing/translating/documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translating the Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -2121,7 +2201,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/latest/contributing/resources/" class="md-nav__link ">
+            <a href="/latest/de/contributing/resources/" class="md-nav__link ">
               
   
   
@@ -2165,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/resources/version-system/" class="md-nav__link">
+      <a href="/latest/de/contributing/resources/version-system/" class="md-nav__link">
         
   
   
@@ -2193,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/contributing/resources/current-devs/" class="md-nav__link">
+      <a href="/latest/de/contributing/resources/current-devs/" class="md-nav__link">
         
   
   
@@ -2236,14 +2316,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/changelog/" class="md-nav__link">
+      <a href="/latest/de/changelog/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changelog
+    Änderungsprotokoll
   
 
     
@@ -2263,14 +2343,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/latest/getting-help/" class="md-nav__link">
+      <a href="/latest/de/getting-help/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Getting Help
+    Hilfe erhalten
   
 
     
@@ -2296,7 +2376,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -2334,7 +2414,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Zurück zum Seitenanfang
 </button>
         
       </main>
@@ -2348,8 +2428,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023-2026 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Change cookie settings</a>
-
+      Copyright &copy; 2023-2026 <a href="https://github.com/hass-agent" target="_blank" rel="noopener">HASS.Agent Team</a> - <a href="#__consent">Cookie-Einstellungen ändern</a>
     </div>
   
   
@@ -2377,9 +2456,11 @@
             
 
 
+  
 
-<h4>Cookie consent</h4>
-<p>We use cookies to fetch github information, recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+
+<h4>Cookie-Einwilligung</h4>
+<p>Wir verwenden Cookies, um GitHub-Informationen abzurufen, Ihre wiederholten Besuche und Einstellungen zu erkennen sowie die Wirksamkeit unserer Dokumentation zu messen und festzustellen, ob Benutzer das finden, wonach sie suchen. Mit Ihrer Einwilligung helfen Sie uns, unsere Dokumentation zu verbessern.</p>
 <input class="md-toggle" type="checkbox" id="__settings" >
 <div class="md-consent__settings">
   <ul class="task-list">
@@ -2426,7 +2507,7 @@
 <div class="md-consent__controls">
   
     
-      <button class="md-button md-button--primary">Accept</button>
+      <button class="md-button md-button--primary">Akzeptieren</button>
     
     
     
@@ -2434,7 +2515,7 @@
     
     
     
-      <label class="md-button" for="__settings">Manage settings</label>
+      <label class="md-button" for="__settings">Einstellungen</label>
     
   
 </div>
@@ -2446,7 +2527,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/latest", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.edit", "content.action.view", "announce.dismiss"], "search": "/latest/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/latest", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.edit", "announce.dismiss"], "search": "/latest/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="/latest/assets/javascripts/bundle.79ae519e.min.js"></script>

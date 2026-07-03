@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Access your homeassistant from any windows machine - send notifications, collect data and automate repetitive tasks">
+        <meta name="description" content="Access your Home Assistant instance from any windows machine - send notifications, collect data and automate repetitive tasks">
       
       
         <meta name="author" content="DrR0X">
@@ -23,6 +23,12 @@
       
       
         
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../de/getting-started/webviews/" hreflang="de">
+        
+          <link rel="alternate" href="https://www.hass-agent.io/latest/contributing/translating/" hreflang="null">
+        
       
       
       <link rel="icon" href="../../assets/images/logo/logo-128-round.png">
@@ -30,7 +36,7 @@
     
     
       
-        <title>Using Webviews - Hass Agent Documentation</title>
+        <title>Using Webviews - HASS.Agent Documentation</title>
       
     
     
@@ -110,21 +116,28 @@
             
             
 
+
+
+
+
 <style>
   .md-announce a:hover {
     color: currentColor;
   }
+
   .md-announce strong {
     white-space: nowrap;
   }
 </style>
 
-<strong>
-  <a href="/latest/contributing/need-help"
-    >We need help! If you have experience in C# or Python we would love to have
-    you help out. Click here for more.</a
-  >
-</strong>
+
+
+  We need help! If you have experience in C# or Python we would love to have you help out.
+  <a href="/latest/en/contributing/need-help">
+    <strong>Click here for more.</strong>
+  </a>
+
+
 
 
           </div>
@@ -192,7 +205,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Hass Agent Documentation" class="md-header__button md-logo" aria-label="Hass Agent Documentation" data-md-component="logo">
+    <a href="../.." title="HASS.Agent Documentation" class="md-header__button md-logo" aria-label="HASS.Agent Documentation" data-md-component="logo">
       
   <img src="../../assets/images/logo/logo-128.png" alt="logo">
 
@@ -205,7 +218,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Hass Agent Documentation
+            HASS.Agent Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -247,6 +260,38 @@
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/getting-started/webviews/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://www.hass-agent.io/latest/contributing/translating/" hreflang="null" class="md-select__link">
+              Help translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
     
     
       
@@ -465,12 +510,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Hass Agent Documentation" class="md-nav__button md-logo" aria-label="Hass Agent Documentation" data-md-component="logo">
+    <a href="../.." title="HASS.Agent Documentation" class="md-nav__button md-logo" aria-label="HASS.Agent Documentation" data-md-component="logo">
       
   <img src="../../assets/images/logo/logo-128.png" alt="logo">
 
     </a>
-    Hass Agent Documentation
+    HASS.Agent Documentation
   </label>
   
     <div class="md-nav__source">
@@ -2106,6 +2151,8 @@
           
         
       
+        
+      
     
     
     
@@ -2140,6 +2187,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
@@ -2153,6 +2205,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/translating/documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translating the Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -2461,19 +2541,11 @@
 
 
   
-    <a href="https://github.com/hass-agent/hass.agent/edit/beta/docs/getting-started/webviews.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/hass-agent/HASS.Agent-Documentation/edit/main/docs/en/getting-started/webviews.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
   
-  
-    
-      
-    
-    <a href="https://github.com/hass-agent/hass.agent/raw/beta/docs/getting-started/webviews.md" title="View source of this page" class="md-content__button md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
-    </a>
   
 
 
@@ -2712,7 +2784,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.edit", "content.action.view", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.action.edit", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
