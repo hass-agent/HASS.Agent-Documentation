@@ -43,7 +43,9 @@ To use your quick actions all you have to do is open the quick actions menu usin
 
 ## Further setup
 
-Now that you have a quick action up and running you can read up on the full configuration of Quick Actions found in the [setup](../setup/quick-actions.md) section.
+Now that you have a quick action up and running you can read up on the full configuration of Quick Actions found in the [reference](../reference/quick-actions.md) section.
+
+For Quick Action fields and behavior, see the [Quick Actions reference](../reference/quick-actions.md).
 
 Below are some quick links to getting started guides for the other HASS.Agent features.
 
@@ -61,4 +63,4 @@ Below are some quick links to getting started guides for the other HASS.Agent fe
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
 [Media Player]: ./media-player.md
-[Other Features]: ../setup/index.md
+[Other Features]: ../reference/index.md

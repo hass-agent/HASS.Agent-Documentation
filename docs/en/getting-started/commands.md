@@ -1,12 +1,12 @@
 # Creating your first Command
 
-One of the main reasons for creating HASS.Agent is the ability to use commands and control your windows pc from home assistant automations and dashboards. This guide will show you how to make your first command, after that you can checkout the in-depth setup guide to create more complex commands.
+One of the main reasons for creating HASS.Agent is the ability to use commands and control your windows pc from home assistant automations and dashboards. This guide will show you how to make your first command, after that you can use the reference guide to explore more complex command types.
 
 ## Creating your first Command
 
 #### Required properties
 
-1. **TYPE:** Select the type of command from the left, there are many options available, a full description of each is available in the [setup](../setup/commands/index.md) guide.
+1. **TYPE:** Select the type of command from the left, there are many options available, a full description of each is available in the [reference](../reference/commands.md) guide.
 2. **Entity Type:** Select what entitiy you want in home assistant. This can be any of the options, but only certain commands will actually return states to HA. So we recommend just using Button for most commands.
 3. **Name:** Enter the name for the entity in HA, this is the entity id so it must not contain spaces.
 
@@ -35,6 +35,8 @@ You can use these entities any way you normally would, yaml or interface. Note t
 
 To test the command you can open the entities properties and click "PRESS" and it will trigger the command to run.
 
+For the full command list and configuration details, see the [Commands reference](../reference/commands.md).
+
 ## Further Reading
 
 <div class="grid cards" markdown>
@@ -51,4 +53,4 @@ To test the command you can open the entities properties and click "PRESS" and i
 [Sensors]: ./sensors.md
 [Notifications]: ./notifications.md
 [Media Player]: ./media-player.md
-[Other Features]: ../setup/index.md
+[Other Features]: ../reference/index.md

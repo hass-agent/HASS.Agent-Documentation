@@ -78,7 +78,7 @@ plugins:
           nav_translations:
             Home: Startseite
             Getting Started: Erste Schritte
-            Setup: Einrichtung
+            Reference: Referenz
             Helping Out: Mithelfen
             Changelog: Änderungsprotokoll
             Getting Help: Hilfe erhalten
@@ -86,13 +86,6 @@ plugins:
           name: Help translating
           build: false
           fixed_link: https://www.hass-agent.io/latest/contributing/translating/
-  # - social:
-  #     enabled: !ENV [CI, false]
-  #     cards_layout: default/variant
-  #     cards_layout_options:
-  #       background_image: layouts/HASS.Agent-Social-Card.png
-  #       background_color: transparent
-  #       color: #ffffff
   - search
 
 # Add stylesheet for custom color scheme
@@ -176,20 +169,13 @@ nav:
       - Using Webviews: getting-started/webviews.md
       - Frequently Asked Questions: getting-started/faq.md
       - Troubleshooting: getting-started/troubleshooting.md
-  - Setup:
-      - setup/index.md
-      - Commands:
-          - setup/commands/index.md
-          - All: setup/commands/all.md
-          - Press Key: setup/commands/press-key.md
-      - Sensors:
-          - setup/sensors/index.md
-          - setup/sensors/gpu-temperature.md
-      - Notifications:
-          - setup/notifications/index.md
-          - All: setup/notifications/all.md
-      - Media Player: setup/media-player.md
-      - Quick Actions: setup/quick-actions.md
+  - Reference:
+      - reference/index.md
+      - Commands: reference/commands.md
+      - Sensors: reference/sensors.md
+      - Notifications: reference/notifications.md
+      - Media Player: reference/media-player.md
+      - Quick Actions: reference/quick-actions.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md

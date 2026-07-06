@@ -16,7 +16,7 @@ Here in this documentation you will find info on everything about HASS.Agent, fr
     We have a search bar at the top right which you can use to find anything throughout the docs, it will be your best way to get correct info about HASS.Agent.
 
 - First time seeing or using HASS.Agent? Start [here](./getting-started/index.md)
-- If you are using more complex features of HASS.Agent checkout the [setup](./setup/index.md) section
+- If you are using more complex features of HASS.Agent checkout the [reference](./reference/index.md) section
 
 ## Community
 
