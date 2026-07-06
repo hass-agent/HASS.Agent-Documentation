@@ -18,6 +18,8 @@ This is as simple as using it how you would anywhere else, you can add it to das
 
 ![Screenshot of the text-to-speech service call](../assets/images/screenshots/getting-started/text-to-speech.png)
 
+For media player behavior and text-to-speech notes, see the [Media Player reference](../reference/media-player.md).
+
 ## Further Reading
 
 <div class="grid cards" markdown>
@@ -34,4 +36,4 @@ This is as simple as using it how you would anywhere else, you can add it to das
 [Sensors]: ./sensors.md
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
-[Other Features]: ../setup/index.md
+[Other Features]: ../reference/index.md

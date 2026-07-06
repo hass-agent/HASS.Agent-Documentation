@@ -68,7 +68,7 @@ sequence:
 
 This notification will warn the user about their vaccuum being full and will include two buttons that ask the user for input on whether to pause or go home.
 
-Because these are a lot more complicated, this guide will not explain anything that we are configuring. If you need info on that checkout the [setup](../setup/notifications/index.md) page.
+Because these are a lot more complicated, this guide will not explain everything that we are configuring. If you need more detail, check the [reference](../reference/notifications.md) page.
 
 ### UI editor
 
@@ -121,7 +121,7 @@ This one is almost the exact same as the previous one. Set the following propert
 
 ### YAML
 
-If you prefer to use YAML a much more in depth guide is available in the setup section. Here are the 3 example automations that manage the vacuum if you want to test it out.
+If you prefer to use YAML, more notification detail is available in the reference section. Here are the 3 example automations that manage the vacuum if you want to test it out.
 
 #### Send Notification
 
@@ -175,6 +175,8 @@ condition: []
 action: []
 ```
 
+For notification payload details, action behavior, and event handling, see the [Notifications reference](../reference/notifications.md).
+
 ## Further Reading
 
 <div class="grid cards" markdown>
@@ -191,4 +193,4 @@ action: []
 [Sensors]: ./sensors.md
 [Commands]: ./commands.md
 [Media Player]: ./media-player.md
-[Other Features]: ../setup/index.md
+[Other Features]: ../reference/index.md

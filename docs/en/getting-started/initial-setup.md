@@ -74,4 +74,4 @@ Now you have finished installing and configuring HASS.Agent you are ready to set
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
 [Media Player]: ./media-player.md
-[Other Features]: ../setup/index.md
+[Other Features]: ../reference/index.md

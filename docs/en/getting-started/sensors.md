@@ -6,7 +6,7 @@ One of the core features of HASS.Agent is the ability to send data about your pc
 
 #### Required properties
 
-1. **TYPE:** Select the type of sensor from the left, there are many options available, a full description is available in the [setup](../setup/sensors/index.md) guide.
+1. **TYPE:** Select the type of sensor from the left, there are many options available, a full description is available in the [reference](../reference/sensors.md) guide.
 2. **Name:** Enter the name for the entity in HA, this is the entity id so it must not contain spaces.
 3. **Update Interval:** Sets the interval for how often the sensor updates, the recommended value is usually fine.
 
@@ -33,6 +33,8 @@ After clicking "Store and Activate" the sensors should be immediately picked up 
 
 You can use these entities any way you normally would, yaml or interface. Note that the entity id is the "Name" you set in the sensor config.
 
+For the full sensor list and configuration details, see the [Sensors reference](../reference/sensors.md).
+
 ## Further Reading
 
 <div class="grid cards" markdown>
@@ -49,4 +51,4 @@ You can use these entities any way you normally would, yaml or interface. Note t
 [Commands]: ./commands.md
 [Notifications]: ./notifications.md
 [Media Player]: ./media-player.md
-[Other Features]: ../setup/index.md
+[Other Features]: ../reference/index.md

@@ -78,7 +78,7 @@ plugins:
           nav_translations:
             Home: Startseite
             Getting Started: Erste Schritte
-            Setup: Einrichtung
+            Reference: Referenz
             Helping Out: Mithelfen
             Changelog: Änderungsprotokoll
             Getting Help: Hilfe erhalten
@@ -169,20 +169,13 @@ nav:
       - Using Webviews: getting-started/webviews.md
       - Frequently Asked Questions: getting-started/faq.md
       - Troubleshooting: getting-started/troubleshooting.md
-  - Setup:
-      - setup/index.md
-      - Commands:
-          - setup/commands/index.md
-          - All: setup/commands/all.md
-          - Press Key: setup/commands/press-key.md
-      - Sensors:
-          - setup/sensors/index.md
-          - setup/sensors/gpu-temperature.md
-      - Notifications:
-          - setup/notifications/index.md
-          - All: setup/notifications/all.md
-      - Media Player: setup/media-player.md
-      - Quick Actions: setup/quick-actions.md
+  - Reference:
+      - reference/index.md
+      - Commands: reference/commands.md
+      - Sensors: reference/sensors.md
+      - Notifications: reference/notifications.md
+      - Media Player: reference/media-player.md
+      - Quick Actions: reference/quick-actions.md
   - Helping Out:
       - contributing/index.md
       - We Need Help: contributing/need-help.md
